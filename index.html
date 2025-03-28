@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Gaëtan's CV</title>
+    <title>Gaëtan Fichet de Clairfontaine</title>
     <style>
         body {
             font-family: Arial, sans-serif;
@@ -11,28 +11,39 @@
             color: #ffffff;
             margin: 0;
             padding: 0;
+        }
+        .header {
+            background-color: #1a1a2e;
+            padding: 20px;
             text-align: center;
+            font-size: 24px;
+            font-weight: bold;
+            color: #00aaff;
+        }
+        .nav {
+            text-align: center;
+            padding: 10px;
+            background-color: #222;
+        }
+        .nav a {
+            color: #00aaff;
+            text-decoration: none;
+            padding: 10px 20px;
+            font-size: 18px;
+        }
+        .nav a:hover {
+            text-decoration: underline;
         }
         .container {
-            max-width: 800px;
-            margin: 50px auto;
+            max-width: 900px;
+            margin: 20px auto;
             padding: 20px;
             background-color: #1a1a2e;
             border-radius: 10px;
             box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
         }
-        h1 {
+        h2 {
             color: #00aaff;
-        }
-        a {
-            color: #00aaff;
-            text-decoration: none;
-        }
-        a:hover {
-            text-decoration: underline;
-        }
-        .cv-section {
-            margin-top: 20px;
         }
         .cv-button {
             display: inline-block;
@@ -50,14 +61,45 @@
     </style>
 </head>
 <body>
-    <div class="container">
-        <h1>Gaëtan's CV</h1>
-        <p>Welcome to my personal page. Here you can view and download my CV.</p>
-        <div class="cv-section">
-            <p><strong>Download my CV:</strong></p>
-            <a href="CV_GFDC_CNRS.pdf" class="cv-button" download>Download PDF</a>
-        </div>
+    <div class="header">Gaëtan Fichet de Clairfontaine</div>
+    <div class="nav">
+        <a href="#home">Home</a>
+        <a href="#research">Research</a>
+        <a href="#publications">Publications</a>
+        <a href="#cv">CV</a>
+        <a href="#contact">Contact</a>
+    </div>
+    
+    <div id="home" class="container">
+        <h2>Welcome</h2>
+        <p>I am a postdoctoral researcher in astrophysics, focusing on jet-star interactions and high-energy astrophysical phenomena.</p>
+    </div>
+    
+    <div id="research" class="container">
+        <h2>Research</h2>
+        <p>My research explores the physics of relativistic jets, particle acceleration, and their interactions with stars and interstellar material.</p>
+    </div>
+    
+    <div id="publications" class="container">
+        <h2>Publications</h2>
+        <p>Here is a list of my most recent publications:</p>
+        <ul>
+            <li><strong>Paper 1:</strong> Title and journal details</li>
+            <li><strong>Paper 2:</strong> Title and journal details</li>
+            <li><strong>Paper 3:</strong> Title and journal details</li>
+        </ul>
+    </div>
+    
+    <div id="cv" class="container">
+        <h2>Curriculum Vitae</h2>
+        <p>You can download my full CV here:</p>
+        <a href="CV_GFDC_CNRS.pdf" class="cv-button" download>Download PDF</a>
+    </div>
+    
+    <div id="contact" class="container">
+        <h2>Contact</h2>
+        <p>Email: your.email@example.com</p>
+        <p>Institution: Your institution name</p>
     </div>
 </body>
 </html>
-
