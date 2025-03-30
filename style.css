@@ -1,0 +1,53 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #121212;
+    color: #ffffff;
+    margin: 0;
+    padding: 0;
+}
+.header {
+    background-color: #1a1a2e;
+    padding: 20px;
+    text-align: center;
+    font-size: 28px;
+    font-weight: bold;
+    color: #00aaff;
+}
+.nav {
+    text-align: center;
+    padding: 10px;
+    background-color: #222;
+}
+.nav a {
+    color: #00aaff;
+    text-decoration: none;
+    padding: 10px 20px;
+    font-size: 18px;
+}
+.nav a:hover {
+    text-decoration: underline;
+}
+.container {
+    max-width: 900px;
+    margin: 20px auto;
+    padding: 20px;
+    background-color: #1a1a2e;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.5);
+}
+h2 {
+    color: #00aaff;
+}
+#apod {
+    margin-top: 20px;
+}
+#apod img, #apod iframe {
+    max-width: 100%;
+    max-height: 500px;
+    height: auto;
+    border-radius: 10px;
+}
+#apod-info {
+    margin-top: 10px;
+    text-align: left;
+}

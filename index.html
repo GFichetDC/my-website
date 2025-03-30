@@ -4,48 +4,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Gaëtan Fichet de Clairfontaine | Home</title>
-  <style>
-      body { 
-          font-family: Arial, sans-serif; 
-          background-color: #121212; 
-          color: #ffffff; 
-          margin: 0; 
-          padding: 0;
-      }
-      .header {
-          background-color: #1a1a2e; 
-          padding: 20px; 
-          text-align: center; 
-          font-size: 28px; 
-          font-weight: bold; 
-          color: #00aaff;
-      }
-      .nav {
-          text-align: center; 
-          padding: 10px; 
-          background-color: #222;
-      }
-      .nav a {
-          color: #00aaff; 
-          text-decoration: none; 
-          padding: 10px 20px; 
-          font-size: 18px;
-      }
-      .nav a:hover {
-          text-decoration: underline;
-      }
-      .container {
-          max-width: 900px; 
-          margin: 20px auto; 
-          padding: 20px; 
-          background-color: #1a1a2e; 
-          border-radius: 10px; 
-          box-shadow: 0 0 10px rgba(0,0,0,0.5);
-      }
-      h2 { color: #00aaff; }
-      #apod {\n          margin-top: 20px;\n      }\n      #apod img, #apod iframe {\n          max-width: 100%;\n          border-radius: 10px;\n      }
-      #apod-info { margin-top: 10px; text-align: left; }
-  </style>
+  <link rel="stylesheet" href="styles.css">
 </head>
 <body>
   <div class="header">Gaëtan Fichet de Clairfontaine</div>
@@ -55,16 +14,17 @@
       <a href="publications.html">Publications</a>
       <a href="cv.html">CV</a>
       <a href="contact.html">Contact</a>
+      <a href="riptide.html">RIPTIDE</a>
   </div>
   
   <div class="container">
-      <h2>Welcome</h2>
-      <p>I am a postdoctoral researcher in astrophysics, focusing on high-energy phenomena and the dynamics of relativistic jets in AGN.</p>
+      <h2>My Most Recent News</h2>
+      <p>Welcome to my personal website. Here, you'll find updates on my latest research, publications, and projects.</p>
       <hr>
       <h2>Astronomy Picture of the Day</h2>
       <div id="apod">
           <!-- APOD image or video will be injected here -->
-          <img id="apod-image" src="" alt="NASA Astronomy Picture of the Day">
+          <img id="apod-media" src="" alt="NASA Astronomy Picture of the Day">
       </div>
       <div id="apod-info">
           <h3 id="apod-title"></h3>
@@ -73,18 +33,19 @@
   </div>
 
   <script>
-      // Fetch NASA Astronomy Picture of the Day using the free DEMO_KEY.
-      fetch('https://api.nasa.gov/planetary/apod?api_key=DEMO_KEY')
+      // Fetch NASA Astronomy Picture of the Day using your API key.
+      const apiKey = 'DEMO_KEY'; // Replace with your actual API key
+      fetch(`https://api.nasa.gov/planetary/apod?api_key=${apiKey}`)
         .then(response => response.json())
         .then(data => {
-            const apodImage = document.getElementById('apod-image');
+            const apodMedia = document.getElementById('apod-media');
             const apodTitle = document.getElementById('apod-title');
             const apodExplanation = document.getElementById('apod-explanation');
             if(data.media_type === 'image'){
-                apodImage.src = data.url;
+                apodMedia.src = data.url;
             } else if(data.media_type === 'video'){
                 // Replace image element with an iframe for video content.
-                apodImage.outerHTML = `<iframe src="${data.url}" frameborder="0" allowfullscreen style="width:100%; height:400px;"></iframe>`;
+                apodMedia.outerHTML = `<iframe src="${data.url}" frameborder="0" allowfullscreen></iframe>`;
             }
             apodTitle.innerText = data.title;
             apodExplanation.innerText = data.explanation;
@@ -96,4 +57,3 @@
   </script>
 </body>
 </html>
-
