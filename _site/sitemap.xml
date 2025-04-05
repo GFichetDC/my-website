@@ -97,9 +97,6 @@
 <loc>http://localhost:4000/portfolio/</loc>
 </url>
 <url>
-<loc>http://localhost:4000/publications/</loc>
-</url>
-<url>
 <loc>http://localhost:4000/sitemap/</loc>
 </url>
 <url>
@@ -119,6 +116,10 @@
 </url>
 <url>
 <loc>http://localhost:4000/year-archive/</loc>
+</url>
+<url>
+<loc>http://localhost:4000/_pages/publications.html</loc>
+<lastmod>2025-04-05T20:44:31+00:00</lastmod>
 </url>
 <url>
 <loc>http://localhost:4000/files/paper1.pdf</loc>
