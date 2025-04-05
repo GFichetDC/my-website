@@ -11,11 +11,11 @@ locale                   : "en-US"
 site_theme               : "default"
 title                    : "Gaëtan Fichet de Clairfontaine"
 title_separator          : "-"
-name                     : &name "Your Name"
-description              : &description "personal description"
-url                      : https://gfichetdc.github.io # the base hostname & protocol for your site e.g. "https://[your GitHub username].github.io"
-baseurl                  : "" # the subpath of your site, e.g. "/blog"
-repository               : ""
+name                     : &name "Gaëtan Fichet de Clairfontaine"
+description              : &description "Personal website of Gaëtan Fichet de Clairfontaine"
+url                      : https://gfichetdc.github.io  # the base hostname & protocol for your site
+baseurl                  : "/my-website"  # the subpath of your site
+repository               : "gfichetdc/my-website"  # your GitHub repository name
 
 # Site Author - The following control what appear as part of the author content on the side bar.
 #               If a field is blank the icon and link will not appear, otherwise it will be shown.
