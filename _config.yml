@@ -8,14 +8,14 @@
 
 # Basic Site Settings
 locale                   : "en-US"
-site_theme              : "default"
-title                   : "Gaëtan Fichet de Clairfontaine"
+site_theme               : "default"
+title                    : "Gaëtan Fichet de Clairfontaine"
 title_separator          : "-"
-name                     : &name "Gaëtan Fichet de Clairfontaine"
+name                     : &name "Your Name"
 description              : &description "personal description"
-url                      : https://gfichetdc.github.io  # the base hostname & protocol for your site
-baseurl                  : "/my-website"  # the subpath of your site
-repository               : "my-website"  # the name of your GitHub repository
+url                      : https://gfichetdc.github.io # the base hostname & protocol for your site e.g. "https://[your GitHub username].github.io"
+baseurl                  : "/my-website" # the subpath of your site, e.g. "/blog"
+repository               : ""
 
 # Site Author - The following control what appear as part of the author content on the side bar.
 #               If a field is blank the icon and link will not appear, otherwise it will be shown.
