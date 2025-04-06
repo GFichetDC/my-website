@@ -21,10 +21,10 @@ I have taught courses at the master's level, supervised student projects, and pa
 
 ### Publications and Talks
 
-Explore my [publications](https://gfichetdc.github.io/presentations) and [talks](https://gfichetdc.github.io/talks) to learn more about my research contributions and presentations at international conferences.
+Explore my [publications](https://gfichetdc.github.io/my-website/presentations) and [talks](https://gfichetdc.github.io/my-website/talks) to learn more about my research contributions and presentations at international conferences.
 
 ### Contact
 
-For more information or to get in touch, please visit the [contact page](https://gfichetdc.github.io/contact).
+For more information or to get in touch, please visit the [contact page](https://gfichetdc.github.io/my-website/contact).
 
 ---
