@@ -9,7 +9,7 @@
 # Basic Site Settings
 locale                   : "en-US"
 site_theme               : "default"
-title                    : "Gaëtan Fichet de Clairfontaine"
+title                    : "Home"
 title_separator          : "-"
 name                     : &name "Gaëtan Fichet de Clairfontaine"
 description              : &description "Personal website of Gaëtan Fichet de Clairfontaine"
@@ -35,10 +35,10 @@ author:
   arxiv            : # URL - Update with the correct link to your profile
   googlescholar    : "https://scholar.google.com/citations?hl=en&user=oNRiH-8AAAAJ"
   impactstory      : # URL
-  orcid            : "http://orcid.org/yourorcidurl"
+  orcid            : "https://orcid.org/0000-0003-1143-3883"
   semantic         : # URL
   pubmed           : # URL
-  researchgate     : # URL
+  researchgate     : "https://www.researchgate.net/profile/Gaetan-Fichet-De-Clairfontaine?ev=hdr_xprf&_tp=eyJjb250ZXh0Ijp7ImZpcnN0UGFnZSI6ImhvbWUiLCJwYWdlIjoiaG9tZSIsInBvc2l0aW9uIjoiZ2xvYmFsSGVhZGVyIn19"
   scopus           : # URL
 
   # Repositories and software development
