@@ -11,29 +11,35 @@ redirect_from:
 
 Education
 ======
-* **2019 - 2022:** Ph.D. in Astrophysics, Observatoire de Paris, Laboratoire Univers et Théories (LUTh)
-* **2017 - 2019:** Master's in Astronomy, Astrophysics, and Space Engineering, Observatoire de Paris
-* **2014 - 2017:** Bachelor's in General Physics, University of Normandy, Caen
+* Ph.D in Version Control Theory, GitHub University, 2018 (expected)
+* M.S. in Jekyll, GitHub University, 2014
+* B.S. in GitHub, GitHub University, 2012
 
-Work Experience
+Work experience
 ======
-* **2024 - Present:** Postdoctoral Researcher
-  * University of Valencia, Department of Astrophysics
-  * Focus: Study of AGN jets as potential neutrino sources
-  * Supervisor: Prof. Manel Perucho
+* Spring 2024: Academic Pages Collaborator
+  * GitHub University
+  * Duties includes: Updates and improvements to template
+  * Supervisor: The Users
 
-* **2022 - 2024:** Postdoctoral Researcher
-  * University of Würzburg, Department of Astrophysics
-  * Focus: Development of simulation tools for AGN jets
-  * Supervisor: Prof. Sara Buson (ERC 949555, MessMapp)
+* Fall 2015: Research Assistant
+  * GitHub University
+  * Duties included: Merging pull requests
+  * Supervisor: Professor Hub
 
+* Summer 2015: Research Assistant
+  * GitHub University
+  * Duties included: Tagging issues
+  * Supervisor: Professor Git
+  
 Skills
 ======
-* Development of numerical simulation tools for astrophysical phenomena
-* Data reduction and analysis in high-energy astrophysics
-* Theoretical modeling of relativistic jets in AGNs
-* Teaching and supervision of graduate students
-* Scientific communication and outreach
+* Skill 1
+* Skill 2
+  * Sub-skill 2.1
+  * Sub-skill 2.2
+  * Sub-skill 2.3
+* Skill 3
 
 Publications
 ======
