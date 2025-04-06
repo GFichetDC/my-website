@@ -14,7 +14,7 @@ title_separator          : "-"
 name                     : &name "Home"
 description              : &description "Personal website of Gaëtan Fichet de Clairfontaine"
 url                      : https://gfichetdc.github.io  # the base hostname & protocol for your site
-baseurl                  : "/my-website/"  # the subpath of your site
+baseurl                  : "/my-website"  # the subpath of your site
 repository               : "gfichetdc/my-website"  # your GitHub repository name
 
 # Site Author - The following control what appear as part of the author content on the side bar.
