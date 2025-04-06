@@ -376,20 +376,17 @@
 
 
 
-
-
 <div class="list__item">
   <article class="archive__item" itemscope itemtype="http://schema.org/CreativeWork">
     
 
     <h2 class="archive__item-title" itemprop="headline">
       
-        <a href="https://gfichetdc.github.io/my-website/posts/2025/04/blog-post-1/" rel="permalink" onclick="toggleChart(event, 'could-this-be-a-dyson-sphere')">Could this be a Dyson Sphere?
+        <a href="https://gfichetdc.github.io/my-website/posts/2025/04/blog-post-1/" rel="permalink">Could this be a Dyson Sphere?
 </a>
       
     </h2>
-
-    <!-- Existing metadata section remains unchanged -->
+    
     
       <p class="page__meta"><i class="fa fa-clock" aria-hidden="true"></i> 
 
@@ -400,81 +397,19 @@
 </p>
     
 
-    <!-- Citation chart container -->
-    
+        
+         <p class="page__date"><strong><i class="fa fa-fw fa-calendar" aria-hidden="true"></i> Published:</strong> <time datetime="2025-04-06T00:00:00+00:00">April 06, 2025</time></p>
+        
 
-    <!-- Existing content remains unchanged -->
     
     <p class="archive__item-excerpt" itemprop="description">
 </p>
     
-
-    <!-- Existing citation/links section remains unchanged -->
     
-    <!-- Other conditional link blocks remain unchanged -->
+    
 
   </article>
 </div>
-
-<script>
-function toggleChart(event, chartId) {
-  event.preventDefault();
-  const container = document.getElementById(`chart-${chartId}`);
-  if (container) {
-    container.style.display = container.style.display === 'none' ? 'block' : 'none';
-    
-    if (!container.dataset.initialized && container.style.display === 'block') {
-      const ctx = container.querySelector('.citation-canvas').getContext('2d');
-      const data = null;
-      
-      new Chart(ctx, {
-        type: 'line',
-        data: {
-          labels: data.citations_over_time.map(d => d.year),
-          datasets: [{
-            label: 'Citations Over Time',
-            data: data.citations_over_time.map(d => d.citations),
-            borderColor: '#2c7be5',
-            backgroundColor: 'rgba(44, 123, 229, 0.1)',
-            tension: 0.3
-          }]
-        },
-        options: {
-          responsive: true,
-          plugins: {
-            legend: {
-              position: 'bottom'
-            }
-          }
-        }
-      });
-      
-      container.dataset.initialized = true;
-    }
-  }
-}
-</script>
-
-<style>
-.citation-chart {
-  margin: 1rem 0;
-  padding: 1.5rem;
-  background: #f8f9fa;
-  border-radius: 8px;
-  box-shadow: 0 2px 4px rgba(0,0,0,0.05);
-}
-
-.citation-canvas {
-  max-width: 100%;
-  min-height: 300px;
-}
-
-.chart-header {
-  margin-bottom: 1rem;
-  border-bottom: 1px solid #dee2e6;
-  padding-bottom: 0.5rem;
-}
-</style>
 
 
   </div>
