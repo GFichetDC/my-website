@@ -19,7 +19,7 @@
 
 
 
-<title>Talk 2 on Relevant Topic in Your Field - Home</title>
+<title>Hadronic Processes at Work in 5BZB J0630‑2406 - Home</title>
 
 
 
@@ -29,15 +29,15 @@
 
 <meta property="og:locale" content="en-US">
 <meta property="og:site_name" content="Home">
-<meta property="og:title" content="Talk 2 on Relevant Topic in Your Field">
+<meta property="og:title" content="Hadronic Processes at Work in 5BZB J0630‑2406">
 
 
-  <link rel="canonical" href="https://gfichetdc.github.io/my-website/talks/2014-02-01-talk-2">
-  <meta property="og:url" content="https://gfichetdc.github.io/my-website/talks/2014-02-01-talk-2">
+  <link rel="canonical" href="https://gfichetdc.github.io/my-website/publication/2023-01-11-paper-title-number-4.md">
+  <meta property="og:url" content="https://gfichetdc.github.io/my-website/publication/2023-01-11-paper-title-number-4.md">
 
 
 
-  <meta property="og:description" name="description" content="More information here">
+  <meta property="og:description" name="description" content="">
 
 
 
@@ -52,7 +52,7 @@
 
 
   <meta property="og:type" content="article">
-  <meta property="article:published_time" content="2014-02-01T00:00:00+00:00">
+  <meta property="article:published_time" content="2023-01-11T00:00:00+00:00">
 
 
 
@@ -142,16 +142,10 @@
             <li class="masthead__menu-item"><a href="https://gfichetdc.github.io/my-website/teaching/">Teaching</a></li>
           
             
-            <li class="masthead__menu-item"><a href="https://gfichetdc.github.io/my-website/portfolio/">Portfolio</a></li>
-          
-            
             <li class="masthead__menu-item"><a href="https://gfichetdc.github.io/my-website/year-archive/">Blog Posts</a></li>
           
             
             <li class="masthead__menu-item"><a href="https://gfichetdc.github.io/my-website/cv/">CV</a></li>
-          
-            
-            <li class="masthead__menu-item"><a href="https://gfichetdc.github.io/my-website/markdown/">Guide</a></li>
           
           <li id="theme-toggle" class="masthead__menu-item persist tail">
             <a><i id="theme-icon" class="fa-solid fa-sun" aria-hidden="true" title="toggle theme"></i></a>
@@ -208,16 +202,20 @@
       
 
       <!-- Font Awesome and Academicons icons / Academic websites -->
+      
+        <li><a href="https://arxiv.org/search/?searchtype=author&query=de+Clairfontaine%2C+G+F"><i class="ai ai-arxiv ai-fw icon-pad-right"></i>arXiv</a></li>
             
       
-        <li><a href="https://scholar.google.com/citations?user=PS_CX0AAAAAJ"><i class="ai ai-google-scholar icon-pad-right"></i>Google Scholar</a></li>
+        <li><a href="https://scholar.google.com/citations?user=oNRiH-8AAAAJ&hl=en&oi=ao"><i class="ai ai-google-scholar icon-pad-right"></i>Google Scholar</a></li>
       
       
       
       
-        <li><a href="http://orcid.org/yourorcidurl"><i class="ai ai-orcid ai-fw icon-pad-right"></i>ORCID</a></li>
+        <li><a href="https://orcid.org/0000-0003-1143-3883"><i class="ai ai-orcid ai-fw icon-pad-right"></i>ORCID</a></li>
       
                               
+      
+        <li><a href="https://www.researchgate.net/profile/Gaetan-Fichet-De-Clairfontaine?ev=hdr_xprf"><i class="fab fa-fw fa-researchgate icon-pad-right" aria-hidden="true"></i>ResearchGate</a></li>
       
       
 
@@ -263,29 +261,32 @@
 
 
   <article class="page" itemscope itemtype="http://schema.org/CreativeWork">
-    <meta itemprop="headline" content="Talk 2 on Relevant Topic in Your Field">
-    <meta itemprop="description" content="More information here">
-    <meta itemprop="datePublished" content="February 01, 2014">
+    <meta itemprop="headline" content="Hadronic Processes at Work in 5BZB J0630‑2406">
+    <meta itemprop="description" content="">
+    <meta itemprop="datePublished" content="January 11, 2023">
     
 
     <div class="page__inner-wrap">
       
         <header>
-          <h1 class="page__title" itemprop="headline">Talk 2 on Relevant Topic in Your Field
+          <h1 class="page__title" itemprop="headline">Hadronic Processes at Work in 5BZB J0630‑2406
 </h1>
           
         
-          <p class="page__date"><strong><i class="fa fa-fw fa-calendar" aria-hidden="true"></i>Date:</strong> <time datetime="2014-02-01T00:00:00+00:00">February 01, 2014</time></p>
         
         
-
+          <p>Published in <i>The Astrophysical Journal Letters</i>, 2023 </p>
+            
         </header>
       
 
       <section class="page__content" itemprop="text">
-        <p><a href="http://example2.com">More information here</a></p>
+        
 
-<p>This is a description of your talk, which is a markdown files that can be all markdown-ified like any other post. Yay markdown!</p>
+
+        
+          <p style="font-size: smaller">Recommended citation: G. Fichet de Clairfontaine, et al. (2023). &quot;Hadronic Processes at Work in 5BZB J0630‑2406.&quot; <i>The Astrophysical Journal Letters</i>. Volume 958, Issue 1, id.L2, 14 pp.<br /><a href="https://iopscience.iop.org/article/10.3847/2041-8213/ad0644/pdf">Download Paper</a> | <a href="http://academicpages.github.io/files/bibtexB.bib">Download Bibtex</a></p>
+        
 
         
       </section>
@@ -306,13 +307,13 @@
     <h4 class="page__share-title">Share on</h4>
   
 
-  <a href="https://bsky.app/intent/compose?text=https://gfichetdc.github.io/my-website/talks/2014-02-01-talk-2" class="btn btn--bluesky" title="Share on Bluesky"><i class="fab fa-bluesky" aria-hidden="true"></i><span> Bluesky</span></a>
+  <a href="https://bsky.app/intent/compose?text=https://gfichetdc.github.io/my-website/publication/2023-01-11-paper-title-number-4.md" class="btn btn--bluesky" title="Share on Bluesky"><i class="fab fa-bluesky" aria-hidden="true"></i><span> Bluesky</span></a>
 
-  <a href="https://www.facebook.com/sharer/sharer.php?u=https://gfichetdc.github.io/my-website/talks/2014-02-01-talk-2" class="btn btn--facebook" title="Share on Facebook"><i class="fab fa-facebook" aria-hidden="true"></i><span> Facebook</span></a>
+  <a href="https://www.facebook.com/sharer/sharer.php?u=https://gfichetdc.github.io/my-website/publication/2023-01-11-paper-title-number-4.md" class="btn btn--facebook" title="Share on Facebook"><i class="fab fa-facebook" aria-hidden="true"></i><span> Facebook</span></a>
 
-  <a href="https://www.linkedin.com/shareArticle?mini=true&url=https://gfichetdc.github.io/my-website/talks/2014-02-01-talk-2" class="btn btn--linkedin" title="Share on LinkedIn"><i class="fab fa-linkedin" aria-hidden="true"></i><span> LinkedIn</span></a>
+  <a href="https://www.linkedin.com/shareArticle?mini=true&url=https://gfichetdc.github.io/my-website/publication/2023-01-11-paper-title-number-4.md" class="btn btn--linkedin" title="Share on LinkedIn"><i class="fab fa-linkedin" aria-hidden="true"></i><span> LinkedIn</span></a>
 
-  <a href="https://x.com/intent/post?text=https://gfichetdc.github.io/my-website/talks/2014-02-01-talk-2" class="btn btn--x" title="Share on X"><i class="fab fa-x-twitter" aria-hidden="true"></i><span> X (formerly Twitter)</span></a>
+  <a href="https://x.com/intent/post?text=https://gfichetdc.github.io/my-website/publication/2023-01-11-paper-title-number-4.md" class="btn btn--x" title="Share on X"><i class="fab fa-x-twitter" aria-hidden="true"></i><span> X (formerly Twitter)</span></a>
 </section>
 
 
@@ -321,11 +322,10 @@
 
   <nav class="pagination">
     
-      <a href="https://gfichetdc.github.io/my-website/talks/2013-03-01-tutorial-1" class="pagination--pager" title="Tutorial 1 on Relevant Topic in Your Field
-">Previous</a>
+      <a href="#" class="pagination--pager disabled">Previous</a>
     
     
-      <a href="https://gfichetdc.github.io/my-website/talks/2014-03-01-talk-3" class="pagination--pager" title="Conference Proceeding talk 3 on Relevant Topic in Your Field
+      <a href="https://gfichetdc.github.io/my-website/publication/paperA" class="pagination--pager" title="Dynamic and radiative implications of jet–star interactions in AGN jets
 ">Next</a>
     
   </nav>

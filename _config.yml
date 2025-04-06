@@ -32,13 +32,13 @@ author:
   email            : "gaetan.fichet@uv.es" 
 
   # Academic websites
-  arxiv            : # URL - Update with the correct link to your profile
-  googlescholar    : "https://scholar.google.com/citations?user=PS_CX0AAAAAJ"
+  arxiv            : "https://arxiv.org/search/?searchtype=author&query=de+Clairfontaine%2C+G+F"
+  googlescholar    : "https://scholar.google.com/citations?user=oNRiH-8AAAAJ&hl=en&oi=ao"
   impactstory      : # URL
-  orcid            : "http://orcid.org/yourorcidurl"
+  orcid            : "https://orcid.org/0000-0003-1143-3883"
   semantic         : # URL
   pubmed           : # URL
-  researchgate     : # URL
+  researchgate     : "https://www.researchgate.net/profile/Gaetan-Fichet-De-Clairfontaine?ev=hdr_xprf"
   scopus           : # URL
 
   # Repositories and software development
