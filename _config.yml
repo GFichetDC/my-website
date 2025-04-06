@@ -11,7 +11,7 @@ locale                   : "en-US"
 site_theme               : "default"
 title                    : "Home"
 title_separator          : "-"
-name                     : &name "Gaëtan Fichet de Clairfontaine"
+name                     : &name "Home"
 description              : &description "Personal website of Gaëtan Fichet de Clairfontaine"
 url                      : https://gfichetdc.github.io  # the base hostname & protocol for your site
 baseurl                  : "/my-website"  # the subpath of your site
