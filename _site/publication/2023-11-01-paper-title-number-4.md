@@ -19,7 +19,7 @@
 
 
 
-<title>Paper Title Number 2 - Home</title>
+<title>Hadronic Processes at Work in 5BZB J0630‑2406 - Home</title>
 
 
 
@@ -29,15 +29,15 @@
 
 <meta property="og:locale" content="en-US">
 <meta property="og:site_name" content="Home">
-<meta property="og:title" content="Paper Title Number 2">
+<meta property="og:title" content="Hadronic Processes at Work in 5BZB J0630‑2406">
 
 
-  <link rel="canonical" href="https://gfichetdc.github.io/my-website/publication/2010-10-01-paper-title-number-2">
-  <meta property="og:url" content="https://gfichetdc.github.io/my-website/publication/2010-10-01-paper-title-number-2">
+  <link rel="canonical" href="https://gfichetdc.github.io/my-website/publication/2023-11-01-paper-title-number-4.md">
+  <meta property="og:url" content="https://gfichetdc.github.io/my-website/publication/2023-11-01-paper-title-number-4.md">
 
 
 
-  <meta property="og:description" name="description" content="This paper is about the number 2. The number 3 is left for future work.">
+  <meta property="og:description" name="description" content="The physical phenomena explaining the classification of Active Galactic Nuclei (NAG) are still not well understood. Furthermore, new observational markers, such as the offset between the radio and optical emission centers, seem to indicate the presence of intrinsic physical phenomena within the jets. In this study, we propose the interaction between the jet and a stellar population. These interactions lead to mass entrainment in the jet due to proton enrichment. This mass entrainment results in more or less pronounced jet deceleration depending on the stellar density, and consequently, energy dissipation. In this study, we used the RIPTIDE code to produce radio and optical emission maps and highlight the presence of this radio-optical offset by quantitatively reproducing VLBI and Gaia optical observations for different types of NAG. This study underscores the crucial impact of stars on jet characteristics and our understanding of the current classification of NAG. Moreover, it paves the way for the multi-messenger study of these jet-star interactions.">
 
 
 
@@ -52,7 +52,7 @@
 
 
   <meta property="og:type" content="article">
-  <meta property="article:published_time" content="2010-10-01T00:00:00+00:00">
+  <meta property="article:published_time" content="2023-11-01T00:00:00+00:00">
 
 
 
@@ -263,31 +263,31 @@
 
 
   <article class="page" itemscope itemtype="http://schema.org/CreativeWork">
-    <meta itemprop="headline" content="Paper Title Number 2">
-    <meta itemprop="description" content="This paper is about the number 2. The number 3 is left for future work.">
-    <meta itemprop="datePublished" content="October 01, 2010">
+    <meta itemprop="headline" content="Hadronic Processes at Work in 5BZB J0630‑2406">
+    <meta itemprop="description" content="The physical phenomena explaining the classification of Active Galactic Nuclei (NAG) are still not well understood. Furthermore, new observational markers, such as the offset between the radio and optical emission centers, seem to indicate the presence of intrinsic physical phenomena within the jets. In this study, we propose the interaction between the jet and a stellar population. These interactions lead to mass entrainment in the jet due to proton enrichment. This mass entrainment results in more or less pronounced jet deceleration depending on the stellar density, and consequently, energy dissipation. In this study, we used the RIPTIDE code to produce radio and optical emission maps and highlight the presence of this radio-optical offset by quantitatively reproducing VLBI and Gaia optical observations for different types of NAG. This study underscores the crucial impact of stars on jet characteristics and our understanding of the current classification of NAG. Moreover, it paves the way for the multi-messenger study of these jet-star interactions.">
+    <meta itemprop="datePublished" content="November 01, 2023">
     
 
     <div class="page__inner-wrap">
       
         <header>
-          <h1 class="page__title" itemprop="headline">Paper Title Number 2
+          <h1 class="page__title" itemprop="headline">Hadronic Processes at Work in 5BZB J0630‑2406
 </h1>
           
         
         
         
-          <p>Published in <i>Journal 1</i>, 2010 </p>
+          <p>Published in <i>The Astrophysical Journal Letters</i>, 2023 </p>
             
         </header>
       
 
       <section class="page__content" itemprop="text">
-        <p>The contents above will be part of a list of publications, if the user clicks the link for the publication than the contents of section will be rendered as a full page, allowing you to provide more information about the paper for the reader. When publications are displayed as a single page, the contents of the above “citation” field will automatically be included below this section in a smaller font.</p>
+        <p>The physical phenomena explaining the classification of Active Galactic Nuclei (NAG) are still not well understood. Furthermore, new observational markers, such as the offset between the radio and optical emission centers, seem to indicate the presence of intrinsic physical phenomena within the jets. In this study, we propose the interaction between the jet and a stellar population. These interactions lead to mass entrainment in the jet due to proton enrichment. This mass entrainment results in more or less pronounced jet deceleration depending on the stellar density, and consequently, energy dissipation. In this study, we used the RIPTIDE code to produce radio and optical emission maps and highlight the presence of this radio-optical offset by quantitatively reproducing VLBI and Gaia optical observations for different types of NAG. This study underscores the crucial impact of stars on jet characteristics and our understanding of the current classification of NAG. Moreover, it paves the way for the multi-messenger study of these jet-star interactions.</p>
 
 
         
-          <p style="font-size: smaller">Recommended citation: Your Name, You. (2010). &quot;Paper Title Number 2.&quot; <i>Journal 1</i>. 1(2).<br /><a href="http://academicpages.github.io/files/paper2.pdf">Download Paper</a> | <a href="http://academicpages.github.io/files/slides2.pdf">Download Slides</a></p>
+          <p style="font-size: smaller">Recommended citation: G. Fichet de Clairfontaine, et al. (2023). &quot;Hadronic Processes at Work in 5BZB J0630‑2406.&quot; <i>The Astrophysical Journal Letters</i>. 1(1).<br /><a href="https://iopscience.iop.org/article/10.3847/2041-8213/ad0644/pdf">Download Paper</a> | <a href="http://academicpages.github.io/files/bibtexB.bib">Download Bibtex</a></p>
         
 
         
@@ -309,13 +309,13 @@
     <h4 class="page__share-title">Share on</h4>
   
 
-  <a href="https://bsky.app/intent/compose?text=https://gfichetdc.github.io/my-website/publication/2010-10-01-paper-title-number-2" class="btn btn--bluesky" title="Share on Bluesky"><i class="fab fa-bluesky" aria-hidden="true"></i><span> Bluesky</span></a>
+  <a href="https://bsky.app/intent/compose?text=https://gfichetdc.github.io/my-website/publication/2023-11-01-paper-title-number-4.md" class="btn btn--bluesky" title="Share on Bluesky"><i class="fab fa-bluesky" aria-hidden="true"></i><span> Bluesky</span></a>
 
-  <a href="https://www.facebook.com/sharer/sharer.php?u=https://gfichetdc.github.io/my-website/publication/2010-10-01-paper-title-number-2" class="btn btn--facebook" title="Share on Facebook"><i class="fab fa-facebook" aria-hidden="true"></i><span> Facebook</span></a>
+  <a href="https://www.facebook.com/sharer/sharer.php?u=https://gfichetdc.github.io/my-website/publication/2023-11-01-paper-title-number-4.md" class="btn btn--facebook" title="Share on Facebook"><i class="fab fa-facebook" aria-hidden="true"></i><span> Facebook</span></a>
 
-  <a href="https://www.linkedin.com/shareArticle?mini=true&url=https://gfichetdc.github.io/my-website/publication/2010-10-01-paper-title-number-2" class="btn btn--linkedin" title="Share on LinkedIn"><i class="fab fa-linkedin" aria-hidden="true"></i><span> LinkedIn</span></a>
+  <a href="https://www.linkedin.com/shareArticle?mini=true&url=https://gfichetdc.github.io/my-website/publication/2023-11-01-paper-title-number-4.md" class="btn btn--linkedin" title="Share on LinkedIn"><i class="fab fa-linkedin" aria-hidden="true"></i><span> LinkedIn</span></a>
 
-  <a href="https://x.com/intent/post?text=https://gfichetdc.github.io/my-website/publication/2010-10-01-paper-title-number-2" class="btn btn--x" title="Share on X"><i class="fab fa-x-twitter" aria-hidden="true"></i><span> X (formerly Twitter)</span></a>
+  <a href="https://x.com/intent/post?text=https://gfichetdc.github.io/my-website/publication/2023-11-01-paper-title-number-4.md" class="btn btn--x" title="Share on X"><i class="fab fa-x-twitter" aria-hidden="true"></i><span> X (formerly Twitter)</span></a>
 </section>
 
 
@@ -327,7 +327,7 @@
       <a href="#" class="pagination--pager disabled">Previous</a>
     
     
-      <a href="https://gfichetdc.github.io/my-website/publication/2015-10-01-paper-title-number-3" class="pagination--pager" title="Paper Title Number 3
+      <a href="https://gfichetdc.github.io/my-website/publication/paperA" class="pagination--pager" title="Dynamic and radiative implications of jet–star interactions in AGN jets
 ">Next</a>
     
   </nav>
