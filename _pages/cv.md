@@ -11,35 +11,52 @@ redirect_from:
 
 Education
 ======
-* Ph.D in Version Control Theory, GitHub University, 2018 (expected)
-* M.S. in Jekyll, GitHub University, 2014
-* B.S. in GitHub, GitHub University, 2012
+* Ph.D. in Astrophysics, Observatoire de Paris, Laboratoire Univers et Théories (LUTh), 2022
+  * Thesis: "Modélisation unifiée de l'émission d'AGN détectés en rayons gamma"
+  * Supervisors: Andreas Zech and Zakaria Meliani
 
-Work experience
+* M.S. in Astronomy, Astrophysics and Space Engineering, Observatoire de Paris, 2019
+
+* B.S. in General Physics, Université de Normandie, Caen, 2017
+
+Work Experience
 ======
-* Spring 2024: Academic Pages Collaborator
-  * GitHub University
-  * Duties includes: Updates and improvements to template
-  * Supervisor: The Users
+* 2024 - Present: Postdoctoral Researcher
+  * Université de Valencia, Department of Astrophysics
+  * Research on jets of active galactic nuclei as potential neutrino sources
+  * Supervisor: Prof. Manel Perucho
 
-* Fall 2015: Research Assistant
-  * GitHub University
-  * Duties included: Merging pull requests
-  * Supervisor: Professor Hub
+* 2022 - 2024: Postdoctoral Researcher
+  * Universität Würzburg, Department of Astrophysics
+  * Research on high-energy phenomena in AGN jets
+  * Supervisor: Prof. Sara Buson (ERC 949555, MessMapp)
 
-* Summer 2015: Research Assistant
-  * GitHub University
-  * Duties included: Tagging issues
-  * Supervisor: Professor Git
-  
+* 2019 - 2022: Ph.D. Candidate
+  * Observatoire de Paris, Laboratoire Univers et Théories (LUTh)
+  * Thesis work on modeling gamma-ray emissions from AGN
+  * Supervisors: Andreas Zech and Zakaria Meliani
+
 Skills
 ======
-* Skill 1
-* Skill 2
-  * Sub-skill 2.1
-  * Sub-skill 2.2
-  * Sub-skill 2.3
-* Skill 3
+* Theoretical Astrophysics
+  * Simulation and modeling of relativistic jets
+  * Development of numerical tools for astrophysical simulations
+
+* Data Analysis
+  * Reduction and analysis of astrophysical data
+  * Experience with H.E.S.S. and Fermi-LAT data
+
+* Programming and Software
+  * Proficient in Python, C++, and scientific computing libraries
+  * Experience with MPI-AMRVAC and RIPTIDE for simulations
+
+* Teaching and Mentoring
+  * Supervision of master's and Ph.D. students
+  * Lecturing and leading practical sessions in astrophysics courses
+
+* Scientific Communication
+  * Publication of research articles in peer-reviewed journals
+  * Presentation of research at international conferences
 
 Publications
 ======
