@@ -283,7 +283,7 @@
 
     <h2 class="archive__item-title" itemprop="headline">
       
-        <a href="https://gfichetdc.github.io/my-website/portfolio/portfolio-1/" rel="permalink">Portfolio item number 1
+        <a href="https://gfichetdc.github.io/my-website/portfolio/portfolio-1/" rel="permalink" onclick="toggleChart(event, 'portfolio-item-number-1')">Portfolio item number 1
 </a>
       
     </h2>
@@ -291,14 +291,23 @@
     
 
     
+    
+  </article>
+</div>
 
-    
-      <p class="archive__item-excerpt" itemprop="description"><p>Short description of portfolio item number 1<br /><img src="/images/500x300.png" /></p>
-</p>
-    
-
-    
-    
+<script>
+// Global toggle function
+function toggleChart(event, chartId) {
+  event.preventDefault();
+  const container = document.getElementById(`chart-${chartId}`);
+  if (container) {
+    container.style.display = container.style.display === 'none' ? 'block' : 'none';
+    if (!container.querySelector('canvas').dataset.initialized) {
+      window[`initChart${chartId}`]();
+    }
+  }
+}
+</script>
     
   
     
@@ -314,7 +323,7 @@
 
     <h2 class="archive__item-title" itemprop="headline">
       
-        <a href="https://gfichetdc.github.io/my-website/portfolio/portfolio-2/" rel="permalink">Portfolio item number 2
+        <a href="https://gfichetdc.github.io/my-website/portfolio/portfolio-2/" rel="permalink" onclick="toggleChart(event, 'portfolio-item-number-2')">Portfolio item number 2
 </a>
       
     </h2>
@@ -322,14 +331,23 @@
     
 
     
+    
+  </article>
+</div>
 
-    
-      <p class="archive__item-excerpt" itemprop="description"><p>Short description of portfolio item number 2 <br /><img src="/images/500x300.png" /></p>
-</p>
-    
-
-    
-    
+<script>
+// Global toggle function
+function toggleChart(event, chartId) {
+  event.preventDefault();
+  const container = document.getElementById(`chart-${chartId}`);
+  if (container) {
+    container.style.display = container.style.display === 'none' ? 'block' : 'none';
+    if (!container.querySelector('canvas').dataset.initialized) {
+      window[`initChart${chartId}`]();
+    }
+  }
+}
+</script>
     
   
 
@@ -359,7 +377,7 @@
 
     <h2 class="archive__item-title" itemprop="headline">
       
-        <a href="https://gfichetdc.github.io/my-website/publications/2021-03-01-paper-title-number-0" rel="permalink">Flux variability from ejecta in structured relativistic jets with large-scale magnetic fields
+        <a href="https://gfichetdc.github.io/my-website/publications/2021-03-01-paper-title-number-0" rel="permalink" onclick="toggleChart(event, 'flux-variability-from-ejecta-in-structured-relativistic-jets-with-large-scale-magnetic-fields')">Flux variability from ejecta in structured relativistic jets with large-scale magnetic fields
 </a>
       
     </h2>
@@ -367,80 +385,61 @@
     
 
     
-      <p>Published in <i>Astronomy & Astrophysics</i>, 2021 </p>
     
-
-    
-      <p class="archive__item-excerpt" itemprop="description">
-</p>
-    
-
-    
-    
-      <div class="citation-metrics">
+      <div class="citation-metrics" id="chart-flux-variability-from-ejecta-in-structured-relativistic-jets-with-large-scale-magnetic-fields" style="display:none;">
         <h4>Citation Metrics</h4>
         <p>Total Citations: 150</p>
-        
-        
-        
-        <canvas id="citationChart--20210301"></canvas>
-        
-        
-        <!-- <pre>Debug: {"total_citations":150,"citations_over_time":[{"year":2020,"citations":50},{"year":2021,"citations":75},{"year":2022,"citations":150}]}</pre> -->
-
+        <canvas id="citationChart-flux-variability-from-ejecta-in-structured-relativistic-jets-with-large-scale-magnetic-fields"></canvas>
         <script>
-          document.addEventListener("DOMContentLoaded", function() {
-            try {
-              
-              var citationData = {"total_citations":150,"citations_over_time":[{"year":2020,"citations":50},{"year":2021,"citations":75},{"year":2022,"citations":150}]};
-              if (!citationData?.citations_over_time) {
-                console.error('Invalid citation data structure', citationData);
-                return;
-              }
-
-              
-              var ctx = document.getElementById('citationChart--20210301').getContext('2d');
-              
-              new Chart(ctx, {
-                type: 'line',
-                data: {
-                  labels: citationData.citations_over_time.map(item => item.year.toString()),
-                  datasets: [{
-                    label: 'Citations Over Time',
-                    data: citationData.citations_over_time.map(item => item.citations),
-                    borderColor: '#4A90E2',
-                    backgroundColor: 'rgba(74, 144, 226, 0.1)',
-                    tension: 0.3,
-                    pointRadius: 5,
-                    pointHoverRadius: 7
-                  }]
-                },
-                options: {
-                  responsive: true,
-                  maintainAspectRatio: false,
-                  scales: {
-                    y: {
-                      beginAtZero: true,
-                      grid: { color: 'rgba(0,0,0,0.05)' }
-                    },
-                    x: {
-                      grid: { display: false }
-                    }
-                  },
-                  plugins: {
-                    legend: {
-                      position: 'bottom'
-                    }
-                  }
+          (function() {
+            // Store chart configuration
+            var chartConfigflux-variability-from-ejecta-in-structured-relativistic-jets-with-large-scale-magnetic-fields = {
+              type: 'line',
+              data: {
+                labels: [2020,2021,2022],
+                datasets: [{
+                  label: 'Citations Over Time',
+                  data: [50,75,150],
+                  borderColor: '#4A90E2',
+                  backgroundColor: 'rgba(74, 144, 226, 0.1)',
+                  tension: 0.3
+                }]
+              },
+              options: {
+                responsive: true,
+                maintainAspectRatio: false,
+                scales: {
+                  y: { beginAtZero: true }
                 }
-              });
-            } catch (error) {
-              console.error('Chart error for post "Flux variability from ejecta in structured relativistic jets with large-scale magnetic fields":', error);
-            }
-          });
+              }
+            };
+
+            // Initialize chart on first click
+            window.initChartflux-variability-from-ejecta-in-structured-relativistic-jets-with-large-scale-magnetic-fields = function() {
+              var ctx = document.getElementById('citationChart-flux-variability-from-ejecta-in-structured-relativistic-jets-with-large-scale-magnetic-fields');
+              new Chart(ctx.getContext('2d'), chartConfigflux-variability-from-ejecta-in-structured-relativistic-jets-with-large-scale-magnetic-fields);
+              ctx.dataset.initialized = true;
+            };
+          })();
         </script>
       </div>
     
+  </article>
+</div>
+
+<script>
+// Global toggle function
+function toggleChart(event, chartId) {
+  event.preventDefault();
+  const container = document.getElementById(`chart-${chartId}`);
+  if (container) {
+    container.style.display = container.style.display === 'none' ? 'block' : 'none';
+    if (!container.querySelector('canvas').dataset.initialized) {
+      window[`initChart${chartId}`]();
+    }
+  }
+}
+</script>
     
   
     
@@ -456,7 +455,7 @@
 
     <h2 class="archive__item-title" itemprop="headline">
       
-        <a href="https://gfichetdc.github.io/my-website/publication/2022-05-01-paper-title-number-1" rel="permalink">Flare echoes from relaxation shocks in perturbed relativistic jets
+        <a href="https://gfichetdc.github.io/my-website/publication/2022-05-01-paper-title-number-1" rel="permalink" onclick="toggleChart(event, 'flare-echoes-from-relaxation-shocks-in-perturbed-relativistic-jets')">Flare echoes from relaxation shocks in perturbed relativistic jets
 </a>
       
     </h2>
@@ -464,16 +463,23 @@
     
 
     
-      <p>Published in <i>Astronomy & Astrophysics</i>, 2022 </p>
     
+  </article>
+</div>
 
-    
-      <p class="archive__item-excerpt" itemprop="description">
-</p>
-    
-
-    
-    
+<script>
+// Global toggle function
+function toggleChart(event, chartId) {
+  event.preventDefault();
+  const container = document.getElementById(`chart-${chartId}`);
+  if (container) {
+    container.style.display = container.style.display === 'none' ? 'block' : 'none';
+    if (!container.querySelector('canvas').dataset.initialized) {
+      window[`initChart${chartId}`]();
+    }
+  }
+}
+</script>
     
   
     
@@ -489,7 +495,7 @@
 
     <h2 class="archive__item-title" itemprop="headline">
       
-        <a href="https://gfichetdc.github.io/my-website/publications/2023-11-01-paper-title-number-2" rel="permalink">Hadronic Processes at Work in 5BZB J0630‑2406
+        <a href="https://gfichetdc.github.io/my-website/publications/2023-11-01-paper-title-number-2" rel="permalink" onclick="toggleChart(event, 'hadronic-processes-at-work-in-5bzb-j0630-2406')">Hadronic Processes at Work in 5BZB J0630‑2406
 </a>
       
     </h2>
@@ -497,16 +503,23 @@
     
 
     
-      <p>Published in <i>The Astrophysical Journal Letters</i>, 2023 </p>
     
+  </article>
+</div>
 
-    
-      <p class="archive__item-excerpt" itemprop="description">
-</p>
-    
-
-    
-    
+<script>
+// Global toggle function
+function toggleChart(event, chartId) {
+  event.preventDefault();
+  const container = document.getElementById(`chart-${chartId}`);
+  if (container) {
+    container.style.display = container.style.display === 'none' ? 'block' : 'none';
+    if (!container.querySelector('canvas').dataset.initialized) {
+      window[`initChart${chartId}`]();
+    }
+  }
+}
+</script>
     
   
     
@@ -522,7 +535,7 @@
 
     <h2 class="archive__item-title" itemprop="headline">
       
-        <a href="https://gfichetdc.github.io/my-website/publications/2024-03-01-paper-title-number-3" rel="permalink">The galactic bubbles of starburst galaxies. The influence of galactic large-scale magnetic fields
+        <a href="https://gfichetdc.github.io/my-website/publications/2024-03-01-paper-title-number-3" rel="permalink" onclick="toggleChart(event, 'the-galactic-bubbles-of-starburst-galaxies-the-influence-of-galactic-large-scale-magnetic-fields')">The galactic bubbles of starburst galaxies. The influence of galactic large-scale magnetic fields
 </a>
       
     </h2>
@@ -530,16 +543,23 @@
     
 
     
-      <p>Published in <i>Astronomy & Astrophysics</i>, 2024 </p>
     
+  </article>
+</div>
 
-    
-      <p class="archive__item-excerpt" itemprop="description">
-</p>
-    
-
-    
-    
+<script>
+// Global toggle function
+function toggleChart(event, chartId) {
+  event.preventDefault();
+  const container = document.getElementById(`chart-${chartId}`);
+  if (container) {
+    container.style.display = container.style.display === 'none' ? 'block' : 'none';
+    if (!container.querySelector('canvas').dataset.initialized) {
+      window[`initChart${chartId}`]();
+    }
+  }
+}
+</script>
     
   
     
@@ -555,7 +575,7 @@
 
     <h2 class="archive__item-title" itemprop="headline">
       
-        <a href="https://gfichetdc.github.io/my-website/publications/2024-11-01-paper-title-number-4" rel="permalink">AM³: An Open-Source Tool for Time-Dependent Lepto-Hadronic Modelling of Astrophysical Sources
+        <a href="https://gfichetdc.github.io/my-website/publications/2024-11-01-paper-title-number-4" rel="permalink" onclick="toggleChart(event, 'am-an-open-source-tool-for-time-dependent-lepto-hadronic-modelling-of-astrophysical-sources')">AM³: An Open-Source Tool for Time-Dependent Lepto-Hadronic Modelling of Astrophysical Sources
 </a>
       
     </h2>
@@ -563,16 +583,23 @@
     
 
     
-      <p>Published in <i>The Astrophysical Journal Supplement Series</i>, 2024 </p>
     
+  </article>
+</div>
 
-    
-      <p class="archive__item-excerpt" itemprop="description">
-</p>
-    
-
-    
-    
+<script>
+// Global toggle function
+function toggleChart(event, chartId) {
+  event.preventDefault();
+  const container = document.getElementById(`chart-${chartId}`);
+  if (container) {
+    container.style.display = container.style.display === 'none' ? 'block' : 'none';
+    if (!container.querySelector('canvas').dataset.initialized) {
+      window[`initChart${chartId}`]();
+    }
+  }
+}
+</script>
     
   
     
@@ -588,7 +615,7 @@
 
     <h2 class="archive__item-title" itemprop="headline">
       
-        <a href="https://gfichetdc.github.io/my-website/publications/2025-01-11-paper-title-number-5" rel="permalink">Dynamic and radiative implications of jet–star interactions in AGN jets
+        <a href="https://gfichetdc.github.io/my-website/publications/2025-01-11-paper-title-number-5" rel="permalink" onclick="toggleChart(event, 'dynamic-and-radiative-implications-of-jet-star-interactions-in-agn-jets')">Dynamic and radiative implications of jet–star interactions in AGN jets
 </a>
       
     </h2>
@@ -596,16 +623,23 @@
     
 
     
-      <p>Published in <i>Astronomy & Astrophysics</i>, 2025 </p>
     
+  </article>
+</div>
 
-    
-      <p class="archive__item-excerpt" itemprop="description">
-</p>
-    
-
-    
-    
+<script>
+// Global toggle function
+function toggleChart(event, chartId) {
+  event.preventDefault();
+  const container = document.getElementById(`chart-${chartId}`);
+  if (container) {
+    container.style.display = container.style.display === 'none' ? 'block' : 'none';
+    if (!container.querySelector('canvas').dataset.initialized) {
+      window[`initChart${chartId}`]();
+    }
+  }
+}
+</script>
     
   
 
@@ -630,7 +664,7 @@
 
     <h2 class="archive__item-title" itemprop="headline">
       
-        <a href="https://gfichetdc.github.io/my-website/talks/2012-03-01-talk-1" rel="permalink">Talk 1 on Relevant Topic in Your Field
+        <a href="https://gfichetdc.github.io/my-website/talks/2012-03-01-talk-1" rel="permalink" onclick="toggleChart(event, 'talk-1-on-relevant-topic-in-your-field')">Talk 1 on Relevant Topic in Your Field
 </a>
       
     </h2>
@@ -638,16 +672,23 @@
     
 
     
-      <p class="page__date"><strong><i class="fa fa-fw fa-calendar" aria-hidden="true"></i> Published:</strong> <time datetime="2012-03-01T00:00:00+00:00">March 01, 2012</time></p>
     
+  </article>
+</div>
 
-    
-      <p class="archive__item-excerpt" itemprop="description"><p>This is a description of your talk, which is a markdown file that can be all markdown-ified like any other post. Yay markdown!</p>
-</p>
-    
-
-    
-    
+<script>
+// Global toggle function
+function toggleChart(event, chartId) {
+  event.preventDefault();
+  const container = document.getElementById(`chart-${chartId}`);
+  if (container) {
+    container.style.display = container.style.display === 'none' ? 'block' : 'none';
+    if (!container.querySelector('canvas').dataset.initialized) {
+      window[`initChart${chartId}`]();
+    }
+  }
+}
+</script>
     
   
 
@@ -672,7 +713,7 @@
 
     <h2 class="archive__item-title" itemprop="headline">
       
-        <a href="https://gfichetdc.github.io/my-website/teaching/2019-spring-teaching-3" rel="permalink">Tutoring for Lumière sur l’Univers
+        <a href="https://gfichetdc.github.io/my-website/teaching/2019-spring-teaching-3" rel="permalink" onclick="toggleChart(event, 'tutoring-for-lumière-sur-l-univers')">Tutoring for Lumière sur l’Univers
 </a>
       
     </h2>
@@ -680,17 +721,23 @@
     
 
     
-      <p> University Diploma, <i>Observatoire de Paris</i>, 2019 </p>
     
+  </article>
+</div>
 
-    
-      <p class="archive__item-excerpt" itemprop="description"><p>As a tutor for the “Lumière sur l’Univers” university diploma program, I provided guidance and support to students as they explored various topics in astronomy and astrophysics.</p>
-
-</p>
-    
-
-    
-    
+<script>
+// Global toggle function
+function toggleChart(event, chartId) {
+  event.preventDefault();
+  const container = document.getElementById(`chart-${chartId}`);
+  if (container) {
+    container.style.display = container.style.display === 'none' ? 'block' : 'none';
+    if (!container.querySelector('canvas').dataset.initialized) {
+      window[`initChart${chartId}`]();
+    }
+  }
+}
+</script>
     
   
     
@@ -706,7 +753,7 @@
 
     <h2 class="archive__item-title" itemprop="headline">
       
-        <a href="https://gfichetdc.github.io/my-website/teaching/2019-spring-teaching-1" rel="permalink">Data Processing and Associated Methods
+        <a href="https://gfichetdc.github.io/my-website/teaching/2019-spring-teaching-1" rel="permalink" onclick="toggleChart(event, 'data-processing-and-associated-methods')">Data Processing and Associated Methods
 </a>
       
     </h2>
@@ -714,17 +761,23 @@
     
 
     
-      <p> Master Course, <i>Observatoire de Paris</i>, 2019 </p>
     
+  </article>
+</div>
 
-    
-      <p class="archive__item-excerpt" itemprop="description"><p>This course covered data processing techniques and associated methods for space science and technology students. I supervised evening observation sessions and practical workshops for data analysis.</p>
-
-</p>
-    
-
-    
-    
+<script>
+// Global toggle function
+function toggleChart(event, chartId) {
+  event.preventDefault();
+  const container = document.getElementById(`chart-${chartId}`);
+  if (container) {
+    container.style.display = container.style.display === 'none' ? 'block' : 'none';
+    if (!container.querySelector('canvas').dataset.initialized) {
+      window[`initChart${chartId}`]();
+    }
+  }
+}
+</script>
     
   
     
@@ -740,7 +793,7 @@
 
     <h2 class="archive__item-title" itemprop="headline">
       
-        <a href="https://gfichetdc.github.io/my-website/teaching/2019-spring-teaching-2" rel="permalink">Interactions Milieux Dilués et Rayonnements
+        <a href="https://gfichetdc.github.io/my-website/teaching/2019-spring-teaching-2" rel="permalink" onclick="toggleChart(event, 'interactions-milieux-dilués-et-rayonnements')">Interactions Milieux Dilués et Rayonnements
 </a>
       
     </h2>
@@ -748,17 +801,23 @@
     
 
     
-      <p> Master Course, <i>Sorbonne Université</i>, 2019 </p>
     
+  </article>
+</div>
 
-    
-      <p class="archive__item-excerpt" itemprop="description"><p>This course focused on the interactions between dilute media and radiation, providing students with a deep understanding of the underlying physical principles. I led tutorial sessions to reinforce learning through problem-solving exercises.</p>
-
-</p>
-    
-
-    
-    
+<script>
+// Global toggle function
+function toggleChart(event, chartId) {
+  event.preventDefault();
+  const container = document.getElementById(`chart-${chartId}`);
+  if (container) {
+    container.style.display = container.style.display === 'none' ? 'block' : 'none';
+    if (!container.querySelector('canvas').dataset.initialized) {
+      window[`initChart${chartId}`]();
+    }
+  }
+}
+</script>
     
   
 

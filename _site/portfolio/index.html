@@ -274,7 +274,7 @@
 
     <h2 class="archive__item-title" itemprop="headline">
       
-        <a href="https://gfichetdc.github.io/my-website/portfolio/portfolio-1/" rel="permalink">Portfolio item number 1
+        <a href="https://gfichetdc.github.io/my-website/portfolio/portfolio-1/" rel="permalink" onclick="toggleChart(event, 'portfolio-item-number-1')">Portfolio item number 1
 </a>
       
     </h2>
@@ -282,14 +282,23 @@
     
 
     
+    
+  </article>
+</div>
 
-    
-      <p class="archive__item-excerpt" itemprop="description"><p>Short description of portfolio item number 1<br /><img src="/images/500x300.png" /></p>
-</p>
-    
-
-    
-    
+<script>
+// Global toggle function
+function toggleChart(event, chartId) {
+  event.preventDefault();
+  const container = document.getElementById(`chart-${chartId}`);
+  if (container) {
+    container.style.display = container.style.display === 'none' ? 'block' : 'none';
+    if (!container.querySelector('canvas').dataset.initialized) {
+      window[`initChart${chartId}`]();
+    }
+  }
+}
+</script>
 
   
 
@@ -303,7 +312,7 @@
 
     <h2 class="archive__item-title" itemprop="headline">
       
-        <a href="https://gfichetdc.github.io/my-website/portfolio/portfolio-2/" rel="permalink">Portfolio item number 2
+        <a href="https://gfichetdc.github.io/my-website/portfolio/portfolio-2/" rel="permalink" onclick="toggleChart(event, 'portfolio-item-number-2')">Portfolio item number 2
 </a>
       
     </h2>
@@ -311,14 +320,23 @@
     
 
     
+    
+  </article>
+</div>
 
-    
-      <p class="archive__item-excerpt" itemprop="description"><p>Short description of portfolio item number 2 <br /><img src="/images/500x300.png" /></p>
-</p>
-    
-
-    
-    
+<script>
+// Global toggle function
+function toggleChart(event, chartId) {
+  event.preventDefault();
+  const container = document.getElementById(`chart-${chartId}`);
+  if (container) {
+    container.style.display = container.style.display === 'none' ? 'block' : 'none';
+    if (!container.querySelector('canvas').dataset.initialized) {
+      window[`initChart${chartId}`]();
+    }
+  }
+}
+</script>
 
 
 

@@ -497,24 +497,30 @@
 
     <h2 class="archive__item-title" itemprop="headline">
       
-        <a href="https://gfichetdc.github.io/my-website/404.html" rel="permalink">Page Not Found</a>
+        <a href="https://gfichetdc.github.io/my-website/404.html" rel="permalink" onclick="toggleChart(event, 'page-not-found')">Page Not Found</a>
       
     </h2>
 
     
 
     
-
     
+  </article>
+</div>
 
-    
-    
-
-
-
-
-
-
+<script>
+// Global toggle function
+function toggleChart(event, chartId) {
+  event.preventDefault();
+  const container = document.getElementById(`chart-${chartId}`);
+  if (container) {
+    container.style.display = container.style.display === 'none' ? 'block' : 'none';
+    if (!container.querySelector('canvas').dataset.initialized) {
+      window[`initChart${chartId}`]();
+    }
+  }
+}
+</script>
 
 <div class="list__item">
   <article class="archive__item" itemscope="" itemtype="http://schema.org/CreativeWork">
@@ -522,24 +528,30 @@
 
     <h2 class="archive__item-title" itemprop="headline">
       
-        <a href="https://gfichetdc.github.io/my-website/" rel="permalink">Welcome to my website!</a>
+        <a href="https://gfichetdc.github.io/my-website/" rel="permalink" onclick="toggleChart(event, 'welcome-to-my-website')">Welcome to my website!</a>
       
     </h2>
 
     
 
     
-
     
+  </article>
+</div>
 
-    
-    
-
-
-
-
-
-
+<script>
+// Global toggle function
+function toggleChart(event, chartId) {
+  event.preventDefault();
+  const container = document.getElementById(`chart-${chartId}`);
+  if (container) {
+    container.style.display = container.style.display === 'none' ? 'block' : 'none';
+    if (!container.querySelector('canvas').dataset.initialized) {
+      window[`initChart${chartId}`]();
+    }
+  }
+}
+</script>
 
 <div class="list__item">
   <article class="archive__item" itemscope="" itemtype="http://schema.org/CreativeWork">
@@ -547,24 +559,30 @@
 
     <h2 class="archive__item-title" itemprop="headline">
       
-        <a href="https://gfichetdc.github.io/my-website/archive-layout-with-content/" rel="permalink">Archive Layout with Content</a>
+        <a href="https://gfichetdc.github.io/my-website/archive-layout-with-content/" rel="permalink" onclick="toggleChart(event, 'archive-layout-with-content')">Archive Layout with Content</a>
       
     </h2>
 
     
 
     
-
     
+  </article>
+</div>
 
-    
-    
-
-
-
-
-
-
+<script>
+// Global toggle function
+function toggleChart(event, chartId) {
+  event.preventDefault();
+  const container = document.getElementById(`chart-${chartId}`);
+  if (container) {
+    container.style.display = container.style.display === 'none' ? 'block' : 'none';
+    if (!container.querySelector('canvas').dataset.initialized) {
+      window[`initChart${chartId}`]();
+    }
+  }
+}
+</script>
 
 <div class="list__item">
   <article class="archive__item" itemscope="" itemtype="http://schema.org/CreativeWork">
@@ -572,24 +590,30 @@
 
     <h2 class="archive__item-title" itemprop="headline">
       
-        <a href="https://gfichetdc.github.io/my-website/categories/" rel="permalink">Posts by Category</a>
+        <a href="https://gfichetdc.github.io/my-website/categories/" rel="permalink" onclick="toggleChart(event, 'posts-by-category')">Posts by Category</a>
       
     </h2>
 
     
 
     
-
     
+  </article>
+</div>
 
-    
-    
-
-
-
-
-
-
+<script>
+// Global toggle function
+function toggleChart(event, chartId) {
+  event.preventDefault();
+  const container = document.getElementById(`chart-${chartId}`);
+  if (container) {
+    container.style.display = container.style.display === 'none' ? 'block' : 'none';
+    if (!container.querySelector('canvas').dataset.initialized) {
+      window[`initChart${chartId}`]();
+    }
+  }
+}
+</script>
 
 <div class="list__item">
   <article class="archive__item" itemscope="" itemtype="http://schema.org/CreativeWork">
@@ -597,24 +621,30 @@
 
     <h2 class="archive__item-title" itemprop="headline">
       
-        <a href="https://gfichetdc.github.io/my-website/collection-archive/" rel="permalink">Posts by Collection</a>
+        <a href="https://gfichetdc.github.io/my-website/collection-archive/" rel="permalink" onclick="toggleChart(event, 'posts-by-collection')">Posts by Collection</a>
       
     </h2>
 
     
 
     
-
     
+  </article>
+</div>
 
-    
-    
-
-
-
-
-
-
+<script>
+// Global toggle function
+function toggleChart(event, chartId) {
+  event.preventDefault();
+  const container = document.getElementById(`chart-${chartId}`);
+  if (container) {
+    container.style.display = container.style.display === 'none' ? 'block' : 'none';
+    if (!container.querySelector('canvas').dataset.initialized) {
+      window[`initChart${chartId}`]();
+    }
+  }
+}
+</script>
 
 <div class="list__item">
   <article class="archive__item" itemscope="" itemtype="http://schema.org/CreativeWork">
@@ -622,24 +652,30 @@
 
     <h2 class="archive__item-title" itemprop="headline">
       
-        <a href="https://gfichetdc.github.io/my-website/cv-json/" rel="permalink">CV</a>
+        <a href="https://gfichetdc.github.io/my-website/cv-json/" rel="permalink" onclick="toggleChart(event, 'cv')">CV</a>
       
     </h2>
 
     
 
     
-
     
+  </article>
+</div>
 
-    
-    
-
-
-
-
-
-
+<script>
+// Global toggle function
+function toggleChart(event, chartId) {
+  event.preventDefault();
+  const container = document.getElementById(`chart-${chartId}`);
+  if (container) {
+    container.style.display = container.style.display === 'none' ? 'block' : 'none';
+    if (!container.querySelector('canvas').dataset.initialized) {
+      window[`initChart${chartId}`]();
+    }
+  }
+}
+</script>
 
 <div class="list__item">
   <article class="archive__item" itemscope="" itemtype="http://schema.org/CreativeWork">
@@ -647,24 +683,30 @@
 
     <h2 class="archive__item-title" itemprop="headline">
       
-        <a href="https://gfichetdc.github.io/my-website/cv/" rel="permalink">CV</a>
+        <a href="https://gfichetdc.github.io/my-website/cv/" rel="permalink" onclick="toggleChart(event, 'cv')">CV</a>
       
     </h2>
 
     
 
     
-
     
+  </article>
+</div>
 
-    
-    
-
-
-
-
-
-
+<script>
+// Global toggle function
+function toggleChart(event, chartId) {
+  event.preventDefault();
+  const container = document.getElementById(`chart-${chartId}`);
+  if (container) {
+    container.style.display = container.style.display === 'none' ? 'block' : 'none';
+    if (!container.querySelector('canvas').dataset.initialized) {
+      window[`initChart${chartId}`]();
+    }
+  }
+}
+</script>
 
 <div class="list__item">
   <article class="archive__item" itemscope="" itemtype="http://schema.org/CreativeWork">
@@ -672,24 +714,30 @@
 
     <h2 class="archive__item-title" itemprop="headline">
       
-        <a href="https://gfichetdc.github.io/my-website/assets/css/main.css" rel="permalink"></a>
+        <a href="https://gfichetdc.github.io/my-website/assets/css/main.css" rel="permalink" onclick="toggleChart(event, '')"></a>
       
     </h2>
 
     
 
     
-
     
+  </article>
+</div>
 
-    
-    
-
-
-
-
-
-
+<script>
+// Global toggle function
+function toggleChart(event, chartId) {
+  event.preventDefault();
+  const container = document.getElementById(`chart-${chartId}`);
+  if (container) {
+    container.style.display = container.style.display === 'none' ? 'block' : 'none';
+    if (!container.querySelector('canvas').dataset.initialized) {
+      window[`initChart${chartId}`]();
+    }
+  }
+}
+</script>
 
 <div class="list__item">
   <article class="archive__item" itemscope="" itemtype="http://schema.org/CreativeWork">
@@ -697,24 +745,30 @@
 
     <h2 class="archive__item-title" itemprop="headline">
       
-        <a href="https://gfichetdc.github.io/my-website/markdown/" rel="permalink">Markdown</a>
+        <a href="https://gfichetdc.github.io/my-website/markdown/" rel="permalink" onclick="toggleChart(event, 'markdown')">Markdown</a>
       
     </h2>
 
     
 
     
-
     
+  </article>
+</div>
 
-    
-    
-
-
-
-
-
-
+<script>
+// Global toggle function
+function toggleChart(event, chartId) {
+  event.preventDefault();
+  const container = document.getElementById(`chart-${chartId}`);
+  if (container) {
+    container.style.display = container.style.display === 'none' ? 'block' : 'none';
+    if (!container.querySelector('canvas').dataset.initialized) {
+      window[`initChart${chartId}`]();
+    }
+  }
+}
+</script>
 
 <div class="list__item">
   <article class="archive__item" itemscope="" itemtype="http://schema.org/CreativeWork">
@@ -722,24 +776,30 @@
 
     <h2 class="archive__item-title" itemprop="headline">
       
-        <a href="https://gfichetdc.github.io/my-website/non-menu-page/" rel="permalink">Page not in menu</a>
+        <a href="https://gfichetdc.github.io/my-website/non-menu-page/" rel="permalink" onclick="toggleChart(event, 'page-not-in-menu')">Page not in menu</a>
       
     </h2>
 
     
 
     
-
     
+  </article>
+</div>
 
-    
-    
-
-
-
-
-
-
+<script>
+// Global toggle function
+function toggleChart(event, chartId) {
+  event.preventDefault();
+  const container = document.getElementById(`chart-${chartId}`);
+  if (container) {
+    container.style.display = container.style.display === 'none' ? 'block' : 'none';
+    if (!container.querySelector('canvas').dataset.initialized) {
+      window[`initChart${chartId}`]();
+    }
+  }
+}
+</script>
 
 <div class="list__item">
   <article class="archive__item" itemscope="" itemtype="http://schema.org/CreativeWork">
@@ -747,24 +807,30 @@
 
     <h2 class="archive__item-title" itemprop="headline">
       
-        <a href="https://gfichetdc.github.io/my-website/page-archive/" rel="permalink">Page Archive</a>
+        <a href="https://gfichetdc.github.io/my-website/page-archive/" rel="permalink" onclick="toggleChart(event, 'page-archive')">Page Archive</a>
       
     </h2>
 
     
 
     
-
     
+  </article>
+</div>
 
-    
-    
-
-
-
-
-
-
+<script>
+// Global toggle function
+function toggleChart(event, chartId) {
+  event.preventDefault();
+  const container = document.getElementById(`chart-${chartId}`);
+  if (container) {
+    container.style.display = container.style.display === 'none' ? 'block' : 'none';
+    if (!container.querySelector('canvas').dataset.initialized) {
+      window[`initChart${chartId}`]();
+    }
+  }
+}
+</script>
 
 <div class="list__item">
   <article class="archive__item" itemscope="" itemtype="http://schema.org/CreativeWork">
@@ -772,24 +838,30 @@
 
     <h2 class="archive__item-title" itemprop="headline">
       
-        <a href="https://gfichetdc.github.io/my-website/portfolio/" rel="permalink">Portfolio</a>
+        <a href="https://gfichetdc.github.io/my-website/portfolio/" rel="permalink" onclick="toggleChart(event, 'portfolio')">Portfolio</a>
       
     </h2>
 
     
 
     
-
     
+  </article>
+</div>
 
-    
-    
-
-
-
-
-
-
+<script>
+// Global toggle function
+function toggleChart(event, chartId) {
+  event.preventDefault();
+  const container = document.getElementById(`chart-${chartId}`);
+  if (container) {
+    container.style.display = container.style.display === 'none' ? 'block' : 'none';
+    if (!container.querySelector('canvas').dataset.initialized) {
+      window[`initChart${chartId}`]();
+    }
+  }
+}
+</script>
 
 <div class="list__item">
   <article class="archive__item" itemscope="" itemtype="http://schema.org/CreativeWork">
@@ -797,24 +869,30 @@
 
     <h2 class="archive__item-title" itemprop="headline">
       
-        <a href="https://gfichetdc.github.io/my-website/publications/" rel="permalink">Publications</a>
+        <a href="https://gfichetdc.github.io/my-website/publications/" rel="permalink" onclick="toggleChart(event, 'publications')">Publications</a>
       
     </h2>
 
     
 
     
-
     
+  </article>
+</div>
 
-    
-    
-
-
-
-
-
-
+<script>
+// Global toggle function
+function toggleChart(event, chartId) {
+  event.preventDefault();
+  const container = document.getElementById(`chart-${chartId}`);
+  if (container) {
+    container.style.display = container.style.display === 'none' ? 'block' : 'none';
+    if (!container.querySelector('canvas').dataset.initialized) {
+      window[`initChart${chartId}`]();
+    }
+  }
+}
+</script>
 
 <div class="list__item">
   <article class="archive__item" itemscope="" itemtype="http://schema.org/CreativeWork">
@@ -822,24 +900,30 @@
 
     <h2 class="archive__item-title" itemprop="headline">
       
-        <a href="https://gfichetdc.github.io/my-website/sitemap/" rel="permalink">Sitemap</a>
+        <a href="https://gfichetdc.github.io/my-website/sitemap/" rel="permalink" onclick="toggleChart(event, 'sitemap')">Sitemap</a>
       
     </h2>
 
     
 
     
-
     
+  </article>
+</div>
 
-    
-    
-
-
-
-
-
-
+<script>
+// Global toggle function
+function toggleChart(event, chartId) {
+  event.preventDefault();
+  const container = document.getElementById(`chart-${chartId}`);
+  if (container) {
+    container.style.display = container.style.display === 'none' ? 'block' : 'none';
+    if (!container.querySelector('canvas').dataset.initialized) {
+      window[`initChart${chartId}`]();
+    }
+  }
+}
+</script>
 
 <div class="list__item">
   <article class="archive__item" itemscope="" itemtype="http://schema.org/CreativeWork">
@@ -847,24 +931,30 @@
 
     <h2 class="archive__item-title" itemprop="headline">
       
-        <a href="https://gfichetdc.github.io/my-website/tags/" rel="permalink">Posts by Tags</a>
+        <a href="https://gfichetdc.github.io/my-website/tags/" rel="permalink" onclick="toggleChart(event, 'posts-by-tags')">Posts by Tags</a>
       
     </h2>
 
     
 
     
-
     
+  </article>
+</div>
 
-    
-    
-
-
-
-
-
-
+<script>
+// Global toggle function
+function toggleChart(event, chartId) {
+  event.preventDefault();
+  const container = document.getElementById(`chart-${chartId}`);
+  if (container) {
+    container.style.display = container.style.display === 'none' ? 'block' : 'none';
+    if (!container.querySelector('canvas').dataset.initialized) {
+      window[`initChart${chartId}`]();
+    }
+  }
+}
+</script>
 
 <div class="list__item">
   <article class="archive__item" itemscope="" itemtype="http://schema.org/CreativeWork">
@@ -872,24 +962,30 @@
 
     <h2 class="archive__item-title" itemprop="headline">
       
-        <a href="https://gfichetdc.github.io/my-website/talkmap.html" rel="permalink">Talk map</a>
+        <a href="https://gfichetdc.github.io/my-website/talkmap.html" rel="permalink" onclick="toggleChart(event, 'talk-map')">Talk map</a>
       
     </h2>
 
     
 
     
-
     
+  </article>
+</div>
 
-    
-    
-
-
-
-
-
-
+<script>
+// Global toggle function
+function toggleChart(event, chartId) {
+  event.preventDefault();
+  const container = document.getElementById(`chart-${chartId}`);
+  if (container) {
+    container.style.display = container.style.display === 'none' ? 'block' : 'none';
+    if (!container.querySelector('canvas').dataset.initialized) {
+      window[`initChart${chartId}`]();
+    }
+  }
+}
+</script>
 
 <div class="list__item">
   <article class="archive__item" itemscope="" itemtype="http://schema.org/CreativeWork">
@@ -897,24 +993,30 @@
 
     <h2 class="archive__item-title" itemprop="headline">
       
-        <a href="https://gfichetdc.github.io/my-website/talks/" rel="permalink">Talks and presentations</a>
+        <a href="https://gfichetdc.github.io/my-website/talks/" rel="permalink" onclick="toggleChart(event, 'talks-and-presentations')">Talks and presentations</a>
       
     </h2>
 
     
 
     
-
     
+  </article>
+</div>
 
-    
-    
-
-
-
-
-
-
+<script>
+// Global toggle function
+function toggleChart(event, chartId) {
+  event.preventDefault();
+  const container = document.getElementById(`chart-${chartId}`);
+  if (container) {
+    container.style.display = container.style.display === 'none' ? 'block' : 'none';
+    if (!container.querySelector('canvas').dataset.initialized) {
+      window[`initChart${chartId}`]();
+    }
+  }
+}
+</script>
 
 <div class="list__item">
   <article class="archive__item" itemscope="" itemtype="http://schema.org/CreativeWork">
@@ -922,24 +1024,30 @@
 
     <h2 class="archive__item-title" itemprop="headline">
       
-        <a href="https://gfichetdc.github.io/my-website/teaching/" rel="permalink">Teaching</a>
+        <a href="https://gfichetdc.github.io/my-website/teaching/" rel="permalink" onclick="toggleChart(event, 'teaching')">Teaching</a>
       
     </h2>
 
     
 
     
-
     
+  </article>
+</div>
 
-    
-    
-
-
-
-
-
-
+<script>
+// Global toggle function
+function toggleChart(event, chartId) {
+  event.preventDefault();
+  const container = document.getElementById(`chart-${chartId}`);
+  if (container) {
+    container.style.display = container.style.display === 'none' ? 'block' : 'none';
+    if (!container.querySelector('canvas').dataset.initialized) {
+      window[`initChart${chartId}`]();
+    }
+  }
+}
+</script>
 
 <div class="list__item">
   <article class="archive__item" itemscope="" itemtype="http://schema.org/CreativeWork">
@@ -947,24 +1055,30 @@
 
     <h2 class="archive__item-title" itemprop="headline">
       
-        <a href="https://gfichetdc.github.io/my-website/terms/" rel="permalink">Terms and Privacy Policy</a>
+        <a href="https://gfichetdc.github.io/my-website/terms/" rel="permalink" onclick="toggleChart(event, 'terms-and-privacy-policy')">Terms and Privacy Policy</a>
       
     </h2>
 
     
 
     
-
     
+  </article>
+</div>
 
-    
-    
-
-
-
-
-
-
+<script>
+// Global toggle function
+function toggleChart(event, chartId) {
+  event.preventDefault();
+  const container = document.getElementById(`chart-${chartId}`);
+  if (container) {
+    container.style.display = container.style.display === 'none' ? 'block' : 'none';
+    if (!container.querySelector('canvas').dataset.initialized) {
+      window[`initChart${chartId}`]();
+    }
+  }
+}
+</script>
 
 <div class="list__item">
   <article class="archive__item" itemscope="" itemtype="http://schema.org/CreativeWork">
@@ -972,24 +1086,30 @@
 
     <h2 class="archive__item-title" itemprop="headline">
       
-        <a href="https://gfichetdc.github.io/my-website/year-archive/" rel="permalink">Blog posts</a>
+        <a href="https://gfichetdc.github.io/my-website/year-archive/" rel="permalink" onclick="toggleChart(event, 'blog-posts')">Blog posts</a>
       
     </h2>
 
     
 
     
-
     
+  </article>
+</div>
 
-    
-    
-
-
-
-
-
-
+<script>
+// Global toggle function
+function toggleChart(event, chartId) {
+  event.preventDefault();
+  const container = document.getElementById(`chart-${chartId}`);
+  if (container) {
+    container.style.display = container.style.display === 'none' ? 'block' : 'none';
+    if (!container.querySelector('canvas').dataset.initialized) {
+      window[`initChart${chartId}`]();
+    }
+  }
+}
+</script>
 
 <div class="list__item">
   <article class="archive__item" itemscope="" itemtype="http://schema.org/CreativeWork">
@@ -997,24 +1117,30 @@
 
     <h2 class="archive__item-title" itemprop="headline">
       
-        <a href="https://gfichetdc.github.io/my-website/about/" rel="permalink"></a>
+        <a href="https://gfichetdc.github.io/my-website/about/" rel="permalink" onclick="toggleChart(event, '')"></a>
       
     </h2>
 
     
 
     
-
     
+  </article>
+</div>
 
-    
-    
-
-
-
-
-
-
+<script>
+// Global toggle function
+function toggleChart(event, chartId) {
+  event.preventDefault();
+  const container = document.getElementById(`chart-${chartId}`);
+  if (container) {
+    container.style.display = container.style.display === 'none' ? 'block' : 'none';
+    if (!container.querySelector('canvas').dataset.initialized) {
+      window[`initChart${chartId}`]();
+    }
+  }
+}
+</script>
 
 <div class="list__item">
   <article class="archive__item" itemscope="" itemtype="http://schema.org/CreativeWork">
@@ -1022,24 +1148,30 @@
 
     <h2 class="archive__item-title" itemprop="headline">
       
-        <a href="https://gfichetdc.github.io/my-website/about.html" rel="permalink"></a>
+        <a href="https://gfichetdc.github.io/my-website/about.html" rel="permalink" onclick="toggleChart(event, '')"></a>
       
     </h2>
 
     
 
     
-
     
+  </article>
+</div>
 
-    
-    
-
-
-
-
-
-
+<script>
+// Global toggle function
+function toggleChart(event, chartId) {
+  event.preventDefault();
+  const container = document.getElementById(`chart-${chartId}`);
+  if (container) {
+    container.style.display = container.style.display === 'none' ? 'block' : 'none';
+    if (!container.querySelector('canvas').dataset.initialized) {
+      window[`initChart${chartId}`]();
+    }
+  }
+}
+</script>
 
 <div class="list__item">
   <article class="archive__item" itemscope="" itemtype="http://schema.org/CreativeWork">
@@ -1047,24 +1179,30 @@
 
     <h2 class="archive__item-title" itemprop="headline">
       
-        <a href="https://gfichetdc.github.io/my-website/resume-json" rel="permalink"></a>
+        <a href="https://gfichetdc.github.io/my-website/resume-json" rel="permalink" onclick="toggleChart(event, '')"></a>
       
     </h2>
 
     
 
     
-
     
+  </article>
+</div>
 
-    
-    
-
-
-
-
-
-
+<script>
+// Global toggle function
+function toggleChart(event, chartId) {
+  event.preventDefault();
+  const container = document.getElementById(`chart-${chartId}`);
+  if (container) {
+    container.style.display = container.style.display === 'none' ? 'block' : 'none';
+    if (!container.querySelector('canvas').dataset.initialized) {
+      window[`initChart${chartId}`]();
+    }
+  }
+}
+</script>
 
 <div class="list__item">
   <article class="archive__item" itemscope="" itemtype="http://schema.org/CreativeWork">
@@ -1072,24 +1210,30 @@
 
     <h2 class="archive__item-title" itemprop="headline">
       
-        <a href="https://gfichetdc.github.io/my-website/resume" rel="permalink"></a>
+        <a href="https://gfichetdc.github.io/my-website/resume" rel="permalink" onclick="toggleChart(event, '')"></a>
       
     </h2>
 
     
 
     
-
     
+  </article>
+</div>
 
-    
-    
-
-
-
-
-
-
+<script>
+// Global toggle function
+function toggleChart(event, chartId) {
+  event.preventDefault();
+  const container = document.getElementById(`chart-${chartId}`);
+  if (container) {
+    container.style.display = container.style.display === 'none' ? 'block' : 'none';
+    if (!container.querySelector('canvas').dataset.initialized) {
+      window[`initChart${chartId}`]();
+    }
+  }
+}
+</script>
 
 <div class="list__item">
   <article class="archive__item" itemscope="" itemtype="http://schema.org/CreativeWork">
@@ -1097,24 +1241,30 @@
 
     <h2 class="archive__item-title" itemprop="headline">
       
-        <a href="https://gfichetdc.github.io/my-website/md/" rel="permalink"></a>
+        <a href="https://gfichetdc.github.io/my-website/md/" rel="permalink" onclick="toggleChart(event, '')"></a>
       
     </h2>
 
     
 
     
-
     
+  </article>
+</div>
 
-    
-    
-
-
-
-
-
-
+<script>
+// Global toggle function
+function toggleChart(event, chartId) {
+  event.preventDefault();
+  const container = document.getElementById(`chart-${chartId}`);
+  if (container) {
+    container.style.display = container.style.display === 'none' ? 'block' : 'none';
+    if (!container.querySelector('canvas').dataset.initialized) {
+      window[`initChart${chartId}`]();
+    }
+  }
+}
+</script>
 
 <div class="list__item">
   <article class="archive__item" itemscope="" itemtype="http://schema.org/CreativeWork">
@@ -1122,24 +1272,30 @@
 
     <h2 class="archive__item-title" itemprop="headline">
       
-        <a href="https://gfichetdc.github.io/my-website/markdown.html" rel="permalink"></a>
+        <a href="https://gfichetdc.github.io/my-website/markdown.html" rel="permalink" onclick="toggleChart(event, '')"></a>
       
     </h2>
 
     
 
     
-
     
+  </article>
+</div>
 
-    
-    
-
-
-
-
-
-
+<script>
+// Global toggle function
+function toggleChart(event, chartId) {
+  event.preventDefault();
+  const container = document.getElementById(`chart-${chartId}`);
+  if (container) {
+    container.style.display = container.style.display === 'none' ? 'block' : 'none';
+    if (!container.querySelector('canvas').dataset.initialized) {
+      window[`initChart${chartId}`]();
+    }
+  }
+}
+</script>
 
 <div class="list__item">
   <article class="archive__item" itemscope="" itemtype="http://schema.org/CreativeWork">
@@ -1147,24 +1303,30 @@
 
     <h2 class="archive__item-title" itemprop="headline">
       
-        <a href="https://gfichetdc.github.io/my-website/nmp/" rel="permalink"></a>
+        <a href="https://gfichetdc.github.io/my-website/nmp/" rel="permalink" onclick="toggleChart(event, '')"></a>
       
     </h2>
 
     
 
     
-
     
+  </article>
+</div>
 
-    
-    
-
-
-
-
-
-
+<script>
+// Global toggle function
+function toggleChart(event, chartId) {
+  event.preventDefault();
+  const container = document.getElementById(`chart-${chartId}`);
+  if (container) {
+    container.style.display = container.style.display === 'none' ? 'block' : 'none';
+    if (!container.querySelector('canvas').dataset.initialized) {
+      window[`initChart${chartId}`]();
+    }
+  }
+}
+</script>
 
 <div class="list__item">
   <article class="archive__item" itemscope="" itemtype="http://schema.org/CreativeWork">
@@ -1172,24 +1334,30 @@
 
     <h2 class="archive__item-title" itemprop="headline">
       
-        <a href="https://gfichetdc.github.io/my-website/nmp.html" rel="permalink"></a>
+        <a href="https://gfichetdc.github.io/my-website/nmp.html" rel="permalink" onclick="toggleChart(event, '')"></a>
       
     </h2>
 
     
 
     
-
     
+  </article>
+</div>
 
-    
-    
-
-
-
-
-
-
+<script>
+// Global toggle function
+function toggleChart(event, chartId) {
+  event.preventDefault();
+  const container = document.getElementById(`chart-${chartId}`);
+  if (container) {
+    container.style.display = container.style.display === 'none' ? 'block' : 'none';
+    if (!container.querySelector('canvas').dataset.initialized) {
+      window[`initChart${chartId}`]();
+    }
+  }
+}
+</script>
 
 <div class="list__item">
   <article class="archive__item" itemscope="" itemtype="http://schema.org/CreativeWork">
@@ -1197,24 +1365,30 @@
 
     <h2 class="archive__item-title" itemprop="headline">
       
-        <a href="https://gfichetdc.github.io/my-website/wordpress/blog-posts/" rel="permalink"></a>
+        <a href="https://gfichetdc.github.io/my-website/wordpress/blog-posts/" rel="permalink" onclick="toggleChart(event, '')"></a>
       
     </h2>
 
     
 
     
-
     
+  </article>
+</div>
 
-    
-    
-
-
-
-
-
-
+<script>
+// Global toggle function
+function toggleChart(event, chartId) {
+  event.preventDefault();
+  const container = document.getElementById(`chart-${chartId}`);
+  if (container) {
+    container.style.display = container.style.display === 'none' ? 'block' : 'none';
+    if (!container.querySelector('canvas').dataset.initialized) {
+      window[`initChart${chartId}`]();
+    }
+  }
+}
+</script>
 
 <div class="list__item">
   <article class="archive__item" itemscope="" itemtype="http://schema.org/CreativeWork">
@@ -1222,24 +1396,30 @@
 
     <h2 class="archive__item-title" itemprop="headline">
       
-        <a href="https://gfichetdc.github.io/my-website/redirects.json" rel="permalink"></a>
+        <a href="https://gfichetdc.github.io/my-website/redirects.json" rel="permalink" onclick="toggleChart(event, '')"></a>
       
     </h2>
 
     
 
     
-
     
+  </article>
+</div>
 
-    
-    
-
-
-
-
-
-
+<script>
+// Global toggle function
+function toggleChart(event, chartId) {
+  event.preventDefault();
+  const container = document.getElementById(`chart-${chartId}`);
+  if (container) {
+    container.style.display = container.style.display === 'none' ? 'block' : 'none';
+    if (!container.querySelector('canvas').dataset.initialized) {
+      window[`initChart${chartId}`]();
+    }
+  }
+}
+</script>
 
 <div class="list__item">
   <article class="archive__item" itemscope="" itemtype="http://schema.org/CreativeWork">
@@ -1247,24 +1427,30 @@
 
     <h2 class="archive__item-title" itemprop="headline">
       
-        <a href="https://gfichetdc.github.io/my-website/feed.xml" rel="permalink"></a>
+        <a href="https://gfichetdc.github.io/my-website/feed.xml" rel="permalink" onclick="toggleChart(event, '')"></a>
       
     </h2>
 
     
 
     
-
     
+  </article>
+</div>
 
-    
-    
-
-
-
-
-
-
+<script>
+// Global toggle function
+function toggleChart(event, chartId) {
+  event.preventDefault();
+  const container = document.getElementById(`chart-${chartId}`);
+  if (container) {
+    container.style.display = container.style.display === 'none' ? 'block' : 'none';
+    if (!container.querySelector('canvas').dataset.initialized) {
+      window[`initChart${chartId}`]();
+    }
+  }
+}
+</script>
 
 <div class="list__item">
   <article class="archive__item" itemscope="" itemtype="http://schema.org/CreativeWork">
@@ -1272,24 +1458,30 @@
 
     <h2 class="archive__item-title" itemprop="headline">
       
-        <a href="https://gfichetdc.github.io/my-website/sitemap.xml" rel="permalink"></a>
+        <a href="https://gfichetdc.github.io/my-website/sitemap.xml" rel="permalink" onclick="toggleChart(event, '')"></a>
       
     </h2>
 
     
 
     
-
     
+  </article>
+</div>
 
-    
-    
-
-
-
-
-
-
+<script>
+// Global toggle function
+function toggleChart(event, chartId) {
+  event.preventDefault();
+  const container = document.getElementById(`chart-${chartId}`);
+  if (container) {
+    container.style.display = container.style.display === 'none' ? 'block' : 'none';
+    if (!container.querySelector('canvas').dataset.initialized) {
+      window[`initChart${chartId}`]();
+    }
+  }
+}
+</script>
 
 <div class="list__item">
   <article class="archive__item" itemscope="" itemtype="http://schema.org/CreativeWork">
@@ -1297,19 +1489,31 @@
 
     <h2 class="archive__item-title" itemprop="headline">
       
-        <a href="https://gfichetdc.github.io/my-website/robots.txt" rel="permalink"></a>
+        <a href="https://gfichetdc.github.io/my-website/robots.txt" rel="permalink" onclick="toggleChart(event, '')"></a>
       
     </h2>
 
     
 
     
+    
+  </article>
+</div>
 
-    
+<script>
+// Global toggle function
+function toggleChart(event, chartId) {
+  event.preventDefault();
+  const container = document.getElementById(`chart-${chartId}`);
+  if (container) {
+    container.style.display = container.style.display === 'none' ? 'block' : 'none';
+    if (!container.querySelector('canvas').dataset.initialized) {
+      window[`initChart${chartId}`]();
+    }
+  }
+}
+</script>
 
-    
-    
-</article></div></article></div></article></div></article></div></article></div></article></div></article></div></article></div></article></div></article></div></article></div></article></div></article></div></article></div></article></div></article></div></article></div></article></div></article></div></article></div></article></div></article></div></article></div></article></div></article></div></article></div></article></div></article></div></article></div></article></div></article></div></article></div></article></div>
 
   </div>
 </div>

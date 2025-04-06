@@ -273,7 +273,7 @@
 
     <h2 class="archive__item-title" itemprop="headline">
       
-        <a href="https://gfichetdc.github.io/my-website/teaching/2019-spring-teaching-2" rel="permalink">Interactions Milieux Dilués et Rayonnements
+        <a href="https://gfichetdc.github.io/my-website/teaching/2019-spring-teaching-2" rel="permalink" onclick="toggleChart(event, 'interactions-milieux-dilués-et-rayonnements')">Interactions Milieux Dilués et Rayonnements
 </a>
       
     </h2>
@@ -281,17 +281,23 @@
     
 
     
-      <p> Master Course, <i>Sorbonne Université</i>, 2019 </p>
     
+  </article>
+</div>
 
-    
-      <p class="archive__item-excerpt" itemprop="description"><p>This course focused on the interactions between dilute media and radiation, providing students with a deep understanding of the underlying physical principles. I led tutorial sessions to reinforce learning through problem-solving exercises.</p>
-
-</p>
-    
-
-    
-    
+<script>
+// Global toggle function
+function toggleChart(event, chartId) {
+  event.preventDefault();
+  const container = document.getElementById(`chart-${chartId}`);
+  if (container) {
+    container.style.display = container.style.display === 'none' ? 'block' : 'none';
+    if (!container.querySelector('canvas').dataset.initialized) {
+      window[`initChart${chartId}`]();
+    }
+  }
+}
+</script>
 
   
 
@@ -305,7 +311,7 @@
 
     <h2 class="archive__item-title" itemprop="headline">
       
-        <a href="https://gfichetdc.github.io/my-website/teaching/2019-spring-teaching-1" rel="permalink">Data Processing and Associated Methods
+        <a href="https://gfichetdc.github.io/my-website/teaching/2019-spring-teaching-1" rel="permalink" onclick="toggleChart(event, 'data-processing-and-associated-methods')">Data Processing and Associated Methods
 </a>
       
     </h2>
@@ -313,17 +319,23 @@
     
 
     
-      <p> Master Course, <i>Observatoire de Paris</i>, 2019 </p>
     
+  </article>
+</div>
 
-    
-      <p class="archive__item-excerpt" itemprop="description"><p>This course covered data processing techniques and associated methods for space science and technology students. I supervised evening observation sessions and practical workshops for data analysis.</p>
-
-</p>
-    
-
-    
-    
+<script>
+// Global toggle function
+function toggleChart(event, chartId) {
+  event.preventDefault();
+  const container = document.getElementById(`chart-${chartId}`);
+  if (container) {
+    container.style.display = container.style.display === 'none' ? 'block' : 'none';
+    if (!container.querySelector('canvas').dataset.initialized) {
+      window[`initChart${chartId}`]();
+    }
+  }
+}
+</script>
 
   
 
@@ -337,7 +349,7 @@
 
     <h2 class="archive__item-title" itemprop="headline">
       
-        <a href="https://gfichetdc.github.io/my-website/teaching/2019-spring-teaching-3" rel="permalink">Tutoring for Lumière sur l’Univers
+        <a href="https://gfichetdc.github.io/my-website/teaching/2019-spring-teaching-3" rel="permalink" onclick="toggleChart(event, 'tutoring-for-lumière-sur-l-univers')">Tutoring for Lumière sur l’Univers
 </a>
       
     </h2>
@@ -345,17 +357,23 @@
     
 
     
-      <p> University Diploma, <i>Observatoire de Paris</i>, 2019 </p>
     
+  </article>
+</div>
 
-    
-      <p class="archive__item-excerpt" itemprop="description"><p>As a tutor for the “Lumière sur l’Univers” university diploma program, I provided guidance and support to students as they explored various topics in astronomy and astrophysics.</p>
-
-</p>
-    
-
-    
-    
+<script>
+// Global toggle function
+function toggleChart(event, chartId) {
+  event.preventDefault();
+  const container = document.getElementById(`chart-${chartId}`);
+  if (container) {
+    container.style.display = container.style.display === 'none' ? 'block' : 'none';
+    if (!container.querySelector('canvas').dataset.initialized) {
+      window[`initChart${chartId}`]();
+    }
+  }
+}
+</script>
 
 
   </div>
