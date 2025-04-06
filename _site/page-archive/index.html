@@ -278,39 +278,93 @@
 
 
 
+
+
 <div class="list__item">
   <article class="archive__item" itemscope itemtype="http://schema.org/CreativeWork">
     
 
     <h2 class="archive__item-title" itemprop="headline">
       
-        <a href="https://gfichetdc.github.io/my-website/404.html" rel="permalink">Page Not Found</a>
+        <a href="https://gfichetdc.github.io/my-website/404.html" rel="permalink" onclick="toggleChart(event, 'page-not-found')">Page Not Found</a>
       
     </h2>
-    
+
+    <!-- Existing metadata section remains unchanged -->
     
 
-        
+    <!-- Citation chart container -->
+    
 
+    <!-- Existing content remains unchanged -->
     
+
+    <!-- Existing citation/links section remains unchanged -->
     
-    
+    <!-- Other conditional link blocks remain unchanged -->
 
   </article>
 </div>
 
+<script>
+function toggleChart(event, chartId) {
+  event.preventDefault();
+  const container = document.getElementById(`chart-${chartId}`);
+  if (container) {
+    container.style.display = container.style.display === 'none' ? 'block' : 'none';
+    
+    if (!container.dataset.initialized && container.style.display === 'block') {
+      const ctx = container.querySelector('.citation-canvas').getContext('2d');
+      const data = null;
+      
+      new Chart(ctx, {
+        type: 'line',
+        data: {
+          labels: data.citations_over_time.map(d => d.year),
+          datasets: [{
+            label: 'Citations Over Time',
+            data: data.citations_over_time.map(d => d.citations),
+            borderColor: '#2c7be5',
+            backgroundColor: 'rgba(44, 123, 229, 0.1)',
+            tension: 0.3
+          }]
+        },
+        options: {
+          responsive: true,
+          plugins: {
+            legend: {
+              position: 'bottom'
+            }
+          }
+        }
+      });
+      
+      container.dataset.initialized = true;
+    }
+  }
+}
+</script>
 
+<style>
+.citation-chart {
+  margin: 1rem 0;
+  padding: 1.5rem;
+  background: #f8f9fa;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+}
 
-<h2 class="archive__item-title" itemprop="headline">
-  <a href="https://gfichetdc.github.io/my-website/404.html" 
-     class="citation-chart-trigger"
-     data-title="page-not-found"
-     data-citations="null">
-    Page Not Found
-  </a>
-</h2>
+.citation-canvas {
+  max-width: 100%;
+  min-height: 300px;
+}
 
-<div id="chart-container-page-not-found" class="chart-container" hidden></div>
+.chart-header {
+  margin-bottom: 1rem;
+  border-bottom: 1px solid #dee2e6;
+  padding-bottom: 0.5rem;
+}
+</style>
 
   
 
@@ -318,39 +372,93 @@
 
 
 
+
+
 <div class="list__item">
   <article class="archive__item" itemscope itemtype="http://schema.org/CreativeWork">
     
 
     <h2 class="archive__item-title" itemprop="headline">
       
-        <a href="https://gfichetdc.github.io/my-website/" rel="permalink">Welcome to my website!</a>
+        <a href="https://gfichetdc.github.io/my-website/" rel="permalink" onclick="toggleChart(event, 'welcome-to-my-website')">Welcome to my website!</a>
       
     </h2>
-    
+
+    <!-- Existing metadata section remains unchanged -->
     
 
-        
+    <!-- Citation chart container -->
+    
 
+    <!-- Existing content remains unchanged -->
     
+
+    <!-- Existing citation/links section remains unchanged -->
     
-    
+    <!-- Other conditional link blocks remain unchanged -->
 
   </article>
 </div>
 
+<script>
+function toggleChart(event, chartId) {
+  event.preventDefault();
+  const container = document.getElementById(`chart-${chartId}`);
+  if (container) {
+    container.style.display = container.style.display === 'none' ? 'block' : 'none';
+    
+    if (!container.dataset.initialized && container.style.display === 'block') {
+      const ctx = container.querySelector('.citation-canvas').getContext('2d');
+      const data = null;
+      
+      new Chart(ctx, {
+        type: 'line',
+        data: {
+          labels: data.citations_over_time.map(d => d.year),
+          datasets: [{
+            label: 'Citations Over Time',
+            data: data.citations_over_time.map(d => d.citations),
+            borderColor: '#2c7be5',
+            backgroundColor: 'rgba(44, 123, 229, 0.1)',
+            tension: 0.3
+          }]
+        },
+        options: {
+          responsive: true,
+          plugins: {
+            legend: {
+              position: 'bottom'
+            }
+          }
+        }
+      });
+      
+      container.dataset.initialized = true;
+    }
+  }
+}
+</script>
 
+<style>
+.citation-chart {
+  margin: 1rem 0;
+  padding: 1.5rem;
+  background: #f8f9fa;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+}
 
-<h2 class="archive__item-title" itemprop="headline">
-  <a href="https://gfichetdc.github.io/my-website/" 
-     class="citation-chart-trigger"
-     data-title="welcome-to-my-website"
-     data-citations="null">
-    Welcome to my website!
-  </a>
-</h2>
+.citation-canvas {
+  max-width: 100%;
+  min-height: 300px;
+}
 
-<div id="chart-container-welcome-to-my-website" class="chart-container" hidden></div>
+.chart-header {
+  margin-bottom: 1rem;
+  border-bottom: 1px solid #dee2e6;
+  padding-bottom: 0.5rem;
+}
+</style>
 
   
 
@@ -358,39 +466,93 @@
 
 
 
+
+
 <div class="list__item">
   <article class="archive__item" itemscope itemtype="http://schema.org/CreativeWork">
     
 
     <h2 class="archive__item-title" itemprop="headline">
       
-        <a href="https://gfichetdc.github.io/my-website/archive-layout-with-content/" rel="permalink">Archive Layout with Content</a>
+        <a href="https://gfichetdc.github.io/my-website/archive-layout-with-content/" rel="permalink" onclick="toggleChart(event, 'archive-layout-with-content')">Archive Layout with Content</a>
       
     </h2>
-    
+
+    <!-- Existing metadata section remains unchanged -->
     
 
-        
+    <!-- Citation chart container -->
+    
 
+    <!-- Existing content remains unchanged -->
     
+
+    <!-- Existing citation/links section remains unchanged -->
     
-    
+    <!-- Other conditional link blocks remain unchanged -->
 
   </article>
 </div>
 
+<script>
+function toggleChart(event, chartId) {
+  event.preventDefault();
+  const container = document.getElementById(`chart-${chartId}`);
+  if (container) {
+    container.style.display = container.style.display === 'none' ? 'block' : 'none';
+    
+    if (!container.dataset.initialized && container.style.display === 'block') {
+      const ctx = container.querySelector('.citation-canvas').getContext('2d');
+      const data = null;
+      
+      new Chart(ctx, {
+        type: 'line',
+        data: {
+          labels: data.citations_over_time.map(d => d.year),
+          datasets: [{
+            label: 'Citations Over Time',
+            data: data.citations_over_time.map(d => d.citations),
+            borderColor: '#2c7be5',
+            backgroundColor: 'rgba(44, 123, 229, 0.1)',
+            tension: 0.3
+          }]
+        },
+        options: {
+          responsive: true,
+          plugins: {
+            legend: {
+              position: 'bottom'
+            }
+          }
+        }
+      });
+      
+      container.dataset.initialized = true;
+    }
+  }
+}
+</script>
 
+<style>
+.citation-chart {
+  margin: 1rem 0;
+  padding: 1.5rem;
+  background: #f8f9fa;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+}
 
-<h2 class="archive__item-title" itemprop="headline">
-  <a href="https://gfichetdc.github.io/my-website/archive-layout-with-content/" 
-     class="citation-chart-trigger"
-     data-title="archive-layout-with-content"
-     data-citations="null">
-    Archive Layout with Content
-  </a>
-</h2>
+.citation-canvas {
+  max-width: 100%;
+  min-height: 300px;
+}
 
-<div id="chart-container-archive-layout-with-content" class="chart-container" hidden></div>
+.chart-header {
+  margin-bottom: 1rem;
+  border-bottom: 1px solid #dee2e6;
+  padding-bottom: 0.5rem;
+}
+</style>
 
   
 
@@ -398,39 +560,93 @@
 
 
 
+
+
 <div class="list__item">
   <article class="archive__item" itemscope itemtype="http://schema.org/CreativeWork">
     
 
     <h2 class="archive__item-title" itemprop="headline">
       
-        <a href="https://gfichetdc.github.io/my-website/categories/" rel="permalink">Posts by Category</a>
+        <a href="https://gfichetdc.github.io/my-website/categories/" rel="permalink" onclick="toggleChart(event, 'posts-by-category')">Posts by Category</a>
       
     </h2>
-    
+
+    <!-- Existing metadata section remains unchanged -->
     
 
-        
+    <!-- Citation chart container -->
+    
 
+    <!-- Existing content remains unchanged -->
     
+
+    <!-- Existing citation/links section remains unchanged -->
     
-    
+    <!-- Other conditional link blocks remain unchanged -->
 
   </article>
 </div>
 
+<script>
+function toggleChart(event, chartId) {
+  event.preventDefault();
+  const container = document.getElementById(`chart-${chartId}`);
+  if (container) {
+    container.style.display = container.style.display === 'none' ? 'block' : 'none';
+    
+    if (!container.dataset.initialized && container.style.display === 'block') {
+      const ctx = container.querySelector('.citation-canvas').getContext('2d');
+      const data = null;
+      
+      new Chart(ctx, {
+        type: 'line',
+        data: {
+          labels: data.citations_over_time.map(d => d.year),
+          datasets: [{
+            label: 'Citations Over Time',
+            data: data.citations_over_time.map(d => d.citations),
+            borderColor: '#2c7be5',
+            backgroundColor: 'rgba(44, 123, 229, 0.1)',
+            tension: 0.3
+          }]
+        },
+        options: {
+          responsive: true,
+          plugins: {
+            legend: {
+              position: 'bottom'
+            }
+          }
+        }
+      });
+      
+      container.dataset.initialized = true;
+    }
+  }
+}
+</script>
 
+<style>
+.citation-chart {
+  margin: 1rem 0;
+  padding: 1.5rem;
+  background: #f8f9fa;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+}
 
-<h2 class="archive__item-title" itemprop="headline">
-  <a href="https://gfichetdc.github.io/my-website/categories/" 
-     class="citation-chart-trigger"
-     data-title="posts-by-category"
-     data-citations="null">
-    Posts by Category
-  </a>
-</h2>
+.citation-canvas {
+  max-width: 100%;
+  min-height: 300px;
+}
 
-<div id="chart-container-posts-by-category" class="chart-container" hidden></div>
+.chart-header {
+  margin-bottom: 1rem;
+  border-bottom: 1px solid #dee2e6;
+  padding-bottom: 0.5rem;
+}
+</style>
 
   
 
@@ -438,39 +654,93 @@
 
 
 
+
+
 <div class="list__item">
   <article class="archive__item" itemscope itemtype="http://schema.org/CreativeWork">
     
 
     <h2 class="archive__item-title" itemprop="headline">
       
-        <a href="https://gfichetdc.github.io/my-website/collection-archive/" rel="permalink">Posts by Collection</a>
+        <a href="https://gfichetdc.github.io/my-website/collection-archive/" rel="permalink" onclick="toggleChart(event, 'posts-by-collection')">Posts by Collection</a>
       
     </h2>
-    
+
+    <!-- Existing metadata section remains unchanged -->
     
 
-        
+    <!-- Citation chart container -->
+    
 
+    <!-- Existing content remains unchanged -->
     
+
+    <!-- Existing citation/links section remains unchanged -->
     
-    
+    <!-- Other conditional link blocks remain unchanged -->
 
   </article>
 </div>
 
+<script>
+function toggleChart(event, chartId) {
+  event.preventDefault();
+  const container = document.getElementById(`chart-${chartId}`);
+  if (container) {
+    container.style.display = container.style.display === 'none' ? 'block' : 'none';
+    
+    if (!container.dataset.initialized && container.style.display === 'block') {
+      const ctx = container.querySelector('.citation-canvas').getContext('2d');
+      const data = null;
+      
+      new Chart(ctx, {
+        type: 'line',
+        data: {
+          labels: data.citations_over_time.map(d => d.year),
+          datasets: [{
+            label: 'Citations Over Time',
+            data: data.citations_over_time.map(d => d.citations),
+            borderColor: '#2c7be5',
+            backgroundColor: 'rgba(44, 123, 229, 0.1)',
+            tension: 0.3
+          }]
+        },
+        options: {
+          responsive: true,
+          plugins: {
+            legend: {
+              position: 'bottom'
+            }
+          }
+        }
+      });
+      
+      container.dataset.initialized = true;
+    }
+  }
+}
+</script>
 
+<style>
+.citation-chart {
+  margin: 1rem 0;
+  padding: 1.5rem;
+  background: #f8f9fa;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+}
 
-<h2 class="archive__item-title" itemprop="headline">
-  <a href="https://gfichetdc.github.io/my-website/collection-archive/" 
-     class="citation-chart-trigger"
-     data-title="posts-by-collection"
-     data-citations="null">
-    Posts by Collection
-  </a>
-</h2>
+.citation-canvas {
+  max-width: 100%;
+  min-height: 300px;
+}
 
-<div id="chart-container-posts-by-collection" class="chart-container" hidden></div>
+.chart-header {
+  margin-bottom: 1rem;
+  border-bottom: 1px solid #dee2e6;
+  padding-bottom: 0.5rem;
+}
+</style>
 
   
 
@@ -478,39 +748,93 @@
 
 
 
+
+
 <div class="list__item">
   <article class="archive__item" itemscope itemtype="http://schema.org/CreativeWork">
     
 
     <h2 class="archive__item-title" itemprop="headline">
       
-        <a href="https://gfichetdc.github.io/my-website/cv-json/" rel="permalink">CV</a>
+        <a href="https://gfichetdc.github.io/my-website/cv-json/" rel="permalink" onclick="toggleChart(event, 'cv')">CV</a>
       
     </h2>
-    
+
+    <!-- Existing metadata section remains unchanged -->
     
 
-        
+    <!-- Citation chart container -->
+    
 
+    <!-- Existing content remains unchanged -->
     
+
+    <!-- Existing citation/links section remains unchanged -->
     
-    
+    <!-- Other conditional link blocks remain unchanged -->
 
   </article>
 </div>
 
+<script>
+function toggleChart(event, chartId) {
+  event.preventDefault();
+  const container = document.getElementById(`chart-${chartId}`);
+  if (container) {
+    container.style.display = container.style.display === 'none' ? 'block' : 'none';
+    
+    if (!container.dataset.initialized && container.style.display === 'block') {
+      const ctx = container.querySelector('.citation-canvas').getContext('2d');
+      const data = null;
+      
+      new Chart(ctx, {
+        type: 'line',
+        data: {
+          labels: data.citations_over_time.map(d => d.year),
+          datasets: [{
+            label: 'Citations Over Time',
+            data: data.citations_over_time.map(d => d.citations),
+            borderColor: '#2c7be5',
+            backgroundColor: 'rgba(44, 123, 229, 0.1)',
+            tension: 0.3
+          }]
+        },
+        options: {
+          responsive: true,
+          plugins: {
+            legend: {
+              position: 'bottom'
+            }
+          }
+        }
+      });
+      
+      container.dataset.initialized = true;
+    }
+  }
+}
+</script>
 
+<style>
+.citation-chart {
+  margin: 1rem 0;
+  padding: 1.5rem;
+  background: #f8f9fa;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+}
 
-<h2 class="archive__item-title" itemprop="headline">
-  <a href="https://gfichetdc.github.io/my-website/cv-json/" 
-     class="citation-chart-trigger"
-     data-title="cv"
-     data-citations="null">
-    CV
-  </a>
-</h2>
+.citation-canvas {
+  max-width: 100%;
+  min-height: 300px;
+}
 
-<div id="chart-container-cv" class="chart-container" hidden></div>
+.chart-header {
+  margin-bottom: 1rem;
+  border-bottom: 1px solid #dee2e6;
+  padding-bottom: 0.5rem;
+}
+</style>
 
   
 
@@ -518,39 +842,93 @@
 
 
 
+
+
 <div class="list__item">
   <article class="archive__item" itemscope itemtype="http://schema.org/CreativeWork">
     
 
     <h2 class="archive__item-title" itemprop="headline">
       
-        <a href="https://gfichetdc.github.io/my-website/cv/" rel="permalink">CV</a>
+        <a href="https://gfichetdc.github.io/my-website/cv/" rel="permalink" onclick="toggleChart(event, 'cv')">CV</a>
       
     </h2>
-    
+
+    <!-- Existing metadata section remains unchanged -->
     
 
-        
+    <!-- Citation chart container -->
+    
 
+    <!-- Existing content remains unchanged -->
     
+
+    <!-- Existing citation/links section remains unchanged -->
     
-    
+    <!-- Other conditional link blocks remain unchanged -->
 
   </article>
 </div>
 
+<script>
+function toggleChart(event, chartId) {
+  event.preventDefault();
+  const container = document.getElementById(`chart-${chartId}`);
+  if (container) {
+    container.style.display = container.style.display === 'none' ? 'block' : 'none';
+    
+    if (!container.dataset.initialized && container.style.display === 'block') {
+      const ctx = container.querySelector('.citation-canvas').getContext('2d');
+      const data = null;
+      
+      new Chart(ctx, {
+        type: 'line',
+        data: {
+          labels: data.citations_over_time.map(d => d.year),
+          datasets: [{
+            label: 'Citations Over Time',
+            data: data.citations_over_time.map(d => d.citations),
+            borderColor: '#2c7be5',
+            backgroundColor: 'rgba(44, 123, 229, 0.1)',
+            tension: 0.3
+          }]
+        },
+        options: {
+          responsive: true,
+          plugins: {
+            legend: {
+              position: 'bottom'
+            }
+          }
+        }
+      });
+      
+      container.dataset.initialized = true;
+    }
+  }
+}
+</script>
 
+<style>
+.citation-chart {
+  margin: 1rem 0;
+  padding: 1.5rem;
+  background: #f8f9fa;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+}
 
-<h2 class="archive__item-title" itemprop="headline">
-  <a href="https://gfichetdc.github.io/my-website/cv/" 
-     class="citation-chart-trigger"
-     data-title="cv"
-     data-citations="null">
-    CV
-  </a>
-</h2>
+.citation-canvas {
+  max-width: 100%;
+  min-height: 300px;
+}
 
-<div id="chart-container-cv" class="chart-container" hidden></div>
+.chart-header {
+  margin-bottom: 1rem;
+  border-bottom: 1px solid #dee2e6;
+  padding-bottom: 0.5rem;
+}
+</style>
 
   
 
@@ -558,39 +936,93 @@
 
 
 
+
+
 <div class="list__item">
   <article class="archive__item" itemscope itemtype="http://schema.org/CreativeWork">
     
 
     <h2 class="archive__item-title" itemprop="headline">
       
-        <a href="https://gfichetdc.github.io/my-website/assets/css/main.css" rel="permalink"></a>
+        <a href="https://gfichetdc.github.io/my-website/assets/css/main.css" rel="permalink" onclick="toggleChart(event, '')"></a>
       
     </h2>
-    
+
+    <!-- Existing metadata section remains unchanged -->
     
 
-        
+    <!-- Citation chart container -->
+    
 
+    <!-- Existing content remains unchanged -->
     
+
+    <!-- Existing citation/links section remains unchanged -->
     
-    
+    <!-- Other conditional link blocks remain unchanged -->
 
   </article>
 </div>
 
-
-
-<h2 class="archive__item-title" itemprop="headline">
-  <a href="https://gfichetdc.github.io/my-website/assets/css/main.css" 
-     class="citation-chart-trigger"
-     data-title=""
-     data-citations="null">
+<script>
+function toggleChart(event, chartId) {
+  event.preventDefault();
+  const container = document.getElementById(`chart-${chartId}`);
+  if (container) {
+    container.style.display = container.style.display === 'none' ? 'block' : 'none';
     
-  </a>
-</h2>
+    if (!container.dataset.initialized && container.style.display === 'block') {
+      const ctx = container.querySelector('.citation-canvas').getContext('2d');
+      const data = null;
+      
+      new Chart(ctx, {
+        type: 'line',
+        data: {
+          labels: data.citations_over_time.map(d => d.year),
+          datasets: [{
+            label: 'Citations Over Time',
+            data: data.citations_over_time.map(d => d.citations),
+            borderColor: '#2c7be5',
+            backgroundColor: 'rgba(44, 123, 229, 0.1)',
+            tension: 0.3
+          }]
+        },
+        options: {
+          responsive: true,
+          plugins: {
+            legend: {
+              position: 'bottom'
+            }
+          }
+        }
+      });
+      
+      container.dataset.initialized = true;
+    }
+  }
+}
+</script>
 
-<div id="chart-container-" class="chart-container" hidden></div>
+<style>
+.citation-chart {
+  margin: 1rem 0;
+  padding: 1.5rem;
+  background: #f8f9fa;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+}
+
+.citation-canvas {
+  max-width: 100%;
+  min-height: 300px;
+}
+
+.chart-header {
+  margin-bottom: 1rem;
+  border-bottom: 1px solid #dee2e6;
+  padding-bottom: 0.5rem;
+}
+</style>
 
   
 
@@ -598,39 +1030,93 @@
 
 
 
+
+
 <div class="list__item">
   <article class="archive__item" itemscope itemtype="http://schema.org/CreativeWork">
     
 
     <h2 class="archive__item-title" itemprop="headline">
       
-        <a href="https://gfichetdc.github.io/my-website/markdown/" rel="permalink">Markdown</a>
+        <a href="https://gfichetdc.github.io/my-website/markdown/" rel="permalink" onclick="toggleChart(event, 'markdown')">Markdown</a>
       
     </h2>
-    
+
+    <!-- Existing metadata section remains unchanged -->
     
 
-        
+    <!-- Citation chart container -->
+    
 
+    <!-- Existing content remains unchanged -->
     
+
+    <!-- Existing citation/links section remains unchanged -->
     
-    
+    <!-- Other conditional link blocks remain unchanged -->
 
   </article>
 </div>
 
+<script>
+function toggleChart(event, chartId) {
+  event.preventDefault();
+  const container = document.getElementById(`chart-${chartId}`);
+  if (container) {
+    container.style.display = container.style.display === 'none' ? 'block' : 'none';
+    
+    if (!container.dataset.initialized && container.style.display === 'block') {
+      const ctx = container.querySelector('.citation-canvas').getContext('2d');
+      const data = null;
+      
+      new Chart(ctx, {
+        type: 'line',
+        data: {
+          labels: data.citations_over_time.map(d => d.year),
+          datasets: [{
+            label: 'Citations Over Time',
+            data: data.citations_over_time.map(d => d.citations),
+            borderColor: '#2c7be5',
+            backgroundColor: 'rgba(44, 123, 229, 0.1)',
+            tension: 0.3
+          }]
+        },
+        options: {
+          responsive: true,
+          plugins: {
+            legend: {
+              position: 'bottom'
+            }
+          }
+        }
+      });
+      
+      container.dataset.initialized = true;
+    }
+  }
+}
+</script>
 
+<style>
+.citation-chart {
+  margin: 1rem 0;
+  padding: 1.5rem;
+  background: #f8f9fa;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+}
 
-<h2 class="archive__item-title" itemprop="headline">
-  <a href="https://gfichetdc.github.io/my-website/markdown/" 
-     class="citation-chart-trigger"
-     data-title="markdown"
-     data-citations="null">
-    Markdown
-  </a>
-</h2>
+.citation-canvas {
+  max-width: 100%;
+  min-height: 300px;
+}
 
-<div id="chart-container-markdown" class="chart-container" hidden></div>
+.chart-header {
+  margin-bottom: 1rem;
+  border-bottom: 1px solid #dee2e6;
+  padding-bottom: 0.5rem;
+}
+</style>
 
   
 
@@ -638,39 +1124,93 @@
 
 
 
+
+
 <div class="list__item">
   <article class="archive__item" itemscope itemtype="http://schema.org/CreativeWork">
     
 
     <h2 class="archive__item-title" itemprop="headline">
       
-        <a href="https://gfichetdc.github.io/my-website/non-menu-page/" rel="permalink">Page not in menu</a>
+        <a href="https://gfichetdc.github.io/my-website/non-menu-page/" rel="permalink" onclick="toggleChart(event, 'page-not-in-menu')">Page not in menu</a>
       
     </h2>
-    
+
+    <!-- Existing metadata section remains unchanged -->
     
 
-        
+    <!-- Citation chart container -->
+    
 
+    <!-- Existing content remains unchanged -->
     
+
+    <!-- Existing citation/links section remains unchanged -->
     
-    
+    <!-- Other conditional link blocks remain unchanged -->
 
   </article>
 </div>
 
+<script>
+function toggleChart(event, chartId) {
+  event.preventDefault();
+  const container = document.getElementById(`chart-${chartId}`);
+  if (container) {
+    container.style.display = container.style.display === 'none' ? 'block' : 'none';
+    
+    if (!container.dataset.initialized && container.style.display === 'block') {
+      const ctx = container.querySelector('.citation-canvas').getContext('2d');
+      const data = null;
+      
+      new Chart(ctx, {
+        type: 'line',
+        data: {
+          labels: data.citations_over_time.map(d => d.year),
+          datasets: [{
+            label: 'Citations Over Time',
+            data: data.citations_over_time.map(d => d.citations),
+            borderColor: '#2c7be5',
+            backgroundColor: 'rgba(44, 123, 229, 0.1)',
+            tension: 0.3
+          }]
+        },
+        options: {
+          responsive: true,
+          plugins: {
+            legend: {
+              position: 'bottom'
+            }
+          }
+        }
+      });
+      
+      container.dataset.initialized = true;
+    }
+  }
+}
+</script>
 
+<style>
+.citation-chart {
+  margin: 1rem 0;
+  padding: 1.5rem;
+  background: #f8f9fa;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+}
 
-<h2 class="archive__item-title" itemprop="headline">
-  <a href="https://gfichetdc.github.io/my-website/non-menu-page/" 
-     class="citation-chart-trigger"
-     data-title="page-not-in-menu"
-     data-citations="null">
-    Page not in menu
-  </a>
-</h2>
+.citation-canvas {
+  max-width: 100%;
+  min-height: 300px;
+}
 
-<div id="chart-container-page-not-in-menu" class="chart-container" hidden></div>
+.chart-header {
+  margin-bottom: 1rem;
+  border-bottom: 1px solid #dee2e6;
+  padding-bottom: 0.5rem;
+}
+</style>
 
   
 
@@ -678,39 +1218,93 @@
 
 
 
+
+
 <div class="list__item">
   <article class="archive__item" itemscope itemtype="http://schema.org/CreativeWork">
     
 
     <h2 class="archive__item-title" itemprop="headline">
       
-        <a href="https://gfichetdc.github.io/my-website/page-archive/" rel="permalink">Page Archive</a>
+        <a href="https://gfichetdc.github.io/my-website/page-archive/" rel="permalink" onclick="toggleChart(event, 'page-archive')">Page Archive</a>
       
     </h2>
-    
+
+    <!-- Existing metadata section remains unchanged -->
     
 
-        
+    <!-- Citation chart container -->
+    
 
+    <!-- Existing content remains unchanged -->
     
+
+    <!-- Existing citation/links section remains unchanged -->
     
-    
+    <!-- Other conditional link blocks remain unchanged -->
 
   </article>
 </div>
 
+<script>
+function toggleChart(event, chartId) {
+  event.preventDefault();
+  const container = document.getElementById(`chart-${chartId}`);
+  if (container) {
+    container.style.display = container.style.display === 'none' ? 'block' : 'none';
+    
+    if (!container.dataset.initialized && container.style.display === 'block') {
+      const ctx = container.querySelector('.citation-canvas').getContext('2d');
+      const data = null;
+      
+      new Chart(ctx, {
+        type: 'line',
+        data: {
+          labels: data.citations_over_time.map(d => d.year),
+          datasets: [{
+            label: 'Citations Over Time',
+            data: data.citations_over_time.map(d => d.citations),
+            borderColor: '#2c7be5',
+            backgroundColor: 'rgba(44, 123, 229, 0.1)',
+            tension: 0.3
+          }]
+        },
+        options: {
+          responsive: true,
+          plugins: {
+            legend: {
+              position: 'bottom'
+            }
+          }
+        }
+      });
+      
+      container.dataset.initialized = true;
+    }
+  }
+}
+</script>
 
+<style>
+.citation-chart {
+  margin: 1rem 0;
+  padding: 1.5rem;
+  background: #f8f9fa;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+}
 
-<h2 class="archive__item-title" itemprop="headline">
-  <a href="https://gfichetdc.github.io/my-website/page-archive/" 
-     class="citation-chart-trigger"
-     data-title="page-archive"
-     data-citations="null">
-    Page Archive
-  </a>
-</h2>
+.citation-canvas {
+  max-width: 100%;
+  min-height: 300px;
+}
 
-<div id="chart-container-page-archive" class="chart-container" hidden></div>
+.chart-header {
+  margin-bottom: 1rem;
+  border-bottom: 1px solid #dee2e6;
+  padding-bottom: 0.5rem;
+}
+</style>
 
   
 
@@ -718,39 +1312,93 @@
 
 
 
+
+
 <div class="list__item">
   <article class="archive__item" itemscope itemtype="http://schema.org/CreativeWork">
     
 
     <h2 class="archive__item-title" itemprop="headline">
       
-        <a href="https://gfichetdc.github.io/my-website/portfolio/" rel="permalink">Portfolio</a>
+        <a href="https://gfichetdc.github.io/my-website/portfolio/" rel="permalink" onclick="toggleChart(event, 'portfolio')">Portfolio</a>
       
     </h2>
-    
+
+    <!-- Existing metadata section remains unchanged -->
     
 
-        
+    <!-- Citation chart container -->
+    
 
+    <!-- Existing content remains unchanged -->
     
+
+    <!-- Existing citation/links section remains unchanged -->
     
-    
+    <!-- Other conditional link blocks remain unchanged -->
 
   </article>
 </div>
 
+<script>
+function toggleChart(event, chartId) {
+  event.preventDefault();
+  const container = document.getElementById(`chart-${chartId}`);
+  if (container) {
+    container.style.display = container.style.display === 'none' ? 'block' : 'none';
+    
+    if (!container.dataset.initialized && container.style.display === 'block') {
+      const ctx = container.querySelector('.citation-canvas').getContext('2d');
+      const data = null;
+      
+      new Chart(ctx, {
+        type: 'line',
+        data: {
+          labels: data.citations_over_time.map(d => d.year),
+          datasets: [{
+            label: 'Citations Over Time',
+            data: data.citations_over_time.map(d => d.citations),
+            borderColor: '#2c7be5',
+            backgroundColor: 'rgba(44, 123, 229, 0.1)',
+            tension: 0.3
+          }]
+        },
+        options: {
+          responsive: true,
+          plugins: {
+            legend: {
+              position: 'bottom'
+            }
+          }
+        }
+      });
+      
+      container.dataset.initialized = true;
+    }
+  }
+}
+</script>
 
+<style>
+.citation-chart {
+  margin: 1rem 0;
+  padding: 1.5rem;
+  background: #f8f9fa;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+}
 
-<h2 class="archive__item-title" itemprop="headline">
-  <a href="https://gfichetdc.github.io/my-website/portfolio/" 
-     class="citation-chart-trigger"
-     data-title="portfolio"
-     data-citations="null">
-    Portfolio
-  </a>
-</h2>
+.citation-canvas {
+  max-width: 100%;
+  min-height: 300px;
+}
 
-<div id="chart-container-portfolio" class="chart-container" hidden></div>
+.chart-header {
+  margin-bottom: 1rem;
+  border-bottom: 1px solid #dee2e6;
+  padding-bottom: 0.5rem;
+}
+</style>
 
   
 
@@ -758,39 +1406,93 @@
 
 
 
+
+
 <div class="list__item">
   <article class="archive__item" itemscope itemtype="http://schema.org/CreativeWork">
     
 
     <h2 class="archive__item-title" itemprop="headline">
       
-        <a href="https://gfichetdc.github.io/my-website/publications/" rel="permalink">Publications</a>
+        <a href="https://gfichetdc.github.io/my-website/publications/" rel="permalink" onclick="toggleChart(event, 'publications')">Publications</a>
       
     </h2>
-    
+
+    <!-- Existing metadata section remains unchanged -->
     
 
-        
+    <!-- Citation chart container -->
+    
 
+    <!-- Existing content remains unchanged -->
     
+
+    <!-- Existing citation/links section remains unchanged -->
     
-    
+    <!-- Other conditional link blocks remain unchanged -->
 
   </article>
 </div>
 
+<script>
+function toggleChart(event, chartId) {
+  event.preventDefault();
+  const container = document.getElementById(`chart-${chartId}`);
+  if (container) {
+    container.style.display = container.style.display === 'none' ? 'block' : 'none';
+    
+    if (!container.dataset.initialized && container.style.display === 'block') {
+      const ctx = container.querySelector('.citation-canvas').getContext('2d');
+      const data = null;
+      
+      new Chart(ctx, {
+        type: 'line',
+        data: {
+          labels: data.citations_over_time.map(d => d.year),
+          datasets: [{
+            label: 'Citations Over Time',
+            data: data.citations_over_time.map(d => d.citations),
+            borderColor: '#2c7be5',
+            backgroundColor: 'rgba(44, 123, 229, 0.1)',
+            tension: 0.3
+          }]
+        },
+        options: {
+          responsive: true,
+          plugins: {
+            legend: {
+              position: 'bottom'
+            }
+          }
+        }
+      });
+      
+      container.dataset.initialized = true;
+    }
+  }
+}
+</script>
 
+<style>
+.citation-chart {
+  margin: 1rem 0;
+  padding: 1.5rem;
+  background: #f8f9fa;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+}
 
-<h2 class="archive__item-title" itemprop="headline">
-  <a href="https://gfichetdc.github.io/my-website/publications/" 
-     class="citation-chart-trigger"
-     data-title="publications"
-     data-citations="null">
-    Publications
-  </a>
-</h2>
+.citation-canvas {
+  max-width: 100%;
+  min-height: 300px;
+}
 
-<div id="chart-container-publications" class="chart-container" hidden></div>
+.chart-header {
+  margin-bottom: 1rem;
+  border-bottom: 1px solid #dee2e6;
+  padding-bottom: 0.5rem;
+}
+</style>
 
   
 
@@ -798,39 +1500,93 @@
 
 
 
+
+
 <div class="list__item">
   <article class="archive__item" itemscope itemtype="http://schema.org/CreativeWork">
     
 
     <h2 class="archive__item-title" itemprop="headline">
       
-        <a href="https://gfichetdc.github.io/my-website/sitemap/" rel="permalink">Sitemap</a>
+        <a href="https://gfichetdc.github.io/my-website/sitemap/" rel="permalink" onclick="toggleChart(event, 'sitemap')">Sitemap</a>
       
     </h2>
-    
+
+    <!-- Existing metadata section remains unchanged -->
     
 
-        
+    <!-- Citation chart container -->
+    
 
+    <!-- Existing content remains unchanged -->
     
+
+    <!-- Existing citation/links section remains unchanged -->
     
-    
+    <!-- Other conditional link blocks remain unchanged -->
 
   </article>
 </div>
 
+<script>
+function toggleChart(event, chartId) {
+  event.preventDefault();
+  const container = document.getElementById(`chart-${chartId}`);
+  if (container) {
+    container.style.display = container.style.display === 'none' ? 'block' : 'none';
+    
+    if (!container.dataset.initialized && container.style.display === 'block') {
+      const ctx = container.querySelector('.citation-canvas').getContext('2d');
+      const data = null;
+      
+      new Chart(ctx, {
+        type: 'line',
+        data: {
+          labels: data.citations_over_time.map(d => d.year),
+          datasets: [{
+            label: 'Citations Over Time',
+            data: data.citations_over_time.map(d => d.citations),
+            borderColor: '#2c7be5',
+            backgroundColor: 'rgba(44, 123, 229, 0.1)',
+            tension: 0.3
+          }]
+        },
+        options: {
+          responsive: true,
+          plugins: {
+            legend: {
+              position: 'bottom'
+            }
+          }
+        }
+      });
+      
+      container.dataset.initialized = true;
+    }
+  }
+}
+</script>
 
+<style>
+.citation-chart {
+  margin: 1rem 0;
+  padding: 1.5rem;
+  background: #f8f9fa;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+}
 
-<h2 class="archive__item-title" itemprop="headline">
-  <a href="https://gfichetdc.github.io/my-website/sitemap/" 
-     class="citation-chart-trigger"
-     data-title="sitemap"
-     data-citations="null">
-    Sitemap
-  </a>
-</h2>
+.citation-canvas {
+  max-width: 100%;
+  min-height: 300px;
+}
 
-<div id="chart-container-sitemap" class="chart-container" hidden></div>
+.chart-header {
+  margin-bottom: 1rem;
+  border-bottom: 1px solid #dee2e6;
+  padding-bottom: 0.5rem;
+}
+</style>
 
   
 
@@ -838,39 +1594,93 @@
 
 
 
+
+
 <div class="list__item">
   <article class="archive__item" itemscope itemtype="http://schema.org/CreativeWork">
     
 
     <h2 class="archive__item-title" itemprop="headline">
       
-        <a href="https://gfichetdc.github.io/my-website/tags/" rel="permalink">Posts by Tags</a>
+        <a href="https://gfichetdc.github.io/my-website/tags/" rel="permalink" onclick="toggleChart(event, 'posts-by-tags')">Posts by Tags</a>
       
     </h2>
-    
+
+    <!-- Existing metadata section remains unchanged -->
     
 
-        
+    <!-- Citation chart container -->
+    
 
+    <!-- Existing content remains unchanged -->
     
+
+    <!-- Existing citation/links section remains unchanged -->
     
-    
+    <!-- Other conditional link blocks remain unchanged -->
 
   </article>
 </div>
 
+<script>
+function toggleChart(event, chartId) {
+  event.preventDefault();
+  const container = document.getElementById(`chart-${chartId}`);
+  if (container) {
+    container.style.display = container.style.display === 'none' ? 'block' : 'none';
+    
+    if (!container.dataset.initialized && container.style.display === 'block') {
+      const ctx = container.querySelector('.citation-canvas').getContext('2d');
+      const data = null;
+      
+      new Chart(ctx, {
+        type: 'line',
+        data: {
+          labels: data.citations_over_time.map(d => d.year),
+          datasets: [{
+            label: 'Citations Over Time',
+            data: data.citations_over_time.map(d => d.citations),
+            borderColor: '#2c7be5',
+            backgroundColor: 'rgba(44, 123, 229, 0.1)',
+            tension: 0.3
+          }]
+        },
+        options: {
+          responsive: true,
+          plugins: {
+            legend: {
+              position: 'bottom'
+            }
+          }
+        }
+      });
+      
+      container.dataset.initialized = true;
+    }
+  }
+}
+</script>
 
+<style>
+.citation-chart {
+  margin: 1rem 0;
+  padding: 1.5rem;
+  background: #f8f9fa;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+}
 
-<h2 class="archive__item-title" itemprop="headline">
-  <a href="https://gfichetdc.github.io/my-website/tags/" 
-     class="citation-chart-trigger"
-     data-title="posts-by-tags"
-     data-citations="null">
-    Posts by Tags
-  </a>
-</h2>
+.citation-canvas {
+  max-width: 100%;
+  min-height: 300px;
+}
 
-<div id="chart-container-posts-by-tags" class="chart-container" hidden></div>
+.chart-header {
+  margin-bottom: 1rem;
+  border-bottom: 1px solid #dee2e6;
+  padding-bottom: 0.5rem;
+}
+</style>
 
   
 
@@ -878,39 +1688,93 @@
 
 
 
+
+
 <div class="list__item">
   <article class="archive__item" itemscope itemtype="http://schema.org/CreativeWork">
     
 
     <h2 class="archive__item-title" itemprop="headline">
       
-        <a href="https://gfichetdc.github.io/my-website/talkmap.html" rel="permalink">Talk map</a>
+        <a href="https://gfichetdc.github.io/my-website/talkmap.html" rel="permalink" onclick="toggleChart(event, 'talk-map')">Talk map</a>
       
     </h2>
-    
+
+    <!-- Existing metadata section remains unchanged -->
     
 
-        
+    <!-- Citation chart container -->
+    
 
+    <!-- Existing content remains unchanged -->
     
+
+    <!-- Existing citation/links section remains unchanged -->
     
-    
+    <!-- Other conditional link blocks remain unchanged -->
 
   </article>
 </div>
 
+<script>
+function toggleChart(event, chartId) {
+  event.preventDefault();
+  const container = document.getElementById(`chart-${chartId}`);
+  if (container) {
+    container.style.display = container.style.display === 'none' ? 'block' : 'none';
+    
+    if (!container.dataset.initialized && container.style.display === 'block') {
+      const ctx = container.querySelector('.citation-canvas').getContext('2d');
+      const data = null;
+      
+      new Chart(ctx, {
+        type: 'line',
+        data: {
+          labels: data.citations_over_time.map(d => d.year),
+          datasets: [{
+            label: 'Citations Over Time',
+            data: data.citations_over_time.map(d => d.citations),
+            borderColor: '#2c7be5',
+            backgroundColor: 'rgba(44, 123, 229, 0.1)',
+            tension: 0.3
+          }]
+        },
+        options: {
+          responsive: true,
+          plugins: {
+            legend: {
+              position: 'bottom'
+            }
+          }
+        }
+      });
+      
+      container.dataset.initialized = true;
+    }
+  }
+}
+</script>
 
+<style>
+.citation-chart {
+  margin: 1rem 0;
+  padding: 1.5rem;
+  background: #f8f9fa;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+}
 
-<h2 class="archive__item-title" itemprop="headline">
-  <a href="https://gfichetdc.github.io/my-website/talkmap.html" 
-     class="citation-chart-trigger"
-     data-title="talk-map"
-     data-citations="null">
-    Talk map
-  </a>
-</h2>
+.citation-canvas {
+  max-width: 100%;
+  min-height: 300px;
+}
 
-<div id="chart-container-talk-map" class="chart-container" hidden></div>
+.chart-header {
+  margin-bottom: 1rem;
+  border-bottom: 1px solid #dee2e6;
+  padding-bottom: 0.5rem;
+}
+</style>
 
   
 
@@ -918,39 +1782,93 @@
 
 
 
+
+
 <div class="list__item">
   <article class="archive__item" itemscope itemtype="http://schema.org/CreativeWork">
     
 
     <h2 class="archive__item-title" itemprop="headline">
       
-        <a href="https://gfichetdc.github.io/my-website/talks/" rel="permalink">Talks and presentations</a>
+        <a href="https://gfichetdc.github.io/my-website/talks/" rel="permalink" onclick="toggleChart(event, 'talks-and-presentations')">Talks and presentations</a>
       
     </h2>
-    
+
+    <!-- Existing metadata section remains unchanged -->
     
 
-        
+    <!-- Citation chart container -->
+    
 
+    <!-- Existing content remains unchanged -->
     
+
+    <!-- Existing citation/links section remains unchanged -->
     
-    
+    <!-- Other conditional link blocks remain unchanged -->
 
   </article>
 </div>
 
+<script>
+function toggleChart(event, chartId) {
+  event.preventDefault();
+  const container = document.getElementById(`chart-${chartId}`);
+  if (container) {
+    container.style.display = container.style.display === 'none' ? 'block' : 'none';
+    
+    if (!container.dataset.initialized && container.style.display === 'block') {
+      const ctx = container.querySelector('.citation-canvas').getContext('2d');
+      const data = null;
+      
+      new Chart(ctx, {
+        type: 'line',
+        data: {
+          labels: data.citations_over_time.map(d => d.year),
+          datasets: [{
+            label: 'Citations Over Time',
+            data: data.citations_over_time.map(d => d.citations),
+            borderColor: '#2c7be5',
+            backgroundColor: 'rgba(44, 123, 229, 0.1)',
+            tension: 0.3
+          }]
+        },
+        options: {
+          responsive: true,
+          plugins: {
+            legend: {
+              position: 'bottom'
+            }
+          }
+        }
+      });
+      
+      container.dataset.initialized = true;
+    }
+  }
+}
+</script>
 
+<style>
+.citation-chart {
+  margin: 1rem 0;
+  padding: 1.5rem;
+  background: #f8f9fa;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+}
 
-<h2 class="archive__item-title" itemprop="headline">
-  <a href="https://gfichetdc.github.io/my-website/talks/" 
-     class="citation-chart-trigger"
-     data-title="talks-and-presentations"
-     data-citations="null">
-    Talks and presentations
-  </a>
-</h2>
+.citation-canvas {
+  max-width: 100%;
+  min-height: 300px;
+}
 
-<div id="chart-container-talks-and-presentations" class="chart-container" hidden></div>
+.chart-header {
+  margin-bottom: 1rem;
+  border-bottom: 1px solid #dee2e6;
+  padding-bottom: 0.5rem;
+}
+</style>
 
   
 
@@ -958,39 +1876,93 @@
 
 
 
+
+
 <div class="list__item">
   <article class="archive__item" itemscope itemtype="http://schema.org/CreativeWork">
     
 
     <h2 class="archive__item-title" itemprop="headline">
       
-        <a href="https://gfichetdc.github.io/my-website/teaching/" rel="permalink">Teaching</a>
+        <a href="https://gfichetdc.github.io/my-website/teaching/" rel="permalink" onclick="toggleChart(event, 'teaching')">Teaching</a>
       
     </h2>
-    
+
+    <!-- Existing metadata section remains unchanged -->
     
 
-        
+    <!-- Citation chart container -->
+    
 
+    <!-- Existing content remains unchanged -->
     
+
+    <!-- Existing citation/links section remains unchanged -->
     
-    
+    <!-- Other conditional link blocks remain unchanged -->
 
   </article>
 </div>
 
+<script>
+function toggleChart(event, chartId) {
+  event.preventDefault();
+  const container = document.getElementById(`chart-${chartId}`);
+  if (container) {
+    container.style.display = container.style.display === 'none' ? 'block' : 'none';
+    
+    if (!container.dataset.initialized && container.style.display === 'block') {
+      const ctx = container.querySelector('.citation-canvas').getContext('2d');
+      const data = null;
+      
+      new Chart(ctx, {
+        type: 'line',
+        data: {
+          labels: data.citations_over_time.map(d => d.year),
+          datasets: [{
+            label: 'Citations Over Time',
+            data: data.citations_over_time.map(d => d.citations),
+            borderColor: '#2c7be5',
+            backgroundColor: 'rgba(44, 123, 229, 0.1)',
+            tension: 0.3
+          }]
+        },
+        options: {
+          responsive: true,
+          plugins: {
+            legend: {
+              position: 'bottom'
+            }
+          }
+        }
+      });
+      
+      container.dataset.initialized = true;
+    }
+  }
+}
+</script>
 
+<style>
+.citation-chart {
+  margin: 1rem 0;
+  padding: 1.5rem;
+  background: #f8f9fa;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+}
 
-<h2 class="archive__item-title" itemprop="headline">
-  <a href="https://gfichetdc.github.io/my-website/teaching/" 
-     class="citation-chart-trigger"
-     data-title="teaching"
-     data-citations="null">
-    Teaching
-  </a>
-</h2>
+.citation-canvas {
+  max-width: 100%;
+  min-height: 300px;
+}
 
-<div id="chart-container-teaching" class="chart-container" hidden></div>
+.chart-header {
+  margin-bottom: 1rem;
+  border-bottom: 1px solid #dee2e6;
+  padding-bottom: 0.5rem;
+}
+</style>
 
   
 
@@ -998,39 +1970,93 @@
 
 
 
+
+
 <div class="list__item">
   <article class="archive__item" itemscope itemtype="http://schema.org/CreativeWork">
     
 
     <h2 class="archive__item-title" itemprop="headline">
       
-        <a href="https://gfichetdc.github.io/my-website/terms/" rel="permalink">Terms and Privacy Policy</a>
+        <a href="https://gfichetdc.github.io/my-website/terms/" rel="permalink" onclick="toggleChart(event, 'terms-and-privacy-policy')">Terms and Privacy Policy</a>
       
     </h2>
-    
+
+    <!-- Existing metadata section remains unchanged -->
     
 
-        
+    <!-- Citation chart container -->
+    
 
+    <!-- Existing content remains unchanged -->
     
+
+    <!-- Existing citation/links section remains unchanged -->
     
-    
+    <!-- Other conditional link blocks remain unchanged -->
 
   </article>
 </div>
 
+<script>
+function toggleChart(event, chartId) {
+  event.preventDefault();
+  const container = document.getElementById(`chart-${chartId}`);
+  if (container) {
+    container.style.display = container.style.display === 'none' ? 'block' : 'none';
+    
+    if (!container.dataset.initialized && container.style.display === 'block') {
+      const ctx = container.querySelector('.citation-canvas').getContext('2d');
+      const data = null;
+      
+      new Chart(ctx, {
+        type: 'line',
+        data: {
+          labels: data.citations_over_time.map(d => d.year),
+          datasets: [{
+            label: 'Citations Over Time',
+            data: data.citations_over_time.map(d => d.citations),
+            borderColor: '#2c7be5',
+            backgroundColor: 'rgba(44, 123, 229, 0.1)',
+            tension: 0.3
+          }]
+        },
+        options: {
+          responsive: true,
+          plugins: {
+            legend: {
+              position: 'bottom'
+            }
+          }
+        }
+      });
+      
+      container.dataset.initialized = true;
+    }
+  }
+}
+</script>
 
+<style>
+.citation-chart {
+  margin: 1rem 0;
+  padding: 1.5rem;
+  background: #f8f9fa;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+}
 
-<h2 class="archive__item-title" itemprop="headline">
-  <a href="https://gfichetdc.github.io/my-website/terms/" 
-     class="citation-chart-trigger"
-     data-title="terms-and-privacy-policy"
-     data-citations="null">
-    Terms and Privacy Policy
-  </a>
-</h2>
+.citation-canvas {
+  max-width: 100%;
+  min-height: 300px;
+}
 
-<div id="chart-container-terms-and-privacy-policy" class="chart-container" hidden></div>
+.chart-header {
+  margin-bottom: 1rem;
+  border-bottom: 1px solid #dee2e6;
+  padding-bottom: 0.5rem;
+}
+</style>
 
   
 
@@ -1038,39 +2064,93 @@
 
 
 
+
+
 <div class="list__item">
   <article class="archive__item" itemscope itemtype="http://schema.org/CreativeWork">
     
 
     <h2 class="archive__item-title" itemprop="headline">
       
-        <a href="https://gfichetdc.github.io/my-website/year-archive/" rel="permalink">Blog posts</a>
+        <a href="https://gfichetdc.github.io/my-website/year-archive/" rel="permalink" onclick="toggleChart(event, 'blog-posts')">Blog posts</a>
       
     </h2>
-    
+
+    <!-- Existing metadata section remains unchanged -->
     
 
-        
+    <!-- Citation chart container -->
+    
 
+    <!-- Existing content remains unchanged -->
     
+
+    <!-- Existing citation/links section remains unchanged -->
     
-    
+    <!-- Other conditional link blocks remain unchanged -->
 
   </article>
 </div>
 
+<script>
+function toggleChart(event, chartId) {
+  event.preventDefault();
+  const container = document.getElementById(`chart-${chartId}`);
+  if (container) {
+    container.style.display = container.style.display === 'none' ? 'block' : 'none';
+    
+    if (!container.dataset.initialized && container.style.display === 'block') {
+      const ctx = container.querySelector('.citation-canvas').getContext('2d');
+      const data = null;
+      
+      new Chart(ctx, {
+        type: 'line',
+        data: {
+          labels: data.citations_over_time.map(d => d.year),
+          datasets: [{
+            label: 'Citations Over Time',
+            data: data.citations_over_time.map(d => d.citations),
+            borderColor: '#2c7be5',
+            backgroundColor: 'rgba(44, 123, 229, 0.1)',
+            tension: 0.3
+          }]
+        },
+        options: {
+          responsive: true,
+          plugins: {
+            legend: {
+              position: 'bottom'
+            }
+          }
+        }
+      });
+      
+      container.dataset.initialized = true;
+    }
+  }
+}
+</script>
 
+<style>
+.citation-chart {
+  margin: 1rem 0;
+  padding: 1.5rem;
+  background: #f8f9fa;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+}
 
-<h2 class="archive__item-title" itemprop="headline">
-  <a href="https://gfichetdc.github.io/my-website/year-archive/" 
-     class="citation-chart-trigger"
-     data-title="blog-posts"
-     data-citations="null">
-    Blog posts
-  </a>
-</h2>
+.citation-canvas {
+  max-width: 100%;
+  min-height: 300px;
+}
 
-<div id="chart-container-blog-posts" class="chart-container" hidden></div>
+.chart-header {
+  margin-bottom: 1rem;
+  border-bottom: 1px solid #dee2e6;
+  padding-bottom: 0.5rem;
+}
+</style>
 
   
 
@@ -1078,39 +2158,93 @@
 
 
 
+
+
 <div class="list__item">
   <article class="archive__item" itemscope itemtype="http://schema.org/CreativeWork">
     
 
     <h2 class="archive__item-title" itemprop="headline">
       
-        <a href="https://gfichetdc.github.io/my-website/about/" rel="permalink"></a>
+        <a href="https://gfichetdc.github.io/my-website/about/" rel="permalink" onclick="toggleChart(event, '')"></a>
       
     </h2>
-    
+
+    <!-- Existing metadata section remains unchanged -->
     
 
-        
+    <!-- Citation chart container -->
+    
 
+    <!-- Existing content remains unchanged -->
     
+
+    <!-- Existing citation/links section remains unchanged -->
     
-    
+    <!-- Other conditional link blocks remain unchanged -->
 
   </article>
 </div>
 
-
-
-<h2 class="archive__item-title" itemprop="headline">
-  <a href="https://gfichetdc.github.io/my-website/about/" 
-     class="citation-chart-trigger"
-     data-title=""
-     data-citations="null">
+<script>
+function toggleChart(event, chartId) {
+  event.preventDefault();
+  const container = document.getElementById(`chart-${chartId}`);
+  if (container) {
+    container.style.display = container.style.display === 'none' ? 'block' : 'none';
     
-  </a>
-</h2>
+    if (!container.dataset.initialized && container.style.display === 'block') {
+      const ctx = container.querySelector('.citation-canvas').getContext('2d');
+      const data = null;
+      
+      new Chart(ctx, {
+        type: 'line',
+        data: {
+          labels: data.citations_over_time.map(d => d.year),
+          datasets: [{
+            label: 'Citations Over Time',
+            data: data.citations_over_time.map(d => d.citations),
+            borderColor: '#2c7be5',
+            backgroundColor: 'rgba(44, 123, 229, 0.1)',
+            tension: 0.3
+          }]
+        },
+        options: {
+          responsive: true,
+          plugins: {
+            legend: {
+              position: 'bottom'
+            }
+          }
+        }
+      });
+      
+      container.dataset.initialized = true;
+    }
+  }
+}
+</script>
 
-<div id="chart-container-" class="chart-container" hidden></div>
+<style>
+.citation-chart {
+  margin: 1rem 0;
+  padding: 1.5rem;
+  background: #f8f9fa;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+}
+
+.citation-canvas {
+  max-width: 100%;
+  min-height: 300px;
+}
+
+.chart-header {
+  margin-bottom: 1rem;
+  border-bottom: 1px solid #dee2e6;
+  padding-bottom: 0.5rem;
+}
+</style>
 
   
 
@@ -1118,39 +2252,93 @@
 
 
 
+
+
 <div class="list__item">
   <article class="archive__item" itemscope itemtype="http://schema.org/CreativeWork">
     
 
     <h2 class="archive__item-title" itemprop="headline">
       
-        <a href="https://gfichetdc.github.io/my-website/about.html" rel="permalink"></a>
+        <a href="https://gfichetdc.github.io/my-website/about.html" rel="permalink" onclick="toggleChart(event, '')"></a>
       
     </h2>
-    
+
+    <!-- Existing metadata section remains unchanged -->
     
 
-        
+    <!-- Citation chart container -->
+    
 
+    <!-- Existing content remains unchanged -->
     
+
+    <!-- Existing citation/links section remains unchanged -->
     
-    
+    <!-- Other conditional link blocks remain unchanged -->
 
   </article>
 </div>
 
-
-
-<h2 class="archive__item-title" itemprop="headline">
-  <a href="https://gfichetdc.github.io/my-website/about.html" 
-     class="citation-chart-trigger"
-     data-title=""
-     data-citations="null">
+<script>
+function toggleChart(event, chartId) {
+  event.preventDefault();
+  const container = document.getElementById(`chart-${chartId}`);
+  if (container) {
+    container.style.display = container.style.display === 'none' ? 'block' : 'none';
     
-  </a>
-</h2>
+    if (!container.dataset.initialized && container.style.display === 'block') {
+      const ctx = container.querySelector('.citation-canvas').getContext('2d');
+      const data = null;
+      
+      new Chart(ctx, {
+        type: 'line',
+        data: {
+          labels: data.citations_over_time.map(d => d.year),
+          datasets: [{
+            label: 'Citations Over Time',
+            data: data.citations_over_time.map(d => d.citations),
+            borderColor: '#2c7be5',
+            backgroundColor: 'rgba(44, 123, 229, 0.1)',
+            tension: 0.3
+          }]
+        },
+        options: {
+          responsive: true,
+          plugins: {
+            legend: {
+              position: 'bottom'
+            }
+          }
+        }
+      });
+      
+      container.dataset.initialized = true;
+    }
+  }
+}
+</script>
 
-<div id="chart-container-" class="chart-container" hidden></div>
+<style>
+.citation-chart {
+  margin: 1rem 0;
+  padding: 1.5rem;
+  background: #f8f9fa;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+}
+
+.citation-canvas {
+  max-width: 100%;
+  min-height: 300px;
+}
+
+.chart-header {
+  margin-bottom: 1rem;
+  border-bottom: 1px solid #dee2e6;
+  padding-bottom: 0.5rem;
+}
+</style>
 
   
 
@@ -1158,39 +2346,93 @@
 
 
 
+
+
 <div class="list__item">
   <article class="archive__item" itemscope itemtype="http://schema.org/CreativeWork">
     
 
     <h2 class="archive__item-title" itemprop="headline">
       
-        <a href="https://gfichetdc.github.io/my-website/resume-json" rel="permalink"></a>
+        <a href="https://gfichetdc.github.io/my-website/resume-json" rel="permalink" onclick="toggleChart(event, '')"></a>
       
     </h2>
-    
+
+    <!-- Existing metadata section remains unchanged -->
     
 
-        
+    <!-- Citation chart container -->
+    
 
+    <!-- Existing content remains unchanged -->
     
+
+    <!-- Existing citation/links section remains unchanged -->
     
-    
+    <!-- Other conditional link blocks remain unchanged -->
 
   </article>
 </div>
 
-
-
-<h2 class="archive__item-title" itemprop="headline">
-  <a href="https://gfichetdc.github.io/my-website/resume-json" 
-     class="citation-chart-trigger"
-     data-title=""
-     data-citations="null">
+<script>
+function toggleChart(event, chartId) {
+  event.preventDefault();
+  const container = document.getElementById(`chart-${chartId}`);
+  if (container) {
+    container.style.display = container.style.display === 'none' ? 'block' : 'none';
     
-  </a>
-</h2>
+    if (!container.dataset.initialized && container.style.display === 'block') {
+      const ctx = container.querySelector('.citation-canvas').getContext('2d');
+      const data = null;
+      
+      new Chart(ctx, {
+        type: 'line',
+        data: {
+          labels: data.citations_over_time.map(d => d.year),
+          datasets: [{
+            label: 'Citations Over Time',
+            data: data.citations_over_time.map(d => d.citations),
+            borderColor: '#2c7be5',
+            backgroundColor: 'rgba(44, 123, 229, 0.1)',
+            tension: 0.3
+          }]
+        },
+        options: {
+          responsive: true,
+          plugins: {
+            legend: {
+              position: 'bottom'
+            }
+          }
+        }
+      });
+      
+      container.dataset.initialized = true;
+    }
+  }
+}
+</script>
 
-<div id="chart-container-" class="chart-container" hidden></div>
+<style>
+.citation-chart {
+  margin: 1rem 0;
+  padding: 1.5rem;
+  background: #f8f9fa;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+}
+
+.citation-canvas {
+  max-width: 100%;
+  min-height: 300px;
+}
+
+.chart-header {
+  margin-bottom: 1rem;
+  border-bottom: 1px solid #dee2e6;
+  padding-bottom: 0.5rem;
+}
+</style>
 
   
 
@@ -1198,39 +2440,93 @@
 
 
 
+
+
 <div class="list__item">
   <article class="archive__item" itemscope itemtype="http://schema.org/CreativeWork">
     
 
     <h2 class="archive__item-title" itemprop="headline">
       
-        <a href="https://gfichetdc.github.io/my-website/resume" rel="permalink"></a>
+        <a href="https://gfichetdc.github.io/my-website/resume" rel="permalink" onclick="toggleChart(event, '')"></a>
       
     </h2>
-    
+
+    <!-- Existing metadata section remains unchanged -->
     
 
-        
+    <!-- Citation chart container -->
+    
 
+    <!-- Existing content remains unchanged -->
     
+
+    <!-- Existing citation/links section remains unchanged -->
     
-    
+    <!-- Other conditional link blocks remain unchanged -->
 
   </article>
 </div>
 
-
-
-<h2 class="archive__item-title" itemprop="headline">
-  <a href="https://gfichetdc.github.io/my-website/resume" 
-     class="citation-chart-trigger"
-     data-title=""
-     data-citations="null">
+<script>
+function toggleChart(event, chartId) {
+  event.preventDefault();
+  const container = document.getElementById(`chart-${chartId}`);
+  if (container) {
+    container.style.display = container.style.display === 'none' ? 'block' : 'none';
     
-  </a>
-</h2>
+    if (!container.dataset.initialized && container.style.display === 'block') {
+      const ctx = container.querySelector('.citation-canvas').getContext('2d');
+      const data = null;
+      
+      new Chart(ctx, {
+        type: 'line',
+        data: {
+          labels: data.citations_over_time.map(d => d.year),
+          datasets: [{
+            label: 'Citations Over Time',
+            data: data.citations_over_time.map(d => d.citations),
+            borderColor: '#2c7be5',
+            backgroundColor: 'rgba(44, 123, 229, 0.1)',
+            tension: 0.3
+          }]
+        },
+        options: {
+          responsive: true,
+          plugins: {
+            legend: {
+              position: 'bottom'
+            }
+          }
+        }
+      });
+      
+      container.dataset.initialized = true;
+    }
+  }
+}
+</script>
 
-<div id="chart-container-" class="chart-container" hidden></div>
+<style>
+.citation-chart {
+  margin: 1rem 0;
+  padding: 1.5rem;
+  background: #f8f9fa;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+}
+
+.citation-canvas {
+  max-width: 100%;
+  min-height: 300px;
+}
+
+.chart-header {
+  margin-bottom: 1rem;
+  border-bottom: 1px solid #dee2e6;
+  padding-bottom: 0.5rem;
+}
+</style>
 
   
 
@@ -1238,39 +2534,93 @@
 
 
 
+
+
 <div class="list__item">
   <article class="archive__item" itemscope itemtype="http://schema.org/CreativeWork">
     
 
     <h2 class="archive__item-title" itemprop="headline">
       
-        <a href="https://gfichetdc.github.io/my-website/md/" rel="permalink"></a>
+        <a href="https://gfichetdc.github.io/my-website/md/" rel="permalink" onclick="toggleChart(event, '')"></a>
       
     </h2>
-    
+
+    <!-- Existing metadata section remains unchanged -->
     
 
-        
+    <!-- Citation chart container -->
+    
 
+    <!-- Existing content remains unchanged -->
     
+
+    <!-- Existing citation/links section remains unchanged -->
     
-    
+    <!-- Other conditional link blocks remain unchanged -->
 
   </article>
 </div>
 
-
-
-<h2 class="archive__item-title" itemprop="headline">
-  <a href="https://gfichetdc.github.io/my-website/md/" 
-     class="citation-chart-trigger"
-     data-title=""
-     data-citations="null">
+<script>
+function toggleChart(event, chartId) {
+  event.preventDefault();
+  const container = document.getElementById(`chart-${chartId}`);
+  if (container) {
+    container.style.display = container.style.display === 'none' ? 'block' : 'none';
     
-  </a>
-</h2>
+    if (!container.dataset.initialized && container.style.display === 'block') {
+      const ctx = container.querySelector('.citation-canvas').getContext('2d');
+      const data = null;
+      
+      new Chart(ctx, {
+        type: 'line',
+        data: {
+          labels: data.citations_over_time.map(d => d.year),
+          datasets: [{
+            label: 'Citations Over Time',
+            data: data.citations_over_time.map(d => d.citations),
+            borderColor: '#2c7be5',
+            backgroundColor: 'rgba(44, 123, 229, 0.1)',
+            tension: 0.3
+          }]
+        },
+        options: {
+          responsive: true,
+          plugins: {
+            legend: {
+              position: 'bottom'
+            }
+          }
+        }
+      });
+      
+      container.dataset.initialized = true;
+    }
+  }
+}
+</script>
 
-<div id="chart-container-" class="chart-container" hidden></div>
+<style>
+.citation-chart {
+  margin: 1rem 0;
+  padding: 1.5rem;
+  background: #f8f9fa;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+}
+
+.citation-canvas {
+  max-width: 100%;
+  min-height: 300px;
+}
+
+.chart-header {
+  margin-bottom: 1rem;
+  border-bottom: 1px solid #dee2e6;
+  padding-bottom: 0.5rem;
+}
+</style>
 
   
 
@@ -1278,39 +2628,93 @@
 
 
 
+
+
 <div class="list__item">
   <article class="archive__item" itemscope itemtype="http://schema.org/CreativeWork">
     
 
     <h2 class="archive__item-title" itemprop="headline">
       
-        <a href="https://gfichetdc.github.io/my-website/markdown.html" rel="permalink"></a>
+        <a href="https://gfichetdc.github.io/my-website/markdown.html" rel="permalink" onclick="toggleChart(event, '')"></a>
       
     </h2>
-    
+
+    <!-- Existing metadata section remains unchanged -->
     
 
-        
+    <!-- Citation chart container -->
+    
 
+    <!-- Existing content remains unchanged -->
     
+
+    <!-- Existing citation/links section remains unchanged -->
     
-    
+    <!-- Other conditional link blocks remain unchanged -->
 
   </article>
 </div>
 
-
-
-<h2 class="archive__item-title" itemprop="headline">
-  <a href="https://gfichetdc.github.io/my-website/markdown.html" 
-     class="citation-chart-trigger"
-     data-title=""
-     data-citations="null">
+<script>
+function toggleChart(event, chartId) {
+  event.preventDefault();
+  const container = document.getElementById(`chart-${chartId}`);
+  if (container) {
+    container.style.display = container.style.display === 'none' ? 'block' : 'none';
     
-  </a>
-</h2>
+    if (!container.dataset.initialized && container.style.display === 'block') {
+      const ctx = container.querySelector('.citation-canvas').getContext('2d');
+      const data = null;
+      
+      new Chart(ctx, {
+        type: 'line',
+        data: {
+          labels: data.citations_over_time.map(d => d.year),
+          datasets: [{
+            label: 'Citations Over Time',
+            data: data.citations_over_time.map(d => d.citations),
+            borderColor: '#2c7be5',
+            backgroundColor: 'rgba(44, 123, 229, 0.1)',
+            tension: 0.3
+          }]
+        },
+        options: {
+          responsive: true,
+          plugins: {
+            legend: {
+              position: 'bottom'
+            }
+          }
+        }
+      });
+      
+      container.dataset.initialized = true;
+    }
+  }
+}
+</script>
 
-<div id="chart-container-" class="chart-container" hidden></div>
+<style>
+.citation-chart {
+  margin: 1rem 0;
+  padding: 1.5rem;
+  background: #f8f9fa;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+}
+
+.citation-canvas {
+  max-width: 100%;
+  min-height: 300px;
+}
+
+.chart-header {
+  margin-bottom: 1rem;
+  border-bottom: 1px solid #dee2e6;
+  padding-bottom: 0.5rem;
+}
+</style>
 
   
 
@@ -1318,39 +2722,93 @@
 
 
 
+
+
 <div class="list__item">
   <article class="archive__item" itemscope itemtype="http://schema.org/CreativeWork">
     
 
     <h2 class="archive__item-title" itemprop="headline">
       
-        <a href="https://gfichetdc.github.io/my-website/nmp/" rel="permalink"></a>
+        <a href="https://gfichetdc.github.io/my-website/nmp/" rel="permalink" onclick="toggleChart(event, '')"></a>
       
     </h2>
-    
+
+    <!-- Existing metadata section remains unchanged -->
     
 
-        
+    <!-- Citation chart container -->
+    
 
+    <!-- Existing content remains unchanged -->
     
+
+    <!-- Existing citation/links section remains unchanged -->
     
-    
+    <!-- Other conditional link blocks remain unchanged -->
 
   </article>
 </div>
 
-
-
-<h2 class="archive__item-title" itemprop="headline">
-  <a href="https://gfichetdc.github.io/my-website/nmp/" 
-     class="citation-chart-trigger"
-     data-title=""
-     data-citations="null">
+<script>
+function toggleChart(event, chartId) {
+  event.preventDefault();
+  const container = document.getElementById(`chart-${chartId}`);
+  if (container) {
+    container.style.display = container.style.display === 'none' ? 'block' : 'none';
     
-  </a>
-</h2>
+    if (!container.dataset.initialized && container.style.display === 'block') {
+      const ctx = container.querySelector('.citation-canvas').getContext('2d');
+      const data = null;
+      
+      new Chart(ctx, {
+        type: 'line',
+        data: {
+          labels: data.citations_over_time.map(d => d.year),
+          datasets: [{
+            label: 'Citations Over Time',
+            data: data.citations_over_time.map(d => d.citations),
+            borderColor: '#2c7be5',
+            backgroundColor: 'rgba(44, 123, 229, 0.1)',
+            tension: 0.3
+          }]
+        },
+        options: {
+          responsive: true,
+          plugins: {
+            legend: {
+              position: 'bottom'
+            }
+          }
+        }
+      });
+      
+      container.dataset.initialized = true;
+    }
+  }
+}
+</script>
 
-<div id="chart-container-" class="chart-container" hidden></div>
+<style>
+.citation-chart {
+  margin: 1rem 0;
+  padding: 1.5rem;
+  background: #f8f9fa;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+}
+
+.citation-canvas {
+  max-width: 100%;
+  min-height: 300px;
+}
+
+.chart-header {
+  margin-bottom: 1rem;
+  border-bottom: 1px solid #dee2e6;
+  padding-bottom: 0.5rem;
+}
+</style>
 
   
 
@@ -1358,39 +2816,93 @@
 
 
 
+
+
 <div class="list__item">
   <article class="archive__item" itemscope itemtype="http://schema.org/CreativeWork">
     
 
     <h2 class="archive__item-title" itemprop="headline">
       
-        <a href="https://gfichetdc.github.io/my-website/nmp.html" rel="permalink"></a>
+        <a href="https://gfichetdc.github.io/my-website/nmp.html" rel="permalink" onclick="toggleChart(event, '')"></a>
       
     </h2>
-    
+
+    <!-- Existing metadata section remains unchanged -->
     
 
-        
+    <!-- Citation chart container -->
+    
 
+    <!-- Existing content remains unchanged -->
     
+
+    <!-- Existing citation/links section remains unchanged -->
     
-    
+    <!-- Other conditional link blocks remain unchanged -->
 
   </article>
 </div>
 
-
-
-<h2 class="archive__item-title" itemprop="headline">
-  <a href="https://gfichetdc.github.io/my-website/nmp.html" 
-     class="citation-chart-trigger"
-     data-title=""
-     data-citations="null">
+<script>
+function toggleChart(event, chartId) {
+  event.preventDefault();
+  const container = document.getElementById(`chart-${chartId}`);
+  if (container) {
+    container.style.display = container.style.display === 'none' ? 'block' : 'none';
     
-  </a>
-</h2>
+    if (!container.dataset.initialized && container.style.display === 'block') {
+      const ctx = container.querySelector('.citation-canvas').getContext('2d');
+      const data = null;
+      
+      new Chart(ctx, {
+        type: 'line',
+        data: {
+          labels: data.citations_over_time.map(d => d.year),
+          datasets: [{
+            label: 'Citations Over Time',
+            data: data.citations_over_time.map(d => d.citations),
+            borderColor: '#2c7be5',
+            backgroundColor: 'rgba(44, 123, 229, 0.1)',
+            tension: 0.3
+          }]
+        },
+        options: {
+          responsive: true,
+          plugins: {
+            legend: {
+              position: 'bottom'
+            }
+          }
+        }
+      });
+      
+      container.dataset.initialized = true;
+    }
+  }
+}
+</script>
 
-<div id="chart-container-" class="chart-container" hidden></div>
+<style>
+.citation-chart {
+  margin: 1rem 0;
+  padding: 1.5rem;
+  background: #f8f9fa;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+}
+
+.citation-canvas {
+  max-width: 100%;
+  min-height: 300px;
+}
+
+.chart-header {
+  margin-bottom: 1rem;
+  border-bottom: 1px solid #dee2e6;
+  padding-bottom: 0.5rem;
+}
+</style>
 
   
 
@@ -1398,39 +2910,93 @@
 
 
 
+
+
 <div class="list__item">
   <article class="archive__item" itemscope itemtype="http://schema.org/CreativeWork">
     
 
     <h2 class="archive__item-title" itemprop="headline">
       
-        <a href="https://gfichetdc.github.io/my-website/wordpress/blog-posts/" rel="permalink"></a>
+        <a href="https://gfichetdc.github.io/my-website/wordpress/blog-posts/" rel="permalink" onclick="toggleChart(event, '')"></a>
       
     </h2>
-    
+
+    <!-- Existing metadata section remains unchanged -->
     
 
-        
+    <!-- Citation chart container -->
+    
 
+    <!-- Existing content remains unchanged -->
     
+
+    <!-- Existing citation/links section remains unchanged -->
     
-    
+    <!-- Other conditional link blocks remain unchanged -->
 
   </article>
 </div>
 
-
-
-<h2 class="archive__item-title" itemprop="headline">
-  <a href="https://gfichetdc.github.io/my-website/wordpress/blog-posts/" 
-     class="citation-chart-trigger"
-     data-title=""
-     data-citations="null">
+<script>
+function toggleChart(event, chartId) {
+  event.preventDefault();
+  const container = document.getElementById(`chart-${chartId}`);
+  if (container) {
+    container.style.display = container.style.display === 'none' ? 'block' : 'none';
     
-  </a>
-</h2>
+    if (!container.dataset.initialized && container.style.display === 'block') {
+      const ctx = container.querySelector('.citation-canvas').getContext('2d');
+      const data = null;
+      
+      new Chart(ctx, {
+        type: 'line',
+        data: {
+          labels: data.citations_over_time.map(d => d.year),
+          datasets: [{
+            label: 'Citations Over Time',
+            data: data.citations_over_time.map(d => d.citations),
+            borderColor: '#2c7be5',
+            backgroundColor: 'rgba(44, 123, 229, 0.1)',
+            tension: 0.3
+          }]
+        },
+        options: {
+          responsive: true,
+          plugins: {
+            legend: {
+              position: 'bottom'
+            }
+          }
+        }
+      });
+      
+      container.dataset.initialized = true;
+    }
+  }
+}
+</script>
 
-<div id="chart-container-" class="chart-container" hidden></div>
+<style>
+.citation-chart {
+  margin: 1rem 0;
+  padding: 1.5rem;
+  background: #f8f9fa;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+}
+
+.citation-canvas {
+  max-width: 100%;
+  min-height: 300px;
+}
+
+.chart-header {
+  margin-bottom: 1rem;
+  border-bottom: 1px solid #dee2e6;
+  padding-bottom: 0.5rem;
+}
+</style>
 
   
 
@@ -1438,39 +3004,93 @@
 
 
 
+
+
 <div class="list__item">
   <article class="archive__item" itemscope itemtype="http://schema.org/CreativeWork">
     
 
     <h2 class="archive__item-title" itemprop="headline">
       
-        <a href="https://gfichetdc.github.io/my-website/redirects.json" rel="permalink"></a>
+        <a href="https://gfichetdc.github.io/my-website/redirects.json" rel="permalink" onclick="toggleChart(event, '')"></a>
       
     </h2>
-    
+
+    <!-- Existing metadata section remains unchanged -->
     
 
-        
+    <!-- Citation chart container -->
+    
 
+    <!-- Existing content remains unchanged -->
     
+
+    <!-- Existing citation/links section remains unchanged -->
     
-    
+    <!-- Other conditional link blocks remain unchanged -->
 
   </article>
 </div>
 
-
-
-<h2 class="archive__item-title" itemprop="headline">
-  <a href="https://gfichetdc.github.io/my-website/redirects.json" 
-     class="citation-chart-trigger"
-     data-title=""
-     data-citations="null">
+<script>
+function toggleChart(event, chartId) {
+  event.preventDefault();
+  const container = document.getElementById(`chart-${chartId}`);
+  if (container) {
+    container.style.display = container.style.display === 'none' ? 'block' : 'none';
     
-  </a>
-</h2>
+    if (!container.dataset.initialized && container.style.display === 'block') {
+      const ctx = container.querySelector('.citation-canvas').getContext('2d');
+      const data = null;
+      
+      new Chart(ctx, {
+        type: 'line',
+        data: {
+          labels: data.citations_over_time.map(d => d.year),
+          datasets: [{
+            label: 'Citations Over Time',
+            data: data.citations_over_time.map(d => d.citations),
+            borderColor: '#2c7be5',
+            backgroundColor: 'rgba(44, 123, 229, 0.1)',
+            tension: 0.3
+          }]
+        },
+        options: {
+          responsive: true,
+          plugins: {
+            legend: {
+              position: 'bottom'
+            }
+          }
+        }
+      });
+      
+      container.dataset.initialized = true;
+    }
+  }
+}
+</script>
 
-<div id="chart-container-" class="chart-container" hidden></div>
+<style>
+.citation-chart {
+  margin: 1rem 0;
+  padding: 1.5rem;
+  background: #f8f9fa;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+}
+
+.citation-canvas {
+  max-width: 100%;
+  min-height: 300px;
+}
+
+.chart-header {
+  margin-bottom: 1rem;
+  border-bottom: 1px solid #dee2e6;
+  padding-bottom: 0.5rem;
+}
+</style>
 
   
 
@@ -1478,39 +3098,93 @@
 
 
 
+
+
 <div class="list__item">
   <article class="archive__item" itemscope itemtype="http://schema.org/CreativeWork">
     
 
     <h2 class="archive__item-title" itemprop="headline">
       
-        <a href="https://gfichetdc.github.io/my-website/feed.xml" rel="permalink"></a>
+        <a href="https://gfichetdc.github.io/my-website/feed.xml" rel="permalink" onclick="toggleChart(event, '')"></a>
       
     </h2>
-    
+
+    <!-- Existing metadata section remains unchanged -->
     
 
-        
+    <!-- Citation chart container -->
+    
 
+    <!-- Existing content remains unchanged -->
     
+
+    <!-- Existing citation/links section remains unchanged -->
     
-    
+    <!-- Other conditional link blocks remain unchanged -->
 
   </article>
 </div>
 
-
-
-<h2 class="archive__item-title" itemprop="headline">
-  <a href="https://gfichetdc.github.io/my-website/feed.xml" 
-     class="citation-chart-trigger"
-     data-title=""
-     data-citations="null">
+<script>
+function toggleChart(event, chartId) {
+  event.preventDefault();
+  const container = document.getElementById(`chart-${chartId}`);
+  if (container) {
+    container.style.display = container.style.display === 'none' ? 'block' : 'none';
     
-  </a>
-</h2>
+    if (!container.dataset.initialized && container.style.display === 'block') {
+      const ctx = container.querySelector('.citation-canvas').getContext('2d');
+      const data = null;
+      
+      new Chart(ctx, {
+        type: 'line',
+        data: {
+          labels: data.citations_over_time.map(d => d.year),
+          datasets: [{
+            label: 'Citations Over Time',
+            data: data.citations_over_time.map(d => d.citations),
+            borderColor: '#2c7be5',
+            backgroundColor: 'rgba(44, 123, 229, 0.1)',
+            tension: 0.3
+          }]
+        },
+        options: {
+          responsive: true,
+          plugins: {
+            legend: {
+              position: 'bottom'
+            }
+          }
+        }
+      });
+      
+      container.dataset.initialized = true;
+    }
+  }
+}
+</script>
 
-<div id="chart-container-" class="chart-container" hidden></div>
+<style>
+.citation-chart {
+  margin: 1rem 0;
+  padding: 1.5rem;
+  background: #f8f9fa;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+}
+
+.citation-canvas {
+  max-width: 100%;
+  min-height: 300px;
+}
+
+.chart-header {
+  margin-bottom: 1rem;
+  border-bottom: 1px solid #dee2e6;
+  padding-bottom: 0.5rem;
+}
+</style>
 
   
 
@@ -1518,39 +3192,93 @@
 
 
 
+
+
 <div class="list__item">
   <article class="archive__item" itemscope itemtype="http://schema.org/CreativeWork">
     
 
     <h2 class="archive__item-title" itemprop="headline">
       
-        <a href="https://gfichetdc.github.io/my-website/sitemap.xml" rel="permalink"></a>
+        <a href="https://gfichetdc.github.io/my-website/sitemap.xml" rel="permalink" onclick="toggleChart(event, '')"></a>
       
     </h2>
-    
+
+    <!-- Existing metadata section remains unchanged -->
     
 
-        
+    <!-- Citation chart container -->
+    
 
+    <!-- Existing content remains unchanged -->
     
+
+    <!-- Existing citation/links section remains unchanged -->
     
-    
+    <!-- Other conditional link blocks remain unchanged -->
 
   </article>
 </div>
 
-
-
-<h2 class="archive__item-title" itemprop="headline">
-  <a href="https://gfichetdc.github.io/my-website/sitemap.xml" 
-     class="citation-chart-trigger"
-     data-title=""
-     data-citations="null">
+<script>
+function toggleChart(event, chartId) {
+  event.preventDefault();
+  const container = document.getElementById(`chart-${chartId}`);
+  if (container) {
+    container.style.display = container.style.display === 'none' ? 'block' : 'none';
     
-  </a>
-</h2>
+    if (!container.dataset.initialized && container.style.display === 'block') {
+      const ctx = container.querySelector('.citation-canvas').getContext('2d');
+      const data = null;
+      
+      new Chart(ctx, {
+        type: 'line',
+        data: {
+          labels: data.citations_over_time.map(d => d.year),
+          datasets: [{
+            label: 'Citations Over Time',
+            data: data.citations_over_time.map(d => d.citations),
+            borderColor: '#2c7be5',
+            backgroundColor: 'rgba(44, 123, 229, 0.1)',
+            tension: 0.3
+          }]
+        },
+        options: {
+          responsive: true,
+          plugins: {
+            legend: {
+              position: 'bottom'
+            }
+          }
+        }
+      });
+      
+      container.dataset.initialized = true;
+    }
+  }
+}
+</script>
 
-<div id="chart-container-" class="chart-container" hidden></div>
+<style>
+.citation-chart {
+  margin: 1rem 0;
+  padding: 1.5rem;
+  background: #f8f9fa;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+}
+
+.citation-canvas {
+  max-width: 100%;
+  min-height: 300px;
+}
+
+.chart-header {
+  margin-bottom: 1rem;
+  border-bottom: 1px solid #dee2e6;
+  padding-bottom: 0.5rem;
+}
+</style>
 
   
 
@@ -1558,39 +3286,93 @@
 
 
 
+
+
 <div class="list__item">
   <article class="archive__item" itemscope itemtype="http://schema.org/CreativeWork">
     
 
     <h2 class="archive__item-title" itemprop="headline">
       
-        <a href="https://gfichetdc.github.io/my-website/robots.txt" rel="permalink"></a>
+        <a href="https://gfichetdc.github.io/my-website/robots.txt" rel="permalink" onclick="toggleChart(event, '')"></a>
       
     </h2>
-    
+
+    <!-- Existing metadata section remains unchanged -->
     
 
-        
+    <!-- Citation chart container -->
+    
 
+    <!-- Existing content remains unchanged -->
     
+
+    <!-- Existing citation/links section remains unchanged -->
     
-    
+    <!-- Other conditional link blocks remain unchanged -->
 
   </article>
 </div>
 
-
-
-<h2 class="archive__item-title" itemprop="headline">
-  <a href="https://gfichetdc.github.io/my-website/robots.txt" 
-     class="citation-chart-trigger"
-     data-title=""
-     data-citations="null">
+<script>
+function toggleChart(event, chartId) {
+  event.preventDefault();
+  const container = document.getElementById(`chart-${chartId}`);
+  if (container) {
+    container.style.display = container.style.display === 'none' ? 'block' : 'none';
     
-  </a>
-</h2>
+    if (!container.dataset.initialized && container.style.display === 'block') {
+      const ctx = container.querySelector('.citation-canvas').getContext('2d');
+      const data = null;
+      
+      new Chart(ctx, {
+        type: 'line',
+        data: {
+          labels: data.citations_over_time.map(d => d.year),
+          datasets: [{
+            label: 'Citations Over Time',
+            data: data.citations_over_time.map(d => d.citations),
+            borderColor: '#2c7be5',
+            backgroundColor: 'rgba(44, 123, 229, 0.1)',
+            tension: 0.3
+          }]
+        },
+        options: {
+          responsive: true,
+          plugins: {
+            legend: {
+              position: 'bottom'
+            }
+          }
+        }
+      });
+      
+      container.dataset.initialized = true;
+    }
+  }
+}
+</script>
 
-<div id="chart-container-" class="chart-container" hidden></div>
+<style>
+.citation-chart {
+  margin: 1rem 0;
+  padding: 1.5rem;
+  background: #f8f9fa;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+}
+
+.citation-canvas {
+  max-width: 100%;
+  min-height: 300px;
+}
+
+.chart-header {
+  margin-bottom: 1rem;
+  border-bottom: 1px solid #dee2e6;
+  padding-bottom: 0.5rem;
+}
+</style>
 
   </div>
 </div>

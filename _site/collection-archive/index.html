@@ -381,44 +381,97 @@
 
 
 
+
+
 <div class="list__item">
   <article class="archive__item" itemscope itemtype="http://schema.org/CreativeWork">
     
 
     <h2 class="archive__item-title" itemprop="headline">
       
-        <a href="https://gfichetdc.github.io/my-website/portfolio/portfolio-1/" rel="permalink">Portfolio item number 1
+        <a href="https://gfichetdc.github.io/my-website/portfolio/portfolio-1/" rel="permalink" onclick="toggleChart(event, 'portfolio-item-number-1')">Portfolio item number 1
 </a>
       
     </h2>
-    
+
+    <!-- Existing metadata section remains unchanged -->
     
 
-        
+    <!-- Citation chart container -->
+    
 
+    <!-- Existing content remains unchanged -->
     
     <p class="archive__item-excerpt" itemprop="description"><p>Short description of portfolio item number 1<br /><img src="/images/500x300.png" /></p>
 </p>
     
+
+    <!-- Existing citation/links section remains unchanged -->
     
-    
+    <!-- Other conditional link blocks remain unchanged -->
 
   </article>
 </div>
 
+<script>
+function toggleChart(event, chartId) {
+  event.preventDefault();
+  const container = document.getElementById(`chart-${chartId}`);
+  if (container) {
+    container.style.display = container.style.display === 'none' ? 'block' : 'none';
+    
+    if (!container.dataset.initialized && container.style.display === 'block') {
+      const ctx = container.querySelector('.citation-canvas').getContext('2d');
+      const data = null;
+      
+      new Chart(ctx, {
+        type: 'line',
+        data: {
+          labels: data.citations_over_time.map(d => d.year),
+          datasets: [{
+            label: 'Citations Over Time',
+            data: data.citations_over_time.map(d => d.citations),
+            borderColor: '#2c7be5',
+            backgroundColor: 'rgba(44, 123, 229, 0.1)',
+            tension: 0.3
+          }]
+        },
+        options: {
+          responsive: true,
+          plugins: {
+            legend: {
+              position: 'bottom'
+            }
+          }
+        }
+      });
+      
+      container.dataset.initialized = true;
+    }
+  }
+}
+</script>
 
+<style>
+.citation-chart {
+  margin: 1rem 0;
+  padding: 1.5rem;
+  background: #f8f9fa;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+}
 
-<h2 class="archive__item-title" itemprop="headline">
-  <a href="https://gfichetdc.github.io/my-website/portfolio/portfolio-1/" 
-     class="citation-chart-trigger"
-     data-title="portfolio-item-number-1"
-     data-citations="null">
-    Portfolio item number 1
+.citation-canvas {
+  max-width: 100%;
+  min-height: 300px;
+}
 
-  </a>
-</h2>
-
-<div id="chart-container-portfolio-item-number-1" class="chart-container" hidden></div>
+.chart-header {
+  margin-bottom: 1rem;
+  border-bottom: 1px solid #dee2e6;
+  padding-bottom: 0.5rem;
+}
+</style>
     
   
     
@@ -428,44 +481,97 @@
 
 
 
+
+
 <div class="list__item">
   <article class="archive__item" itemscope itemtype="http://schema.org/CreativeWork">
     
 
     <h2 class="archive__item-title" itemprop="headline">
       
-        <a href="https://gfichetdc.github.io/my-website/portfolio/portfolio-2/" rel="permalink">Portfolio item number 2
+        <a href="https://gfichetdc.github.io/my-website/portfolio/portfolio-2/" rel="permalink" onclick="toggleChart(event, 'portfolio-item-number-2')">Portfolio item number 2
 </a>
       
     </h2>
-    
+
+    <!-- Existing metadata section remains unchanged -->
     
 
-        
+    <!-- Citation chart container -->
+    
 
+    <!-- Existing content remains unchanged -->
     
     <p class="archive__item-excerpt" itemprop="description"><p>Short description of portfolio item number 2 <br /><img src="/images/500x300.png" /></p>
 </p>
     
+
+    <!-- Existing citation/links section remains unchanged -->
     
-    
+    <!-- Other conditional link blocks remain unchanged -->
 
   </article>
 </div>
 
+<script>
+function toggleChart(event, chartId) {
+  event.preventDefault();
+  const container = document.getElementById(`chart-${chartId}`);
+  if (container) {
+    container.style.display = container.style.display === 'none' ? 'block' : 'none';
+    
+    if (!container.dataset.initialized && container.style.display === 'block') {
+      const ctx = container.querySelector('.citation-canvas').getContext('2d');
+      const data = null;
+      
+      new Chart(ctx, {
+        type: 'line',
+        data: {
+          labels: data.citations_over_time.map(d => d.year),
+          datasets: [{
+            label: 'Citations Over Time',
+            data: data.citations_over_time.map(d => d.citations),
+            borderColor: '#2c7be5',
+            backgroundColor: 'rgba(44, 123, 229, 0.1)',
+            tension: 0.3
+          }]
+        },
+        options: {
+          responsive: true,
+          plugins: {
+            legend: {
+              position: 'bottom'
+            }
+          }
+        }
+      });
+      
+      container.dataset.initialized = true;
+    }
+  }
+}
+</script>
 
+<style>
+.citation-chart {
+  margin: 1rem 0;
+  padding: 1.5rem;
+  background: #f8f9fa;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+}
 
-<h2 class="archive__item-title" itemprop="headline">
-  <a href="https://gfichetdc.github.io/my-website/portfolio/portfolio-2/" 
-     class="citation-chart-trigger"
-     data-title="portfolio-item-number-2"
-     data-citations="null">
-    Portfolio item number 2
+.citation-canvas {
+  max-width: 100%;
+  min-height: 300px;
+}
 
-  </a>
-</h2>
-
-<div id="chart-container-portfolio-item-number-2" class="chart-container" hidden></div>
+.chart-header {
+  margin-bottom: 1rem;
+  border-bottom: 1px solid #dee2e6;
+  padding-bottom: 0.5rem;
+}
+</style>
     
   
 
@@ -489,48 +595,105 @@
 
 
 
+
+
 <div class="list__item">
   <article class="archive__item" itemscope itemtype="http://schema.org/CreativeWork">
     
 
     <h2 class="archive__item-title" itemprop="headline">
       
-        <a href="https://gfichetdc.github.io/my-website/publications/2021-03-01-paper-title-number-0" rel="permalink">Flux variability from ejecta in structured relativistic jets with large-scale magnetic fields
+        <a href="https://gfichetdc.github.io/my-website/publications/2021-03-01-paper-title-number-0" rel="permalink" onclick="toggleChart(event, 'flux-variability-from-ejecta-in-structured-relativistic-jets-with-large-scale-magnetic-fields')">Flux variability from ejecta in structured relativistic jets with large-scale magnetic fields
 </a>
       
     </h2>
-    
+
+    <!-- Existing metadata section remains unchanged -->
     
 
-        
-          <p>Published in <i>Astronomy & Astrophysics</i>, 2021 </p>
-        
+    <!-- Citation chart container -->
+    
+    <div class="citation-chart" id="chart-flux-variability-from-ejecta-in-structured-relativistic-jets-with-large-scale-magnetic-fields" style="display: none;">
+      <div class="chart-header">
+        <h4>Citation Metrics</h4>
+        <p>Total Citations: 150</p>
+      </div>
+      <canvas class="citation-canvas"></canvas>
+    </div>
+    
 
+    <!-- Existing content remains unchanged -->
     
     <p class="archive__item-excerpt" itemprop="description">
 </p>
     
+
+    <!-- Existing citation/links section remains unchanged -->
     
-    
-      <p>Recommended citation: G. Fichet de Clairfontaine, Z. Meliani, A. Zech, and O. Hervet (2021). "Flux variability from ejecta in structured relativistic jets with large-scale magnetic fields." <i>Astronomy & Astrophysics</i>. Volume 647, A77, 18 pp.<br /><a href="https://www.aanda.org/articles/aa/pdf/2021/03/aa39654-20.pdf">Download Paper</a> | <a href="http://academicpages.github.io/files/bibtex0.bib">Download Bibtex</a></p>
-    
+    <!-- Other conditional link blocks remain unchanged -->
 
   </article>
 </div>
 
+<script>
+function toggleChart(event, chartId) {
+  event.preventDefault();
+  const container = document.getElementById(`chart-${chartId}`);
+  if (container) {
+    container.style.display = container.style.display === 'none' ? 'block' : 'none';
+    
+    if (!container.dataset.initialized && container.style.display === 'block') {
+      const ctx = container.querySelector('.citation-canvas').getContext('2d');
+      const data = {"total_citations":150,"citations_over_time":[{"year":2020,"citations":50},{"year":2021,"citations":75},{"year":2022,"citations":150}]};
+      
+      new Chart(ctx, {
+        type: 'line',
+        data: {
+          labels: data.citations_over_time.map(d => d.year),
+          datasets: [{
+            label: 'Citations Over Time',
+            data: data.citations_over_time.map(d => d.citations),
+            borderColor: '#2c7be5',
+            backgroundColor: 'rgba(44, 123, 229, 0.1)',
+            tension: 0.3
+          }]
+        },
+        options: {
+          responsive: true,
+          plugins: {
+            legend: {
+              position: 'bottom'
+            }
+          }
+        }
+      });
+      
+      container.dataset.initialized = true;
+    }
+  }
+}
+</script>
 
+<style>
+.citation-chart {
+  margin: 1rem 0;
+  padding: 1.5rem;
+  background: #f8f9fa;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+}
 
-<h2 class="archive__item-title" itemprop="headline">
-  <a href="https://gfichetdc.github.io/my-website/publications/2021-03-01-paper-title-number-0" 
-     class="citation-chart-trigger"
-     data-title="flux-variability-from-ejecta-in-structured-relativistic-jets-with-large-scale-magnetic-fields"
-     data-citations="{&quot;total_citations&quot;:150,&quot;citations_over_time&quot;:[{&quot;year&quot;:2020,&quot;citations&quot;:50},{&quot;year&quot;:2021,&quot;citations&quot;:75},{&quot;year&quot;:2022,&quot;citations&quot;:150}]}">
-    Flux variability from ejecta in structured relativistic jets with large-scale magnetic fields
+.citation-canvas {
+  max-width: 100%;
+  min-height: 300px;
+}
 
-  </a>
-</h2>
-
-<div id="chart-container-flux-variability-from-ejecta-in-structured-relativistic-jets-with-large-scale-magnetic-fields" class="chart-container" hidden></div>
+.chart-header {
+  margin-bottom: 1rem;
+  border-bottom: 1px solid #dee2e6;
+  padding-bottom: 0.5rem;
+}
+</style>
     
   
     
@@ -540,48 +703,97 @@
 
 
 
+
+
 <div class="list__item">
   <article class="archive__item" itemscope itemtype="http://schema.org/CreativeWork">
     
 
     <h2 class="archive__item-title" itemprop="headline">
       
-        <a href="https://gfichetdc.github.io/my-website/publication/2022-05-01-paper-title-number-1" rel="permalink">Flare echoes from relaxation shocks in perturbed relativistic jets
+        <a href="https://gfichetdc.github.io/my-website/publication/2022-05-01-paper-title-number-1" rel="permalink" onclick="toggleChart(event, 'flare-echoes-from-relaxation-shocks-in-perturbed-relativistic-jets')">Flare echoes from relaxation shocks in perturbed relativistic jets
 </a>
       
     </h2>
-    
+
+    <!-- Existing metadata section remains unchanged -->
     
 
-        
-          <p>Published in <i>Astronomy & Astrophysics</i>, 2022 </p>
-        
+    <!-- Citation chart container -->
+    
 
+    <!-- Existing content remains unchanged -->
     
     <p class="archive__item-excerpt" itemprop="description">
 </p>
     
+
+    <!-- Existing citation/links section remains unchanged -->
     
-    
-      <p>Recommended citation: G. Fichet de Clairfontaine, Z. Meliani, and A. Zech (2022). "Flare echos from relaxation shocks in perturbed relativistic jets." <i>Astronomy & Astrophysics</i>. Volume 661.<br /><a href="https://www.aanda.org/articles/aa/pdf/2022/05/aa43119-22.pdf">Download Paper</a> | <a href="http://academicpages.github.io/files/bibtex1.bib">Download Bibtex</a></p>
-    
+    <!-- Other conditional link blocks remain unchanged -->
 
   </article>
 </div>
 
+<script>
+function toggleChart(event, chartId) {
+  event.preventDefault();
+  const container = document.getElementById(`chart-${chartId}`);
+  if (container) {
+    container.style.display = container.style.display === 'none' ? 'block' : 'none';
+    
+    if (!container.dataset.initialized && container.style.display === 'block') {
+      const ctx = container.querySelector('.citation-canvas').getContext('2d');
+      const data = null;
+      
+      new Chart(ctx, {
+        type: 'line',
+        data: {
+          labels: data.citations_over_time.map(d => d.year),
+          datasets: [{
+            label: 'Citations Over Time',
+            data: data.citations_over_time.map(d => d.citations),
+            borderColor: '#2c7be5',
+            backgroundColor: 'rgba(44, 123, 229, 0.1)',
+            tension: 0.3
+          }]
+        },
+        options: {
+          responsive: true,
+          plugins: {
+            legend: {
+              position: 'bottom'
+            }
+          }
+        }
+      });
+      
+      container.dataset.initialized = true;
+    }
+  }
+}
+</script>
 
+<style>
+.citation-chart {
+  margin: 1rem 0;
+  padding: 1.5rem;
+  background: #f8f9fa;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+}
 
-<h2 class="archive__item-title" itemprop="headline">
-  <a href="https://gfichetdc.github.io/my-website/publication/2022-05-01-paper-title-number-1" 
-     class="citation-chart-trigger"
-     data-title="flare-echoes-from-relaxation-shocks-in-perturbed-relativistic-jets"
-     data-citations="null">
-    Flare echoes from relaxation shocks in perturbed relativistic jets
+.citation-canvas {
+  max-width: 100%;
+  min-height: 300px;
+}
 
-  </a>
-</h2>
-
-<div id="chart-container-flare-echoes-from-relaxation-shocks-in-perturbed-relativistic-jets" class="chart-container" hidden></div>
+.chart-header {
+  margin-bottom: 1rem;
+  border-bottom: 1px solid #dee2e6;
+  padding-bottom: 0.5rem;
+}
+</style>
     
   
     
@@ -591,48 +803,97 @@
 
 
 
+
+
 <div class="list__item">
   <article class="archive__item" itemscope itemtype="http://schema.org/CreativeWork">
     
 
     <h2 class="archive__item-title" itemprop="headline">
       
-        <a href="https://gfichetdc.github.io/my-website/publications/2023-11-01-paper-title-number-2" rel="permalink">Hadronic Processes at Work in 5BZB J0630‑2406
+        <a href="https://gfichetdc.github.io/my-website/publications/2023-11-01-paper-title-number-2" rel="permalink" onclick="toggleChart(event, 'hadronic-processes-at-work-in-5bzb-j0630-2406')">Hadronic Processes at Work in 5BZB J0630‑2406
 </a>
       
     </h2>
-    
+
+    <!-- Existing metadata section remains unchanged -->
     
 
-        
-          <p>Published in <i>The Astrophysical Journal Letters</i>, 2023 </p>
-        
+    <!-- Citation chart container -->
+    
 
+    <!-- Existing content remains unchanged -->
     
     <p class="archive__item-excerpt" itemprop="description">
 </p>
     
+
+    <!-- Existing citation/links section remains unchanged -->
     
-    
-      <p>Recommended citation: G. Fichet de Clairfontaine, S. Buson, L. Pfeiffer, S. Marchesi, A. Azzollini, V. Baghmanyan, A. Tramacere, E. Barbano, and L. Oswald (2023). "Hadronic processes at Work in 5BZB J0630-2406." <i>The Astrophysical Journal Letters</i>. Volume 958.<br /><a href="https://iopscience.iop.org/article/10.3847/2041-8213/ad0644/pdf">Download Paper</a> | <a href="http://academicpages.github.io/files/bibtex2.bib">Download Bibtex</a></p>
-    
+    <!-- Other conditional link blocks remain unchanged -->
 
   </article>
 </div>
 
+<script>
+function toggleChart(event, chartId) {
+  event.preventDefault();
+  const container = document.getElementById(`chart-${chartId}`);
+  if (container) {
+    container.style.display = container.style.display === 'none' ? 'block' : 'none';
+    
+    if (!container.dataset.initialized && container.style.display === 'block') {
+      const ctx = container.querySelector('.citation-canvas').getContext('2d');
+      const data = null;
+      
+      new Chart(ctx, {
+        type: 'line',
+        data: {
+          labels: data.citations_over_time.map(d => d.year),
+          datasets: [{
+            label: 'Citations Over Time',
+            data: data.citations_over_time.map(d => d.citations),
+            borderColor: '#2c7be5',
+            backgroundColor: 'rgba(44, 123, 229, 0.1)',
+            tension: 0.3
+          }]
+        },
+        options: {
+          responsive: true,
+          plugins: {
+            legend: {
+              position: 'bottom'
+            }
+          }
+        }
+      });
+      
+      container.dataset.initialized = true;
+    }
+  }
+}
+</script>
 
+<style>
+.citation-chart {
+  margin: 1rem 0;
+  padding: 1.5rem;
+  background: #f8f9fa;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+}
 
-<h2 class="archive__item-title" itemprop="headline">
-  <a href="https://gfichetdc.github.io/my-website/publications/2023-11-01-paper-title-number-2" 
-     class="citation-chart-trigger"
-     data-title="hadronic-processes-at-work-in-5bzb-j0630-2406"
-     data-citations="null">
-    Hadronic Processes at Work in 5BZB J0630‑2406
+.citation-canvas {
+  max-width: 100%;
+  min-height: 300px;
+}
 
-  </a>
-</h2>
-
-<div id="chart-container-hadronic-processes-at-work-in-5bzb-j0630-2406" class="chart-container" hidden></div>
+.chart-header {
+  margin-bottom: 1rem;
+  border-bottom: 1px solid #dee2e6;
+  padding-bottom: 0.5rem;
+}
+</style>
     
   
     
@@ -642,48 +903,97 @@
 
 
 
+
+
 <div class="list__item">
   <article class="archive__item" itemscope itemtype="http://schema.org/CreativeWork">
     
 
     <h2 class="archive__item-title" itemprop="headline">
       
-        <a href="https://gfichetdc.github.io/my-website/publications/2024-03-01-paper-title-number-3" rel="permalink">The galactic bubbles of starburst galaxies. The influence of galactic large-scale magnetic fields
+        <a href="https://gfichetdc.github.io/my-website/publications/2024-03-01-paper-title-number-3" rel="permalink" onclick="toggleChart(event, 'the-galactic-bubbles-of-starburst-galaxies-the-influence-of-galactic-large-scale-magnetic-fields')">The galactic bubbles of starburst galaxies. The influence of galactic large-scale magnetic fields
 </a>
       
     </h2>
-    
+
+    <!-- Existing metadata section remains unchanged -->
     
 
-        
-          <p>Published in <i>Astronomy & Astrophysics</i>, 2024 </p>
-        
+    <!-- Citation chart container -->
+    
 
+    <!-- Existing content remains unchanged -->
     
     <p class="archive__item-excerpt" itemprop="description">
 </p>
     
+
+    <!-- Existing citation/links section remains unchanged -->
     
-    
-      <p>Recommended citation: Z. Meliani, P. Cristofari, A. Rodriguez-Gonzalez, G. Fichet de Clairfontaine, E. Proust, and E. Peretti (2024). "The Galactic Bubbles of Starburst Galaxies." <i>Astronomy & Astrophysics</i>. Volume 683.<br /><a href="https://www.aanda.org/articles/aa/pdf/2024/03/aa47352-23.pdf">Download Paper</a> | <a href="http://academicpages.github.io/files/bibtex3.bib">Download Bibtex</a></p>
-    
+    <!-- Other conditional link blocks remain unchanged -->
 
   </article>
 </div>
 
+<script>
+function toggleChart(event, chartId) {
+  event.preventDefault();
+  const container = document.getElementById(`chart-${chartId}`);
+  if (container) {
+    container.style.display = container.style.display === 'none' ? 'block' : 'none';
+    
+    if (!container.dataset.initialized && container.style.display === 'block') {
+      const ctx = container.querySelector('.citation-canvas').getContext('2d');
+      const data = null;
+      
+      new Chart(ctx, {
+        type: 'line',
+        data: {
+          labels: data.citations_over_time.map(d => d.year),
+          datasets: [{
+            label: 'Citations Over Time',
+            data: data.citations_over_time.map(d => d.citations),
+            borderColor: '#2c7be5',
+            backgroundColor: 'rgba(44, 123, 229, 0.1)',
+            tension: 0.3
+          }]
+        },
+        options: {
+          responsive: true,
+          plugins: {
+            legend: {
+              position: 'bottom'
+            }
+          }
+        }
+      });
+      
+      container.dataset.initialized = true;
+    }
+  }
+}
+</script>
 
+<style>
+.citation-chart {
+  margin: 1rem 0;
+  padding: 1.5rem;
+  background: #f8f9fa;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+}
 
-<h2 class="archive__item-title" itemprop="headline">
-  <a href="https://gfichetdc.github.io/my-website/publications/2024-03-01-paper-title-number-3" 
-     class="citation-chart-trigger"
-     data-title="the-galactic-bubbles-of-starburst-galaxies-the-influence-of-galactic-large-scale-magnetic-fields"
-     data-citations="null">
-    The galactic bubbles of starburst galaxies. The influence of galactic large-scale magnetic fields
+.citation-canvas {
+  max-width: 100%;
+  min-height: 300px;
+}
 
-  </a>
-</h2>
-
-<div id="chart-container-the-galactic-bubbles-of-starburst-galaxies-the-influence-of-galactic-large-scale-magnetic-fields" class="chart-container" hidden></div>
+.chart-header {
+  margin-bottom: 1rem;
+  border-bottom: 1px solid #dee2e6;
+  padding-bottom: 0.5rem;
+}
+</style>
     
   
     
@@ -693,48 +1003,97 @@
 
 
 
+
+
 <div class="list__item">
   <article class="archive__item" itemscope itemtype="http://schema.org/CreativeWork">
     
 
     <h2 class="archive__item-title" itemprop="headline">
       
-        <a href="https://gfichetdc.github.io/my-website/publications/2024-11-01-paper-title-number-4" rel="permalink">AM³: An Open-Source Tool for Time-Dependent Lepto-Hadronic Modelling of Astrophysical Sources
+        <a href="https://gfichetdc.github.io/my-website/publications/2024-11-01-paper-title-number-4" rel="permalink" onclick="toggleChart(event, 'am-an-open-source-tool-for-time-dependent-lepto-hadronic-modelling-of-astrophysical-sources')">AM³: An Open-Source Tool for Time-Dependent Lepto-Hadronic Modelling of Astrophysical Sources
 </a>
       
     </h2>
-    
+
+    <!-- Existing metadata section remains unchanged -->
     
 
-        
-          <p>Published in <i>The Astrophysical Journal Supplement Series</i>, 2024 </p>
-        
+    <!-- Citation chart container -->
+    
 
+    <!-- Existing content remains unchanged -->
     
     <p class="archive__item-excerpt" itemprop="description">
 </p>
     
+
+    <!-- Existing citation/links section remains unchanged -->
     
-    
-      <p>Recommended citation: M. Klinger, A. Rudolph, X. Rodrigues, C. Yuan, G. Fichet de Clairfontaine, S. Gao, A. Fedynitch, W. Winter, and M. Pohl (2023). "AM³: An open-source tool for time-dependent lepto-hadronic modelling of astrophysical sources." <i>The Astrophysical Journal Supplement Series</i>. Volume 275.<br /><a href="https://iopscience.iop.org/article/10.3847/1538-4365/ad725c/pdf">Download Paper</a> | <a href="http://academicpages.github.io/files/bibtex4.bib">Download Bibtex</a></p>
-    
+    <!-- Other conditional link blocks remain unchanged -->
 
   </article>
 </div>
 
+<script>
+function toggleChart(event, chartId) {
+  event.preventDefault();
+  const container = document.getElementById(`chart-${chartId}`);
+  if (container) {
+    container.style.display = container.style.display === 'none' ? 'block' : 'none';
+    
+    if (!container.dataset.initialized && container.style.display === 'block') {
+      const ctx = container.querySelector('.citation-canvas').getContext('2d');
+      const data = null;
+      
+      new Chart(ctx, {
+        type: 'line',
+        data: {
+          labels: data.citations_over_time.map(d => d.year),
+          datasets: [{
+            label: 'Citations Over Time',
+            data: data.citations_over_time.map(d => d.citations),
+            borderColor: '#2c7be5',
+            backgroundColor: 'rgba(44, 123, 229, 0.1)',
+            tension: 0.3
+          }]
+        },
+        options: {
+          responsive: true,
+          plugins: {
+            legend: {
+              position: 'bottom'
+            }
+          }
+        }
+      });
+      
+      container.dataset.initialized = true;
+    }
+  }
+}
+</script>
 
+<style>
+.citation-chart {
+  margin: 1rem 0;
+  padding: 1.5rem;
+  background: #f8f9fa;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+}
 
-<h2 class="archive__item-title" itemprop="headline">
-  <a href="https://gfichetdc.github.io/my-website/publications/2024-11-01-paper-title-number-4" 
-     class="citation-chart-trigger"
-     data-title="am-an-open-source-tool-for-time-dependent-lepto-hadronic-modelling-of-astrophysical-sources"
-     data-citations="null">
-    AM³: An Open-Source Tool for Time-Dependent Lepto-Hadronic Modelling of Astrophysical Sources
+.citation-canvas {
+  max-width: 100%;
+  min-height: 300px;
+}
 
-  </a>
-</h2>
-
-<div id="chart-container-am-an-open-source-tool-for-time-dependent-lepto-hadronic-modelling-of-astrophysical-sources" class="chart-container" hidden></div>
+.chart-header {
+  margin-bottom: 1rem;
+  border-bottom: 1px solid #dee2e6;
+  padding-bottom: 0.5rem;
+}
+</style>
     
   
     
@@ -744,48 +1103,97 @@
 
 
 
+
+
 <div class="list__item">
   <article class="archive__item" itemscope itemtype="http://schema.org/CreativeWork">
     
 
     <h2 class="archive__item-title" itemprop="headline">
       
-        <a href="https://gfichetdc.github.io/my-website/publications/2025-01-11-paper-title-number-5" rel="permalink">Dynamic and radiative implications of jet–star interactions in AGN jets
+        <a href="https://gfichetdc.github.io/my-website/publications/2025-01-11-paper-title-number-5" rel="permalink" onclick="toggleChart(event, 'dynamic-and-radiative-implications-of-jet-star-interactions-in-agn-jets')">Dynamic and radiative implications of jet–star interactions in AGN jets
 </a>
       
     </h2>
-    
+
+    <!-- Existing metadata section remains unchanged -->
     
 
-        
-          <p>Published in <i>Astronomy & Astrophysics</i>, 2025 </p>
-        
+    <!-- Citation chart container -->
+    
 
+    <!-- Existing content remains unchanged -->
     
     <p class="archive__item-excerpt" itemprop="description">
 </p>
     
+
+    <!-- Existing citation/links section remains unchanged -->
     
-    
-      <p>Recommended citation: G. Fichet de Clairfontaine, M. Perucho, J.M. Martí, and Y. Kovalev (2025). &quot;Dynamic and radiative implications of jet–star interactions in AGN jets.&quot; <i>Astronomy & Astrophysics</i>. Volume 693.<br /><a href="https://www.aanda.org/articles/aa/pdf/2025/01/aa51914-24.pdf">Download Paper</a> | <a href="http://academicpages.github.io/files/bibtexA.bib">Download Bibtex</a></p>
-    
+    <!-- Other conditional link blocks remain unchanged -->
 
   </article>
 </div>
 
+<script>
+function toggleChart(event, chartId) {
+  event.preventDefault();
+  const container = document.getElementById(`chart-${chartId}`);
+  if (container) {
+    container.style.display = container.style.display === 'none' ? 'block' : 'none';
+    
+    if (!container.dataset.initialized && container.style.display === 'block') {
+      const ctx = container.querySelector('.citation-canvas').getContext('2d');
+      const data = null;
+      
+      new Chart(ctx, {
+        type: 'line',
+        data: {
+          labels: data.citations_over_time.map(d => d.year),
+          datasets: [{
+            label: 'Citations Over Time',
+            data: data.citations_over_time.map(d => d.citations),
+            borderColor: '#2c7be5',
+            backgroundColor: 'rgba(44, 123, 229, 0.1)',
+            tension: 0.3
+          }]
+        },
+        options: {
+          responsive: true,
+          plugins: {
+            legend: {
+              position: 'bottom'
+            }
+          }
+        }
+      });
+      
+      container.dataset.initialized = true;
+    }
+  }
+}
+</script>
 
+<style>
+.citation-chart {
+  margin: 1rem 0;
+  padding: 1.5rem;
+  background: #f8f9fa;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+}
 
-<h2 class="archive__item-title" itemprop="headline">
-  <a href="https://gfichetdc.github.io/my-website/publications/2025-01-11-paper-title-number-5" 
-     class="citation-chart-trigger"
-     data-title="dynamic-and-radiative-implications-of-jet-star-interactions-in-agn-jets"
-     data-citations="null">
-    Dynamic and radiative implications of jet–star interactions in AGN jets
+.citation-canvas {
+  max-width: 100%;
+  min-height: 300px;
+}
 
-  </a>
-</h2>
-
-<div id="chart-container-dynamic-and-radiative-implications-of-jet-star-interactions-in-agn-jets" class="chart-container" hidden></div>
+.chart-header {
+  margin-bottom: 1rem;
+  border-bottom: 1px solid #dee2e6;
+  padding-bottom: 0.5rem;
+}
+</style>
     
   
 
@@ -804,46 +1212,97 @@
 
 
 
+
+
 <div class="list__item">
   <article class="archive__item" itemscope itemtype="http://schema.org/CreativeWork">
     
 
     <h2 class="archive__item-title" itemprop="headline">
       
-        <a href="https://gfichetdc.github.io/my-website/talks/2012-03-01-talk-1" rel="permalink">Talk 1 on Relevant Topic in Your Field
+        <a href="https://gfichetdc.github.io/my-website/talks/2012-03-01-talk-1" rel="permalink" onclick="toggleChart(event, 'talk-1-on-relevant-topic-in-your-field')">Talk 1 on Relevant Topic in Your Field
 </a>
       
     </h2>
-    
+
+    <!-- Existing metadata section remains unchanged -->
     
 
-        
-         <p class="page__date"><strong><i class="fa fa-fw fa-calendar" aria-hidden="true"></i> Published:</strong> <time datetime="2012-03-01T00:00:00+00:00">March 01, 2012</time></p>
-        
+    <!-- Citation chart container -->
+    
 
+    <!-- Existing content remains unchanged -->
     
     <p class="archive__item-excerpt" itemprop="description"><p>This is a description of your talk, which is a markdown file that can be all markdown-ified like any other post. Yay markdown!</p>
 </p>
     
+
+    <!-- Existing citation/links section remains unchanged -->
     
-    
+    <!-- Other conditional link blocks remain unchanged -->
 
   </article>
 </div>
 
+<script>
+function toggleChart(event, chartId) {
+  event.preventDefault();
+  const container = document.getElementById(`chart-${chartId}`);
+  if (container) {
+    container.style.display = container.style.display === 'none' ? 'block' : 'none';
+    
+    if (!container.dataset.initialized && container.style.display === 'block') {
+      const ctx = container.querySelector('.citation-canvas').getContext('2d');
+      const data = null;
+      
+      new Chart(ctx, {
+        type: 'line',
+        data: {
+          labels: data.citations_over_time.map(d => d.year),
+          datasets: [{
+            label: 'Citations Over Time',
+            data: data.citations_over_time.map(d => d.citations),
+            borderColor: '#2c7be5',
+            backgroundColor: 'rgba(44, 123, 229, 0.1)',
+            tension: 0.3
+          }]
+        },
+        options: {
+          responsive: true,
+          plugins: {
+            legend: {
+              position: 'bottom'
+            }
+          }
+        }
+      });
+      
+      container.dataset.initialized = true;
+    }
+  }
+}
+</script>
 
+<style>
+.citation-chart {
+  margin: 1rem 0;
+  padding: 1.5rem;
+  background: #f8f9fa;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+}
 
-<h2 class="archive__item-title" itemprop="headline">
-  <a href="https://gfichetdc.github.io/my-website/talks/2012-03-01-talk-1" 
-     class="citation-chart-trigger"
-     data-title="talk-1-on-relevant-topic-in-your-field"
-     data-citations="null">
-    Talk 1 on Relevant Topic in Your Field
+.citation-canvas {
+  max-width: 100%;
+  min-height: 300px;
+}
 
-  </a>
-</h2>
-
-<div id="chart-container-talk-1-on-relevant-topic-in-your-field" class="chart-container" hidden></div>
+.chart-header {
+  margin-bottom: 1rem;
+  border-bottom: 1px solid #dee2e6;
+  padding-bottom: 0.5rem;
+}
+</style>
     
   
 
@@ -862,51 +1321,104 @@
 
 
 
+
+
 <div class="list__item">
   <article class="archive__item" itemscope itemtype="http://schema.org/CreativeWork">
     
 
     <h2 class="archive__item-title" itemprop="headline">
       
-        <a href="https://gfichetdc.github.io/my-website/teaching/2019-spring-teaching-3" rel="permalink">Tutoring for Lumière sur l’Univers
+        <a href="https://gfichetdc.github.io/my-website/teaching/2019-spring-teaching-3" rel="permalink" onclick="toggleChart(event, 'tutoring-for-lumière-sur-l-univers')">Tutoring for Lumière sur l’Univers
 </a>
       
     </h2>
-    
+
+    <!-- Existing metadata section remains unchanged -->
     
 
-        
-          <p> University Diploma, <i>Observatoire de Paris</i>, 2019 </p>
-        
+    <!-- Citation chart container -->
+    
 
+    <!-- Existing content remains unchanged -->
     
     <p class="archive__item-excerpt" itemprop="description"><p>As a tutor for the “Lumière sur l’Univers” university diploma program, I provided guidance and support to students as they explored various topics in astronomy and astrophysics.</p>
 
 </p>
     
+
+    <!-- Existing citation/links section remains unchanged -->
     
-    
+    <!-- Other conditional link blocks remain unchanged -->
 
   </article>
 </div>
 
+<script>
+function toggleChart(event, chartId) {
+  event.preventDefault();
+  const container = document.getElementById(`chart-${chartId}`);
+  if (container) {
+    container.style.display = container.style.display === 'none' ? 'block' : 'none';
+    
+    if (!container.dataset.initialized && container.style.display === 'block') {
+      const ctx = container.querySelector('.citation-canvas').getContext('2d');
+      const data = null;
+      
+      new Chart(ctx, {
+        type: 'line',
+        data: {
+          labels: data.citations_over_time.map(d => d.year),
+          datasets: [{
+            label: 'Citations Over Time',
+            data: data.citations_over_time.map(d => d.citations),
+            borderColor: '#2c7be5',
+            backgroundColor: 'rgba(44, 123, 229, 0.1)',
+            tension: 0.3
+          }]
+        },
+        options: {
+          responsive: true,
+          plugins: {
+            legend: {
+              position: 'bottom'
+            }
+          }
+        }
+      });
+      
+      container.dataset.initialized = true;
+    }
+  }
+}
+</script>
 
+<style>
+.citation-chart {
+  margin: 1rem 0;
+  padding: 1.5rem;
+  background: #f8f9fa;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+}
 
-<h2 class="archive__item-title" itemprop="headline">
-  <a href="https://gfichetdc.github.io/my-website/teaching/2019-spring-teaching-3" 
-     class="citation-chart-trigger"
-     data-title="tutoring-for-lumière-sur-l-univers"
-     data-citations="null">
-    Tutoring for Lumière sur l’Univers
+.citation-canvas {
+  max-width: 100%;
+  min-height: 300px;
+}
 
-  </a>
-</h2>
-
-<div id="chart-container-tutoring-for-lumière-sur-l-univers" class="chart-container" hidden></div>
+.chart-header {
+  margin-bottom: 1rem;
+  border-bottom: 1px solid #dee2e6;
+  padding-bottom: 0.5rem;
+}
+</style>
     
   
     
       
+
+
 
 
 
@@ -918,45 +1430,96 @@
 
     <h2 class="archive__item-title" itemprop="headline">
       
-        <a href="https://gfichetdc.github.io/my-website/teaching/2019-spring-teaching-1" rel="permalink">Data Processing and Associated Methods
+        <a href="https://gfichetdc.github.io/my-website/teaching/2019-spring-teaching-1" rel="permalink" onclick="toggleChart(event, 'data-processing-and-associated-methods')">Data Processing and Associated Methods
 </a>
       
     </h2>
-    
+
+    <!-- Existing metadata section remains unchanged -->
     
 
-        
-          <p> Master Course, <i>Observatoire de Paris</i>, 2019 </p>
-        
+    <!-- Citation chart container -->
+    
 
+    <!-- Existing content remains unchanged -->
     
     <p class="archive__item-excerpt" itemprop="description"><p>This course covered data processing techniques and associated methods for space science and technology students. I supervised evening observation sessions and practical workshops for data analysis.</p>
 
 </p>
     
+
+    <!-- Existing citation/links section remains unchanged -->
     
-    
+    <!-- Other conditional link blocks remain unchanged -->
 
   </article>
 </div>
 
+<script>
+function toggleChart(event, chartId) {
+  event.preventDefault();
+  const container = document.getElementById(`chart-${chartId}`);
+  if (container) {
+    container.style.display = container.style.display === 'none' ? 'block' : 'none';
+    
+    if (!container.dataset.initialized && container.style.display === 'block') {
+      const ctx = container.querySelector('.citation-canvas').getContext('2d');
+      const data = null;
+      
+      new Chart(ctx, {
+        type: 'line',
+        data: {
+          labels: data.citations_over_time.map(d => d.year),
+          datasets: [{
+            label: 'Citations Over Time',
+            data: data.citations_over_time.map(d => d.citations),
+            borderColor: '#2c7be5',
+            backgroundColor: 'rgba(44, 123, 229, 0.1)',
+            tension: 0.3
+          }]
+        },
+        options: {
+          responsive: true,
+          plugins: {
+            legend: {
+              position: 'bottom'
+            }
+          }
+        }
+      });
+      
+      container.dataset.initialized = true;
+    }
+  }
+}
+</script>
 
+<style>
+.citation-chart {
+  margin: 1rem 0;
+  padding: 1.5rem;
+  background: #f8f9fa;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+}
 
-<h2 class="archive__item-title" itemprop="headline">
-  <a href="https://gfichetdc.github.io/my-website/teaching/2019-spring-teaching-1" 
-     class="citation-chart-trigger"
-     data-title="data-processing-and-associated-methods"
-     data-citations="null">
-    Data Processing and Associated Methods
+.citation-canvas {
+  max-width: 100%;
+  min-height: 300px;
+}
 
-  </a>
-</h2>
-
-<div id="chart-container-data-processing-and-associated-methods" class="chart-container" hidden></div>
+.chart-header {
+  margin-bottom: 1rem;
+  border-bottom: 1px solid #dee2e6;
+  padding-bottom: 0.5rem;
+}
+</style>
     
   
     
       
+
+
 
 
 
@@ -968,41 +1531,90 @@
 
     <h2 class="archive__item-title" itemprop="headline">
       
-        <a href="https://gfichetdc.github.io/my-website/teaching/2019-spring-teaching-2" rel="permalink">Interactions Milieux Dilués et Rayonnements
+        <a href="https://gfichetdc.github.io/my-website/teaching/2019-spring-teaching-2" rel="permalink" onclick="toggleChart(event, 'interactions-milieux-dilués-et-rayonnements')">Interactions Milieux Dilués et Rayonnements
 </a>
       
     </h2>
-    
+
+    <!-- Existing metadata section remains unchanged -->
     
 
-        
-          <p> Master Course, <i>Sorbonne Université</i>, 2019 </p>
-        
+    <!-- Citation chart container -->
+    
 
+    <!-- Existing content remains unchanged -->
     
     <p class="archive__item-excerpt" itemprop="description"><p>This course focused on the interactions between dilute media and radiation, providing students with a deep understanding of the underlying physical principles. I led tutorial sessions to reinforce learning through problem-solving exercises.</p>
 
 </p>
     
+
+    <!-- Existing citation/links section remains unchanged -->
     
-    
+    <!-- Other conditional link blocks remain unchanged -->
 
   </article>
 </div>
 
+<script>
+function toggleChart(event, chartId) {
+  event.preventDefault();
+  const container = document.getElementById(`chart-${chartId}`);
+  if (container) {
+    container.style.display = container.style.display === 'none' ? 'block' : 'none';
+    
+    if (!container.dataset.initialized && container.style.display === 'block') {
+      const ctx = container.querySelector('.citation-canvas').getContext('2d');
+      const data = null;
+      
+      new Chart(ctx, {
+        type: 'line',
+        data: {
+          labels: data.citations_over_time.map(d => d.year),
+          datasets: [{
+            label: 'Citations Over Time',
+            data: data.citations_over_time.map(d => d.citations),
+            borderColor: '#2c7be5',
+            backgroundColor: 'rgba(44, 123, 229, 0.1)',
+            tension: 0.3
+          }]
+        },
+        options: {
+          responsive: true,
+          plugins: {
+            legend: {
+              position: 'bottom'
+            }
+          }
+        }
+      });
+      
+      container.dataset.initialized = true;
+    }
+  }
+}
+</script>
 
+<style>
+.citation-chart {
+  margin: 1rem 0;
+  padding: 1.5rem;
+  background: #f8f9fa;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+}
 
-<h2 class="archive__item-title" itemprop="headline">
-  <a href="https://gfichetdc.github.io/my-website/teaching/2019-spring-teaching-2" 
-     class="citation-chart-trigger"
-     data-title="interactions-milieux-dilués-et-rayonnements"
-     data-citations="null">
-    Interactions Milieux Dilués et Rayonnements
+.citation-canvas {
+  max-width: 100%;
+  min-height: 300px;
+}
 
-  </a>
-</h2>
-
-<div id="chart-container-interactions-milieux-dilués-et-rayonnements" class="chart-container" hidden></div>
+.chart-header {
+  margin-bottom: 1rem;
+  border-bottom: 1px solid #dee2e6;
+  padding-bottom: 0.5rem;
+}
+</style>
     
   
 
