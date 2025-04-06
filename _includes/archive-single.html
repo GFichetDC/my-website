@@ -82,3 +82,37 @@
 
   </article>
 </div>
+
+{% assign citation_data = site.data.citations[post.title] %}
+{% if citation_data %}
+  <div class="citation-metrics">
+    <h4>Citation Metrics</h4>
+    <p>Total Citations: {{ citation_data.total_citations }}</p>
+    <canvas id="citationChart{{ post.title | slugify }}"></canvas>
+    <script>
+      document.addEventListener("DOMContentLoaded", function() {
+        var ctx = document.getElementById('citationChart{{ post.title | slugify }}').getContext('2d');
+        var citationChart = new Chart(ctx, {
+          type: 'line',
+          data: {
+            labels: [{% for year_data in citation_data.citations_over_time %}'{{ year_data.year }}',{% endfor %}],
+            datasets: [{
+              label: 'Citations Over Time',
+              data: [{% for year_data in citation_data.citations_over_time %}{{ year_data.citations }},{% endfor %}],
+              backgroundColor: 'rgba(75, 192, 192, 0.2)',
+              borderColor: 'rgba(75, 192, 192, 1)',
+              borderWidth: 1
+            }]
+          },
+          options: {
+            scales: {
+              y: {
+                beginAtZero: true
+              }
+            }
+          }
+        });
+      });
+    </script>
+  </div>
+{% endif %}

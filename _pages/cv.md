@@ -23,12 +23,12 @@ Work Experience
 ======
 * 2024 - Present: Postdoctoral Researcher
   * Université de Valencia, Department of Astrophysics
-  * Research on jets of active galactic nuclei as potential neutrino sources
+  * Dynamic and radiative impacts of jet-star interactions
   * Supervisor: Prof. Manel Perucho
 
 * 2022 - 2024: Postdoctoral Researcher
   * Universität Würzburg, Department of Astrophysics
-  * Research on high-energy phenomena in AGN jets
+  * Research on jets of active galactic nuclei as potential neutrino sources
   * Supervisor: Prof. Sara Buson (ERC 949555, MessMapp)
 
 * 2019 - 2022: Ph.D. Candidate
@@ -78,4 +78,4 @@ Teaching
   
 Service and leadership
 ======
-* Currently signed in to 43 different slack teams
+* Elected PhD representative at the scientific council of the Observatory of Paris (2021-2022).
