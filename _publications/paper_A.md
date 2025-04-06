@@ -4,7 +4,7 @@ collection: publications
 category: manuscripts
 permalink: /publication/paper_A
 excerpt: 
-date: 
+date: 01/01/2025
 venue: 'Astronomy & Astrophysics'
 slidesurl: 
 paperurl: 'http://academicpages.github.io/files/paperA.pdf'
