@@ -21,7 +21,6 @@ layout: archive  # Keeps left sidebar
     <canvas id="citationChart"></canvas>
   </div>
 
-  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
   <script>
     async function fetchCitationData(bibcode) {
       const apiKey = 'UdZPEmQzY748bW5hdJFQTe9bJwifihMTRoVHVvyb'; // Your ADS API key
@@ -44,47 +43,30 @@ layout: archive  # Keeps left sidebar
         return null;
       }
     }
-
+  
     document.addEventListener("DOMContentLoaded", async function() {
       const bibcode = '{{ page.bibcode }}'; // Ensure your publication has a bibcode in the front matter
       console.log("Bibcode:", bibcode); // Debug log
       const citationData = await fetchCitationData(bibcode);
-
-      if (citationData) {
+  
+      if (citationData && citationData.histogram) {
         console.log("Citation data:", citationData); // Debug log
-
+  
         const ctx = document.getElementById('citationChart').getContext('2d');
         new Chart(ctx, {
           type: 'line',
           data: {
-            labels: citationData.histogram ? citationData.histogram.map(item => item.year) : [],
+            labels: citationData.histogram.map(item => item.year),
             datasets: [{
               label: 'Annual Citations',
-              data: citationData.histogram ? citationData.histogram.map(item => item.count) : [],
+              data: citationData.histogram.map(item => item.count),
               borderColor: '#2b6cb0',
               tension: 0.3
             }]
           }
         });
       } else {
-        console.error("No citation data available.");
+        console.error("No citation data available for the given bibcode.");
       }
     });
   </script>
-</article>
-
-<style>
-.publication-details {
-  max-width: 800px;
-  margin: 0 auto;
-  padding: 2rem;
-}
-.citation-chart {
-  margin: 4rem 0;
-  padding: 2rem;
-  background: #f8fafc;
-}
-#citationChart {
-  min-height: 400px;
-}
-</style>
