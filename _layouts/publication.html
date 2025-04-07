@@ -21,15 +21,17 @@ layout: archive  # Keeps left sidebar
     <canvas id="citationChart"></canvas>
   </div>
 
-  <script>
+<script>
     async function fetchCitationData(bibcode) {
-      const apiKey = 'UdZPEmQzY748bW5hdJFQTe9bJwifihMTRoVHVvyb'; // Your ADS API key
-      const url = `https://api.adsabs.harvard.edu/v1/metrics/citations/${bibcode}`;
-      console.log(`Fetching data from ${url}`); // Debug log
+      const proxyUrl = 'https://allorigins.win/raw?url=';
+      const apiUrl = `https://api.adsabs.harvard.edu/v1/metrics/citations/${bibcode}`;
+      const fullUrl = proxyUrl + apiUrl;
+      console.log(`Fetching data from ${fullUrl}`); // Debug log
       try {
-        const response = await fetch(url, {
+        const response = await fetch(fullUrl, {
           headers: {
-            'Authorization': `Bearer ${apiKey}`
+            'Authorization': `Bearer UdZPEmQzY748bW5hdJFQTe9bJwifihMTRoVHVvyb
+`
           }
         });
         if (!response.ok) {
@@ -70,3 +72,4 @@ layout: archive  # Keeps left sidebar
       }
     });
   </script>
+  
