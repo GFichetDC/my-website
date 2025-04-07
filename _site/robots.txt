@@ -1,1 +1,1 @@
-Sitemap: https://gfichetdc.github.io/my-website/sitemap.xml
+Sitemap: http://localhost:4000/my-website/sitemap.xml

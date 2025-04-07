@@ -1,0 +1,90 @@
+---
+layout: archive  # Keeps left sidebar
+---
+
+<article class="publication-details">
+  <!-- Your existing publication header -->
+  <div class="publication-meta">
+    Published in <em>{{ page.venue }}</em> · {{ page.date | date: "%Y" }}
+    <div class="publication-links">
+      <a href="{{ page.paperurl }}">Download Paper</a> |
+      <a href="{{ page.bibtexurl }}">Download Bibtex</a>
+    </div>
+  </div>
+  <!-- Publication content from markdown -->
+  <div class="publication-content">
+    {{ content }}
+  </div>
+  <!-- Citation chart -->
+  <div class="citation-chart">
+    <h3>Citation Timeline</h3>
+    <canvas id="citationChart"></canvas>
+  </div>
+
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+  <script>
+    async function fetchCitationData(bibcode) {
+      const apiKey = 'UdZPEmQzY748bW5hdJFQTe9bJwifihMTRoVHVvyb'; // Your ADS API key
+      const url = `https://api.adsabs.harvard.edu/v1/metrics/citations/${bibcode}`;
+      console.log(`Fetching data from ${url}`); // Debug log
+      try {
+        const response = await fetch(url, {
+          headers: {
+            'Authorization': `Bearer ${apiKey}`
+          }
+        });
+        if (!response.ok) {
+          throw new Error(`HTTP error! status: ${response.status}`);
+        }
+        const data = await response.json();
+        console.log("Fetched data:", data); // Debug log
+        return data;
+      } catch (error) {
+        console.error("Error fetching citation data:", error);
+        return null;
+      }
+    }
+
+    document.addEventListener("DOMContentLoaded", async function() {
+      const bibcode = '{{ page.bibcode }}'; // Ensure your publication has a bibcode in the front matter
+      console.log("Bibcode:", bibcode); // Debug log
+      const citationData = await fetchCitationData(bibcode);
+
+      if (citationData) {
+        console.log("Citation data:", citationData); // Debug log
+
+        const ctx = document.getElementById('citationChart').getContext('2d');
+        new Chart(ctx, {
+          type: 'line',
+          data: {
+            labels: citationData.histogram ? citationData.histogram.map(item => item.year) : [],
+            datasets: [{
+              label: 'Annual Citations',
+              data: citationData.histogram ? citationData.histogram.map(item => item.count) : [],
+              borderColor: '#2b6cb0',
+              tension: 0.3
+            }]
+          }
+        });
+      } else {
+        console.error("No citation data available.");
+      }
+    });
+  </script>
+</article>
+
+<style>
+.publication-details {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 2rem;
+}
+.citation-chart {
+  margin: 4rem 0;
+  padding: 2rem;
+  background: #f8fafc;
+}
+#citationChart {
+  min-height: 400px;
+}
+</style>
