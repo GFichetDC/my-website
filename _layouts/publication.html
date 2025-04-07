@@ -15,58 +15,98 @@ layout: archive  # Keeps left sidebar
   <div class="publication-content">
     {{ content }}
   </div>
-  <!-- Citation chart -->
-  <div class="citation-chart">
-    <h3>Citation Timeline</h3>
-    <canvas id="citationChart"></canvas>
-  </div>
-
-  <script>
-    async function fetchCitationData(bibcode) {
-      const apiKey = 'UdZPEmQzY748bW5hdJFQTe9bJwifihMTRoVHVvyb'; // Your ADS API key
-      const url = `https://api.adsabs.harvard.edu/v1/metrics/citations/${bibcode}`;
-      console.log(`Fetching data from ${url}`); // Debug log
-      try {
-        const response = await fetch(url, {
-          headers: {
-            'Authorization': `Bearer ${apiKey}`
+    <!-- Citation chart -->
+    <div class="citation-chart">
+        <h3>Citation Timeline</h3>
+        <canvas id="citationChart"></canvas>
+      </div>
+    
+      <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+      <script>
+        document.addEventListener("DOMContentLoaded", function() {
+          const citationData = {{ site.data.citation["Flux variability from ejecta in structured relativistic jets with large-scale magnetic fields"] | jsonify }};
+    
+          if (citationData && citationData.citations_over_time) {
+            console.log("Citation data:", citationData); // Debug log
+    
+            // Calculate cumulative citations
+            const cumulativeCitations = citationData.citations_over_time.map((item, index) => {
+              return citationData.citations_over_time.slice(0, index + 1).reduce((sum, entry) => sum + entry.citations, 0);
+            });
+    
+            const ctx = document.getElementById('citationChart').getContext('2d');
+            new Chart(ctx, {
+              type: 'line',
+              data: {
+                labels: citationData.citations_over_time.map(item => item.year),
+                datasets: [
+                  {
+                    label: 'Annual Citations',
+                    data: citationData.citations_over_time.map(item => item.citations),
+                    borderColor: '#2b6cb0',
+                    backgroundColor: 'rgba(43, 108, 176, 0.2)',
+                    tension: 0.3,
+                    fill: false
+                  },
+                  {
+                    label: 'Cumulative Citations',
+                    data: cumulativeCitations,
+                    borderColor: '#4CAF50',
+                    backgroundColor: 'rgba(76, 175, 80, 0.2)',
+                    tension: 0.3,
+                    fill: false
+                  }
+                ]
+              },
+              options: {
+                scales: {
+                  y: {
+                    beginAtZero: true,
+                    title: {
+                      display: true,
+                      text: 'Citations'
+                    }
+                  },
+                  x: {
+                    title: {
+                      display: true,
+                      text: 'Year'
+                    }
+                  }
+                },
+                plugins: {
+                  legend: {
+                    display: true,
+                    position: 'top'
+                  },
+                  tooltip: {
+                    mode: 'index',
+                    intersect: false
+                  }
+                }
+              }
+            });
+          } else {
+            console.error("No citation data available.");
           }
         });
-        if (!response.ok) {
-          throw new Error(`HTTP error! status: ${response.status}`);
-        }
-        const data = await response.json();
-        console.log("Fetched data:", data); // Debug log
-        return data;
-      } catch (error) {
-        console.error("Error fetching citation data:", error);
-        return null;
-      }
+      </script>
+    </article>
+    
+    <style>
+    .publication-details {
+      max-width: 800px;
+      margin: 0 auto;
+      padding: 2rem;
     }
-  
-    document.addEventListener("DOMContentLoaded", async function() {
-      const bibcode = '{{ page.bibcode }}'; // Ensure your publication has a bibcode in the front matter
-      console.log("Bibcode:", bibcode); // Debug log
-      const citationData = await fetchCitationData(bibcode);
-  
-      if (citationData && citationData.histogram) {
-        console.log("Citation data:", citationData); // Debug log
-  
-        const ctx = document.getElementById('citationChart').getContext('2d');
-        new Chart(ctx, {
-          type: 'line',
-          data: {
-            labels: citationData.histogram.map(item => item.year),
-            datasets: [{
-              label: 'Annual Citations',
-              data: citationData.histogram.map(item => item.count),
-              borderColor: '#2b6cb0',
-              tension: 0.3
-            }]
-          }
-        });
-      } else {
-        console.error("No citation data available for the given bibcode.");
-      }
-    });
-  </script>
+    .citation-chart {
+      margin: 4rem 0;
+      padding: 2rem;
+      background: #f8fafc;
+      border-radius: 8px;
+      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    }
+    #citationChart {
+      min-height: 400px;
+    }
+    </style>
