@@ -1,5 +1,7 @@
 ---
+layout: 'publication'
 title: "Hadronic Processes at Work in 5BZB J0630‑2406"
+citation_key: 'publi_2'
 collection: publications
 category: manuscripts
 permalink: /publications/2023-11-01-paper-title-number-2

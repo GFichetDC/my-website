@@ -1,5 +1,7 @@
 ---
+layout: 'publication'
 title: "AM³: An Open-Source Tool for Time-Dependent Lepto-Hadronic Modelling of Astrophysical Sources"
+citation_key: 'publi_4'
 collection: publications
 category: manuscripts
 permalink: /publications/2024-11-01-paper-title-number-4

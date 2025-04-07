@@ -84,6 +84,19 @@
 <meta name="MobileOptimized" content="320">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
+<!-- Leaflet CSS -->
+<link
+  rel="stylesheet"
+  href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"
+  crossorigin=""
+/>
+
+<!-- Leaflet JS -->
+<script
+  src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"
+  crossorigin=""
+></script>
+
 <script>
   document.documentElement.className = document.documentElement.className.replace(/\bno-js\b/g, '') + ' js ';
 </script>
@@ -159,8 +172,6 @@
 </div>
 
     
-
-
 
 
 
@@ -261,49 +272,110 @@
   </div>
 
 
-  <article class="page" itemscope itemtype="http://schema.org/CreativeWork">
-    <meta itemprop="headline" content="Hadronic Processes at Work in 5BZB J0630‑2406">
-    <meta itemprop="description" content="">
-    <meta itemprop="datePublished" content="November 01, 2023">
+  <div class="archive">
     
-
-    <div class="page__inner-wrap">
-      
-        <header>
-          <h1 class="page__title" itemprop="headline">Hadronic Processes at Work in 5BZB J0630‑2406
-</h1>
-          
-        
-        
-        
-          <p>Published in <i>The Astrophysical Journal Letters</i>, 2023 </p>
-            
-        </header>
-      
-
-      <section class="page__content" itemprop="text">
-        <p>Recent observations highlight the essential role of AGNs in producing high-energy neutrinos. This study focuses on the object 5BZB J0630-2406, recently associated with neutrino emission during the first 7 years of observations by IceCube. The primary objective is to model the spectral energy distribution of this object, exploring various scenarios from purely leptonic models to lepto-hadronic models, including external photon fields. The interactions between protons and external radiation fields are explored, suggesting the production of a detectable neutrino flux by IceCube. The results indicate that hadronic processes involving very energetic protons leave an imprint on the X-ray spectral emission shape, supporting the hypothesis of neutrino production.</p>
+      <h1 class="page__title">Hadronic Processes at Work in 5BZB J0630‑2406</h1>
+    
+    <article class="publication-details">
+  <!-- Publication content from markdown -->
+  <div class="publication-content">
+    <p>Recent observations highlight the essential role of AGNs in producing high-energy neutrinos. This study focuses on the object 5BZB J0630-2406, recently associated with neutrino emission during the first 7 years of observations by IceCube. The primary objective is to model the spectral energy distribution of this object, exploring various scenarios from purely leptonic models to lepto-hadronic models, including external photon fields. The interactions between protons and external radiation fields are explored, suggesting the production of a detectable neutrino flux by IceCube. The results indicate that hadronic processes involving very energetic protons leave an imprint on the X-ray spectral emission shape, supporting the hypothesis of neutrino production.</p>
 
 <p>→ This study explores new aspects of the future integral model, particularly the impact of protons in jets, which is vital for understanding multi-messenger emissions.</p>
 
+  </div>
 
-        
-          <p style="font-size: smaller">Recommended citation: G. Fichet de Clairfontaine, S. Buson, L. Pfeiffer, S. Marchesi, A. Azzollini, V. Baghmanyan, A. Tramacere, E. Barbano, and L. Oswald (2023). "Hadronic processes at Work in 5BZB J0630-2406." <i>The Astrophysical Journal Letters</i>. Volume 958.<br /><a href="https://iopscience.iop.org/article/10.3847/2041-8213/ad0644/pdf">Download Paper</a> | <a href="http://academicpages.github.io/files/bibtex2.bib">Download Bibtex</a></p>
-        
+    <!-- Citation chart -->
+    <div class="citation-chart">
+        <h3>Citation Timeline</h3>
+        <canvas id="citationChart"></canvas>
+      </div>
+    
+      <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+      <script>
+        document.addEventListener("DOMContentLoaded", function() {
+          const citationData = {"title":"Hadronic Processes at Work in 5BZB J0630‑2406","total_citations":7,"citations_over_time":[{"year":2023,"citations":0},{"year":2024,"citations":4},{"year":2025,"citations":3}]};
+    
+          if (citationData && citationData.citations_over_time) {
+            console.log("Citation data:", citationData); // Debug log
+    
+            // Calculate cumulative citations
+            const cumulativeCitations = citationData.citations_over_time.map((item, index) => {
+              return citationData.citations_over_time.slice(0, index + 1).reduce((sum, entry) => sum + entry.citations, 0);
+            });
+    
+            const ctx = document.getElementById('citationChart').getContext('2d');
+            new Chart(ctx, {
+              type: 'line',
+              data: {
+                labels: citationData.citations_over_time.map(item => item.year),
+                datasets: [
+                  {
+                    label: 'Annual Citations',
+                    data: citationData.citations_over_time.map(item => item.citations),
+                    borderColor: '#2b6cb0',
+                    backgroundColor: 'rgba(43, 108, 176, 0.2)',
+                    tension: 0.3,
+                    fill: false
+                  },
+                  {
+                    label: 'Cumulative Citations',
+                    data: cumulativeCitations,
+                    borderColor: '#4CAF50',
+                    backgroundColor: 'rgba(76, 175, 80, 0.2)',
+                    tension: 0.3,
+                    fill: false
+                  }
+                ]
+              },
+              options: {
+                responsive: true,
+                maintainAspectRatio: true,
+                aspectRatio: 2,
+                scales: {
+                    y: {
+                    beginAtZero: true,
+                    title: {
+                        display: true,
+                        text: 'Citations'
+                    }
+                    },
+                    x: {
+                    title: {
+                        display: true,
+                        text: 'Year'
+                    }
+                    }
+                },
+                plugins: {
+                    legend: {
+                    display: true,
+                    position: 'top'
+                    },
+                    tooltip: {
+                    mode: 'index',
+                    intersect: false
+                    }
+                }
+                }
 
-        
-      </section>
+            });
+          } else {
+            console.error("No citation data available.");
+          }
+        });
+      </script>
 
-      <footer class="page__meta">
-        
-        
-
-
-
-
-      </footer>
-
+    
+    <p>Recommended citation: G. Fichet de Clairfontaine, S. Buson, L. Pfeiffer, S. Marchesi, A. Azzollini, V. Baghmanyan, A. Tramacere, E. Barbano, and L. Oswald (2023). "Hadronic processes at Work in 5BZB J0630-2406." <i>The Astrophysical Journal Letters</i>. Volume 958.<br />
+      <a href="https://iopscience.iop.org/article/10.3847/2041-8213/ad0644/pdf">Download Paper</a>
       
+       | <a href="http://academicpages.github.io/files/bibtex2.bib">Download Bibtex</a>
+    </p>
+    
+
+    <!-- Share buttons -->
+    
 
 <section class="page__share">
   
@@ -320,7 +392,8 @@
 </section>
 
 
-      
+    <div class="page__footer-nav">
+        
 
 
   <nav class="pagination">
@@ -336,11 +409,32 @@
 
     </div>
 
-    
-  </article>
+    <!-- Next/Previous navigation -->
+    <div class="page__footer-nav">
+        
 
-  
-  
+
+    </div>
+    </article>
+    
+    <style>
+    .publication-details {
+      max-width: 800px;
+      margin: 0 auto;
+      padding: 2rem;
+    }
+    .citation-chart {
+      margin: 4rem 0;
+      padding: 2rem;
+      background: #f8fafc;
+      border-radius: 8px;
+      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    }
+    #citationChart {
+      min-height: 400px;
+    }
+    </style>
+  </div>
 </div>
 
 

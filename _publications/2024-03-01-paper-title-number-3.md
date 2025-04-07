@@ -1,5 +1,7 @@
 ---
-title: "The galactic bubbles of starburst galaxies. The influence of galactic large-scale magnetic fields "
+layout: 'publication'
+title: "The galactic bubbles of starburst galaxies. The influence of galactic large-scale magnetic fields"
+citation_key: 'publi_3'
 collection: publications
 category: manuscripts
 permalink: /publications/2024-03-01-paper-title-number-3

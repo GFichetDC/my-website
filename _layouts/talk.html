@@ -30,20 +30,102 @@ layout: default
           {% if page.read_time %}
             <p class="page__meta"><i class="fa fa-clock" aria-hidden="true"></i> {% include read-time.html %}</p>
           {% endif %}
-        {% if page.modified %}
-          <p class="page__date"><strong><i class="fa fa-fw fa-calendar" aria-hidden="true"></i>Date:</strong> <time datetime="{{ page.modified | date: "%Y-%m-%d" }}">{{ page.modified | date: "%B %d, %Y" }}</time></p>
-        {% elsif page.date %}
-          <p class="page__date"><strong><i class="fa fa-fw fa-calendar" aria-hidden="true"></i>Date:</strong> <time datetime="{{ page.date | date_to_xmlschema }}">{{ page.date | date: "%B %d, %Y" }}</time></p>
-        {% endif %}
-        {% if page.talk_type %}<p>{{page.talk_type}} at {{ page.venue }},  {{page.location}} {% endif %}
-
+          {% if page.modified %}
+            <p class="page__date"><strong><i class="fa fa-fw fa-calendar" aria-hidden="true"></i>Date:</strong> <time datetime="{{ page.modified | date: "%Y-%m-%d" }}">{{ page.modified | date: "%B %d, %Y" }}</time></p>
+          {% elsif page.date %}
+            <p class="page__date"><strong><i class="fa fa-fw fa-calendar" aria-hidden="true"></i>Date:</strong> <time datetime="{{ page.date | date_to_xmlschema }}">{{ page.date | date: "%B %d, %Y" }}</time></p>
+          {% endif %}
+          {% if page.talk_type %}<p>{{ page.talk_type }} at {{ page.venue }}, {{ page.location }}</p>{% endif %}
         </header>
       {% endunless %}
 
       <section class="page__content" itemprop="text">
         {{ content }}
-        {% if page.link %}<div><a href="{{ page.link }}" class="btn">{{ site.data.ui-text[site.locale].ext_link_label | default: "Direct Link" }}</a></div>{% endif %}
+        {% if page.link %}
+          <div>
+            <a href="{{ page.link }}" class="btn">
+              {{ site.data.ui-text[site.locale].ext_link_label | default: "Direct Link" }}
+            </a>
+          </div>
+        {% endif %}
       </section>
+
+      <div id="map" style="height: 400px; margin-top: 2rem;"></div>
+
+      <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" />
+      <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+
+      <script>
+        document.addEventListener("DOMContentLoaded", function () {
+          if (!window.L) {
+            console.error("Leaflet not loaded");
+            return;
+          }
+
+          // Fix missing marker icon
+          delete L.Icon.Default.prototype._getIconUrl;
+
+          L.Icon.Default.mergeOptions({
+            iconRetinaUrl: "/assets/images/marker-icon-2x.png",
+            iconUrl: "/assets/images/marker-icon.png",
+            shadowUrl: "https://unpkg.com/leaflet@1.9.4/dist/images/marker-shadow.png",
+          });
+
+          // Create red pin for current talk location
+          const redIcon = new L.Icon({
+            iconUrl: "../assets/images/red_marker.png",
+            iconSize: [25, 34], // Reduced vertical stretch
+            iconAnchor: [12, 34],
+            popupAnchor: [0, -34],
+            shadowUrl: "https://unpkg.com/leaflet@1.9.4/dist/images/marker-shadow.png",
+            shadowSize: [41, 41],
+          });
+
+          // Create gray pin for other locations
+          const grayIcon = new L.Icon({
+            iconUrl: "../assets/images/gray_marker.png",
+            iconSize: [25, 34], // Reduced vertical stretch
+            iconAnchor: [12, 34],
+            popupAnchor: [0, -34],
+            shadowUrl: "https://unpkg.com/leaflet@1.9.4/dist/images/marker-shadow.png",
+            shadowSize: [41, 41],
+          });
+
+          // Set up map
+          const map = L.map("map").setView([0, 0], 1);  // Fixed zoom typo
+
+          // Add CartoDB Positron tile layer
+          L.tileLayer("https://{s}.basemaps.cartocdn.com/light_all/{z}/{x}/{y}.png", {
+            maxZoom: 19,
+            minZoom: 1,
+            attribution:
+              'Map tiles by CartoDB, under CC BY 3.0. Data by OpenStreetMap, under ODbL.',
+          }).addTo(map);
+
+          // Add marker for the current talk's location (Red Pin)
+          const lat = {{ page.latitude | jsonify }};
+          const lng = {{ page.longitude | jsonify }};
+          if (lat && lng) {
+            L.marker([lat, lng], { icon: redIcon })
+              .addTo(map)
+              .bindPopup("{{ page.venue }}, {{ page.location }}")
+              .openPopup();
+          } else {
+            console.warn("Missing latitude or longitude in front matter.");
+          }
+
+          // Add markers for other locations from conference.yml (Gray Pins)
+          {% for other_location in site.data.conference %}
+            {% if other_location.latitude and other_location.longitude %}
+              {% unless other_location.latitude == page.latitude and other_location.longitude == page.longitude %}
+                L.marker([{{ other_location.latitude }}, {{ other_location.longitude }}], { icon: grayIcon })
+                  .addTo(map)
+                  .bindPopup("{{ other_location.venue }}, {{ other_location.location }}");
+              {% endunless %}
+            {% endif %}
+          {% endfor %}
+        });
+      </script>
 
       <footer class="page__meta">
         {% if site.data.ui-text[site.locale].meta_label %}
@@ -53,7 +135,6 @@ layout: default
       </footer>
 
       {% if page.share %}{% include social-share.html %}{% endif %}
-
       {% include post_pagination.html %}
     </div>
 
@@ -62,7 +143,6 @@ layout: default
     {% endif %}
   </article>
 
-  {% comment %}<!-- only show related on a post page when not disabled -->{% endcomment %}
   {% if page.id and page.related and site.related_posts.size > 0 %}
     <div class="page__related">
       {% if site.data.ui-text[site.locale].related_label %}
@@ -76,3 +156,17 @@ layout: default
     </div>
   {% endif %}
 </div>
+
+<style>
+  .page__content {
+    clear: both;
+    overflow: hidden;
+  }
+
+  #map {
+    z-index: 10;
+    margin-top: 2rem;
+    width: 100%;
+    height: 400px;
+  }
+</style>

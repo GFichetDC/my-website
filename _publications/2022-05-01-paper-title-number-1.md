@@ -1,5 +1,7 @@
 ---
+layout: 'publication'
 title: "Flare echoes from relaxation shocks in perturbed relativistic jets"
+citation_key: 'publi_1'
 collection: publications
 category: manuscripts
 permalink: /publication/2022-05-01-paper-title-number-1

@@ -1,0 +1,482 @@
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+
+<meta charset="utf-8">
+
+
+
+<!-- begin SEO -->
+
+
+
+
+
+
+
+
+
+<title>Flux variability from ejecta in structured relativistic jets with large-scale magnetic fields - Home</title>
+
+
+
+
+
+
+
+<meta property="og:locale" content="en-US">
+<meta property="og:site_name" content="Home">
+<meta property="og:title" content="Flux variability from ejecta in structured relativistic jets with large-scale magnetic fields">
+
+
+  <link rel="canonical" href="http://localhost:4000/my-website/publications/2021-03-01-paper-title-number-0">
+  <meta property="og:url" content="http://localhost:4000/my-website/publications/2021-03-01-paper-title-number-0">
+
+
+
+  <meta property="og:description" name="description" content="Post-doc in High Energy Astrophysics">
+
+
+
+
+
+  
+
+  
+
+
+
+
+
+  <meta property="og:type" content="article">
+  <meta property="article:published_time" content="2021-03-01T00:00:00+00:00">
+
+
+
+
+
+
+
+
+  <script type="application/ld+json">
+    {
+      "@context" : "http://schema.org",
+      "@type" : "Person",
+      "name" : "Gaëtan Fichet de Clairfontaine",
+      "url" : "http://localhost:4000/my-website",
+      "sameAs" : null
+    }
+  </script>
+
+
+
+
+
+
+<!-- end SEO -->
+
+
+<link href="http://localhost:4000/my-website/feed.xml" type="application/atom+xml" rel="alternate" title="Home Feed">
+
+<!-- http://t.co/dKP3o1e -->
+<meta name="HandheldFriendly" content="True">
+<meta name="MobileOptimized" content="320">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<!-- Leaflet CSS -->
+<link
+  rel="stylesheet"
+  href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"
+  crossorigin=""
+/>
+
+<!-- Leaflet JS -->
+<script
+  src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"
+  crossorigin=""
+></script>
+
+<script>
+  document.documentElement.className = document.documentElement.className.replace(/\bno-js\b/g, '') + ' js ';
+</script>
+
+<!-- For all browsers -->
+<link rel="stylesheet" href="http://localhost:4000/my-website/assets/css/main.css">
+
+<meta http-equiv="cleartype" content="on">
+    
+
+<!-- start custom head snippets -->
+
+<!-- favicon from https://commons.wikimedia.org/wiki/File:OOjs_UI_icon_academic-progressive.svg -->
+<link rel="apple-touch-icon" sizes="180x180" href="http://localhost:4000/my-website/images/apple-touch-icon-180x180.png"/>
+<link rel="icon" type="image/svg+xml" href="http://localhost:4000/my-website/images/favicon.svg"/>
+<link rel="icon" type="image/png" href="http://localhost:4000/my-website/images/favicon-32x32.png" sizes="32x32"/>
+<link rel="icon" type="image/png" href="http://localhost:4000/my-website/images/favicon-192x192.png" sizes="192x192"/>
+<link rel="manifest" href="http://localhost:4000/my-website/images/manifest.json"/>
+<link rel="icon" href="/images/favicon.ico"/>
+<meta name="theme-color" content="#ffffff"/>
+<link rel="stylesheet" href="http://localhost:4000/my-website/assets/css/academicons.css"/>
+
+
+<!-- Support for MatJax -->
+<script src="https://cdnjs.cloudflare.com/polyfill/v3/polyfill.min.js?features=es6"></script>
+<script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
+<!-- end custom head snippets -->
+
+    <script type="text/javascript" async
+      src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/MathJax.js?config=TeX-MML-AM_CHTML">
+    </script>
+  </head>
+
+  <body>
+    <!--[if lt IE 9]>
+<div class="notice--danger align-center" style="margin: 0;">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</div>
+<![endif]-->
+    
+
+<div class="masthead">
+  <div class="masthead__inner-wrap">
+    <div class="masthead__menu">
+      <nav id="site-nav" class="greedy-nav">
+        <button><div class="navicon"></div></button>
+        <ul class="visible-links">
+          <li class="masthead__menu-item masthead__menu-item--lg persist"><a href="http://localhost:4000/my-website/">Home</a></li>
+          
+            
+            <li class="masthead__menu-item"><a href="http://localhost:4000/my-website/publications/">Publications</a></li>
+          
+            
+            <li class="masthead__menu-item"><a href="http://localhost:4000/my-website/talks/">Talks</a></li>
+          
+            
+            <li class="masthead__menu-item"><a href="http://localhost:4000/my-website/teaching/">Teaching</a></li>
+          
+            
+            <li class="masthead__menu-item"><a href="http://localhost:4000/my-website/year-archive/">Blog Posts</a></li>
+          
+            
+            <li class="masthead__menu-item"><a href="http://localhost:4000/my-website/cv/">CV</a></li>
+          
+          <li id="theme-toggle" class="masthead__menu-item persist tail">
+            <a><i id="theme-icon" class="fa-solid fa-sun" aria-hidden="true" title="toggle theme"></i></a>
+          </li>
+        </ul>
+        <ul class="hidden-links hidden"></ul>
+      </nav>
+    </div>
+  </div>
+</div>
+
+    
+
+
+
+<div id="main" role="main">
+  
+
+
+  <div class="sidebar sticky">
+  
+
+
+
+<div itemscope itemtype="http://schema.org/Person">
+
+  <div class="author__avatar">
+    
+    	<img src="http://localhost:4000/my-website/images/profile.png" class="author__avatar" alt="Gaëtan Fichet de Clairfontaine">
+    
+  </div>
+
+  <div class="author__content">
+    <h3 class="author__name">Gaëtan Fichet de Clairfontaine</h3>
+    
+    <p class="author__bio">Post-doc in High Energy Astrophysics</p>
+  </div>
+
+  <div class="author__urls-wrapper">
+    <button class="btn btn--inverse">Follow</button>
+    <ul class="author__urls social-icons">
+      <!-- Font Awesome icons / Biographic information  -->
+      
+        <li class="author__desktop"><i class="fa-solid fa-location-dot icon-pad-right" aria-hidden="true"></i>Valencia, Spain</li>
+      
+      
+        <li class="author__desktop"><i class="fas fa-fw fa-building-columns icon-pad-right" aria-hidden="true"></i>University of Valencia</li>
+      
+      
+      
+        <li><a href="mailto:gaetan.fichet@uv.es"><i class="fas fa-fw fa-envelope icon-pad-right" aria-hidden="true"></i>Email</a></li>
+      
+
+      <!-- Font Awesome and Academicons icons / Academic websites -->
+      
+        <li><a href="https://arxiv.org/search/?searchtype=author&query=de+Clairfontaine%2C+G+F"><i class="ai ai-arxiv ai-fw icon-pad-right"></i>arXiv</a></li>
+            
+      
+        <li><a href="https://scholar.google.com/citations?user=oNRiH-8AAAAJ&hl=en&oi=ao"><i class="ai ai-google-scholar icon-pad-right"></i>Google Scholar</a></li>
+      
+      
+      
+      
+        <li><a href="https://orcid.org/0000-0003-1143-3883"><i class="ai ai-orcid ai-fw icon-pad-right"></i>ORCID</a></li>
+      
+                              
+      
+        <li><a href="https://www.researchgate.net/profile/Gaetan-Fichet-De-Clairfontaine?ev=hdr_xprf"><i class="fab fa-fw fa-researchgate icon-pad-right" aria-hidden="true"></i>ResearchGate</a></li>
+      
+      
+
+      <!-- Font Awesome icons / Repositories and software development -->
+      
+            
+            
+      
+            
+            
+
+      <!-- Font Awesome icons / Social media -->
+      
+      
+            
+      
+                  
+                  
+      
+            
+            
+            
+      
+            
+                  
+            
+      
+            
+            
+      
+              
+      
+                      
+      
+      
+            
+    </ul>
+  </div>
+</div>
+
+  
+  </div>
+
+
+  <div class="archive">
+    
+      <h1 class="page__title">Flux variability from ejecta in structured relativistic jets with large-scale magnetic fields</h1>
+    
+    <article class="publication-details">
+  <!-- Publication content from markdown -->
+  <div class="publication-content">
+    This study explores the complex interactions between mobile shock waves and stationary shocks in relativistic astrophysical jets, which play a key role in the observed variability of active galactic nuclei (AGN). The primary objective is to simulate these interactions and characterize the resulting radio flares using relativistic magnetohydrodynamic simulations. The MPI-AMRVAC code and the RIPTIDE radiative transfer code are employed to explore the impact of magnetic configuration and jet stratification. The results reveal that the presence of a large-scale magnetic structure alters the jet morphology, leading to bright radio flares with distinct characteristics during shock interactions. A promising application is demonstrated on the source 3C 273, highlighting the insightfulness of the shock-shock model.
+
+→ This study is essential for establishing the foundations of the integral model, highlighting the dynamic processes of relativistic jets in AGNs. It also demonstrates the value of connecting simulations performed with MPI-AMRVAC and post-processing done via RIPTIDE, emphasizing the synergy between these tools in enhancing our understanding of relativistic jets.
+  </div>
+
+    <!-- Citation chart -->
+    <div class="citation-chart">
+        <h3>Citation Timeline</h3>
+        <canvas id="citationChart"></canvas>
+      </div>
+    
+      <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+      <script>
+        document.addEventListener("DOMContentLoaded", function() {
+          const citationData = {"title":"Flux variability from ejecta in structured relativistic jets with large-scale magnetic fields","total_citations":13,"citations_over_time":[{"year":2021,"citations":1},{"year":2022,"citations":5},{"year":2023,"citations":5},{"year":2024,"citations":1},{"year":2025,"citations":1}]};
+    
+          if (citationData && citationData.citations_over_time) {
+            console.log("Citation data:", citationData); // Debug log
+    
+            // Calculate cumulative citations
+            const cumulativeCitations = citationData.citations_over_time.map((item, index) => {
+              return citationData.citations_over_time.slice(0, index + 1).reduce((sum, entry) => sum + entry.citations, 0);
+            });
+    
+            const ctx = document.getElementById('citationChart').getContext('2d');
+            new Chart(ctx, {
+              type: 'line',
+              data: {
+                labels: citationData.citations_over_time.map(item => item.year),
+                datasets: [
+                  {
+                    label: 'Annual Citations',
+                    data: citationData.citations_over_time.map(item => item.citations),
+                    borderColor: '#2b6cb0',
+                    backgroundColor: 'rgba(43, 108, 176, 0.2)',
+                    tension: 0.3,
+                    fill: false
+                  },
+                  {
+                    label: 'Cumulative Citations',
+                    data: cumulativeCitations,
+                    borderColor: '#4CAF50',
+                    backgroundColor: 'rgba(76, 175, 80, 0.2)',
+                    tension: 0.3,
+                    fill: false
+                  }
+                ]
+              },
+              options: {
+                responsive: true,
+                maintainAspectRatio: true,
+                aspectRatio: 2,
+                scales: {
+                    y: {
+                    beginAtZero: true,
+                    title: {
+                        display: true,
+                        text: 'Citations'
+                    }
+                    },
+                    x: {
+                    title: {
+                        display: true,
+                        text: 'Year'
+                    }
+                    }
+                },
+                plugins: {
+                    legend: {
+                    display: true,
+                    position: 'top'
+                    },
+                    tooltip: {
+                    mode: 'index',
+                    intersect: false
+                    }
+                }
+                }
+
+            });
+          } else {
+            console.error("No citation data available.");
+          }
+        });
+      </script>
+
+    
+    <p>Recommended citation: G. Fichet de Clairfontaine, Z. Meliani, A. Zech, and O. Hervet (2021). "Flux variability from ejecta in structured relativistic jets with large-scale magnetic fields." <i>Astronomy & Astrophysics</i>. Volume 647, A77, 18 pp.<br />
+      <a href="https://www.aanda.org/articles/aa/pdf/2021/03/aa39654-20.pdf">Download Paper</a>
+      
+       | <a href="http://academicpages.github.io/files/bibtex0.bib">Download Bibtex</a>
+    </p>
+    
+
+    <!-- Share buttons -->
+    
+
+<section class="page__share">
+  
+    <h4 class="page__share-title">Share on</h4>
+  
+
+  <a href="https://bsky.app/intent/compose?text=http://localhost:4000/my-website/publications/2021-03-01-paper-title-number-0" class="btn btn--bluesky" title="Share on Bluesky"><i class="fab fa-bluesky" aria-hidden="true"></i><span> Bluesky</span></a>
+
+  <a href="https://www.facebook.com/sharer/sharer.php?u=http://localhost:4000/my-website/publications/2021-03-01-paper-title-number-0" class="btn btn--facebook" title="Share on Facebook"><i class="fab fa-facebook" aria-hidden="true"></i><span> Facebook</span></a>
+
+  <a href="https://www.linkedin.com/shareArticle?mini=true&url=http://localhost:4000/my-website/publications/2021-03-01-paper-title-number-0" class="btn btn--linkedin" title="Share on LinkedIn"><i class="fab fa-linkedin" aria-hidden="true"></i><span> LinkedIn</span></a>
+
+  <a href="https://x.com/intent/post?text=http://localhost:4000/my-website/publications/2021-03-01-paper-title-number-0" class="btn btn--x" title="Share on X"><i class="fab fa-x-twitter" aria-hidden="true"></i><span> X (formerly Twitter)</span></a>
+</section>
+
+
+    <div class="page__footer-nav">
+        
+
+
+  <nav class="pagination">
+    
+      <a href="#" class="pagination--pager disabled">Previous</a>
+    
+    
+      <a href="http://localhost:4000/my-website/publication/2022-05-01-paper-title-number-1" class="pagination--pager" title="Flare echoes from relaxation shocks in perturbed relativistic jets
+">Next</a>
+    
+  </nav>
+
+    </div>
+
+    <!-- Next/Previous navigation -->
+    <div class="page__footer-nav">
+        
+
+
+    </div>
+    </article>
+    
+    <style>
+    .publication-details {
+      max-width: 800px;
+      margin: 0 auto;
+      padding: 2rem;
+    }
+    .citation-chart {
+      margin: 4rem 0;
+      padding: 2rem;
+      background: #f8fafc;
+      border-radius: 8px;
+      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    }
+    #citationChart {
+      min-height: 400px;
+    }
+    </style>
+  </div>
+</div>
+
+
+    <div class="page__footer">
+      <footer>
+        <!-- start custom footer snippets -->
+<a href="/sitemap/">Sitemap</a>
+<!-- end custom footer snippets -->
+
+        
+
+
+<div class="page__footer-follow">
+  <ul class="social-icons">
+    
+      <li><strong>Follow:</strong></li>
+    
+    
+    
+    
+    <li><a href="http://localhost:4000/my-website/feed.xml"><i class="fa fa-fw fa-rss-square" aria-hidden="true"></i> Feed</a></li>
+    
+  </ul>
+</div>
+
+
+<div class="page__footer-copyright">
+  &copy; 2025 Gaëtan Fichet de Clairfontaine, Powered by <a href="http://jekyllrb.com" rel="nofollow">Jekyll</a> &amp; <a href="https://github.com/academicpages/academicpages.github.io">AcademicPages</a>, a fork of <a href="https://mademistakes.com/work/minimal-mistakes-jekyll-theme/" rel="nofollow">Minimal Mistakes</a>.<br />
+  Site last updated 2025-04-07
+</div>
+
+      </footer>
+    </div>
+
+    <script src="http://localhost:4000/my-website/assets/js/main.min.js"></script>
+
+
+
+
+
+
+
+  </body>
+</html>
+
+
+

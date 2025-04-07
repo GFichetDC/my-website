@@ -1,4 +1,5 @@
-"Flux variability from ejecta in structured relativistic jets with large-scale magnetic fields":
+publi_0:
+  title: "Flux variability from ejecta in structured relativistic jets with large-scale magnetic fields"
   total_citations: 13
   citations_over_time:
     - year: 2021
@@ -11,3 +12,45 @@
       citations: 1
     - year: 2025
       citations: 1
+
+publi_1:
+  title: "Flare echoes from relaxation shocks in perturbed relativistic jets"
+  total_citations: 9
+  citations_over_time:
+    - year: 2022
+      citations: 1
+    - year: 2023
+      citations: 3
+    - year: 2024
+      citations: 1
+    - year: 2025
+      citations: 4
+
+publi_2:
+  title: "Hadronic Processes at Work in 5BZB J0630‑2406"
+  total_citations: 7
+  citations_over_time:
+    - year: 2023
+      citations: 0
+    - year: 2024
+      citations: 4
+    - year: 2025
+      citations: 3
+
+publi_3:
+  title: "The galactic bubbles of starburst galaxies. The influence of galactic large-scale magnetic fields"
+  total_citations: 2
+  citations_over_time:
+    - year: 2024
+      citations: 2
+    - year: 2025
+      citations: 0
+
+publi_4:
+  title: "AM³: An Open-Source Tool for Time-Dependent Lepto-Hadronic Modelling of Astrophysical Sources"
+  total_citations: 17
+  citations_over_time:
+    - year: 2024
+      citations: 10
+    - year: 2025
+      citations: 7

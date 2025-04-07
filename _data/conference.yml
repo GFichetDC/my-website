@@ -1,0 +1,13 @@
+- name: "Talk 1 on Relevant Topic in Your Field"
+  latitude: 39.4699
+  longitude: -0.3763
+  location: "Valencia, Spain"
+  venue: "Astrophysics department"
+  talk_slug: "talk_1"
+
+- name: "Talk 2 on Relevant Topic in Your Field"
+  latitude: 40.7128
+  longitude: -74.0060
+  location: "New York, USA"
+  venue: "NYU"
+  talk_slug: "talk_2"

@@ -3,18 +3,11 @@ layout: archive  # Keeps left sidebar
 ---
 
 <article class="publication-details">
-  <!-- Your existing publication header -->
-  <div class="publication-meta">
-    Published in <em>{{ page.venue }}</em> · {{ page.date | date: "%Y" }}
-    <div class="publication-links">
-      <a href="{{ page.paperurl }}">Download Paper</a> |
-      <a href="{{ page.bibtexurl }}">Download Bibtex</a>
-    </div>
-  </div>
   <!-- Publication content from markdown -->
   <div class="publication-content">
     {{ content }}
   </div>
+
     <!-- Citation chart -->
     <div class="citation-chart">
         <h3>Citation Timeline</h3>
@@ -24,7 +17,7 @@ layout: archive  # Keeps left sidebar
       <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
       <script>
         document.addEventListener("DOMContentLoaded", function() {
-          const citationData = {{ site.data.citation["Flux variability from ejecta in structured relativistic jets with large-scale magnetic fields"] | jsonify }};
+          const citationData = {{ site.data.citations[page.citation_key] | jsonify }};
     
           if (citationData && citationData.citations_over_time) {
             console.log("Citation data:", citationData); // Debug log
@@ -59,38 +52,68 @@ layout: archive  # Keeps left sidebar
                 ]
               },
               options: {
+                responsive: true,
+                maintainAspectRatio: true,
+                aspectRatio: 2,
                 scales: {
-                  y: {
+                    y: {
                     beginAtZero: true,
                     title: {
-                      display: true,
-                      text: 'Citations'
+                        display: true,
+                        text: 'Citations'
                     }
-                  },
-                  x: {
+                    },
+                    x: {
                     title: {
-                      display: true,
-                      text: 'Year'
+                        display: true,
+                        text: 'Year'
                     }
-                  }
+                    }
                 },
                 plugins: {
-                  legend: {
+                    legend: {
                     display: true,
                     position: 'top'
-                  },
-                  tooltip: {
+                    },
+                    tooltip: {
                     mode: 'index',
                     intersect: false
-                  }
+                    }
                 }
-              }
+                }
+
             });
           } else {
             console.error("No citation data available.");
           }
         });
       </script>
+
+    {% if page.citation %}
+    <p>Recommended citation: {{ page.citation }}<br />
+      {% if page.paperurl %}<a href="{{ page.paperurl }}">Download Paper</a>{% endif %}
+      {% if page.slidesurl %}{% if page.paperurl %} | {% endif %}<a href="{{ page.slidesurl }}">Download Slides</a>{% endif %}
+      {% if page.bibtexurl %}{% if page.paperurl or page.slidesurl %} | {% endif %}<a href="{{ page.bibtexurl }}">Download Bibtex</a>{% endif %}
+    </p>
+    {% else %}
+    <p>
+      {% if page.paperurl %}<a href="{{ page.paperurl }}">Download Paper</a>{% endif %}
+      {% if page.slidesurl %}{% if page.paperurl %} | {% endif %}<a href="{{ page.slidesurl }}">Download Slides</a>{% endif %}
+      {% if page.bibtexurl %}{% if page.paperurl or page.slidesurl %} | {% endif %}<a href="{{ page.bibtexurl }}">Download Bibtex</a>{% endif %}
+    </p>
+    {% endif %}
+
+    <!-- Share buttons -->
+    {% include social-share.html %}
+
+    <div class="page__footer-nav">
+        {% include post_pagination.html %}
+    </div>
+
+    <!-- Next/Previous navigation -->
+    <div class="page__footer-nav">
+        {% include paginator.html %}
+    </div>
     </article>
     
     <style>

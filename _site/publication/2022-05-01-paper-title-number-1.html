@@ -84,6 +84,19 @@
 <meta name="MobileOptimized" content="320">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
+<!-- Leaflet CSS -->
+<link
+  rel="stylesheet"
+  href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"
+  crossorigin=""
+/>
+
+<!-- Leaflet JS -->
+<script
+  src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"
+  crossorigin=""
+></script>
+
 <script>
   document.documentElement.className = document.documentElement.className.replace(/\bno-js\b/g, '') + ' js ';
 </script>
@@ -159,8 +172,6 @@
 </div>
 
     
-
-
 
 
 
@@ -261,49 +272,110 @@
   </div>
 
 
-  <article class="page" itemscope itemtype="http://schema.org/CreativeWork">
-    <meta itemprop="headline" content="Flare echoes from relaxation shocks in perturbed relativistic jets">
-    <meta itemprop="description" content="">
-    <meta itemprop="datePublished" content="May 01, 2022">
+  <div class="archive">
     
-
-    <div class="page__inner-wrap">
-      
-        <header>
-          <h1 class="page__title" itemprop="headline">Flare echoes from relaxation shocks in perturbed relativistic jets
-</h1>
-          
-        
-        
-        
-          <p>Published in <i>Astronomy & Astrophysics</i>, 2022 </p>
-            
-        </header>
-      
-
-      <section class="page__content" itemprop="text">
-        <p>This study focuses on the variability of relativistic astrophysical jets in AGNs, based on the acceleration of relativistic particles by internal shocks. The primary objective is to characterize the evolution of emission regions in the jet and study their multi-wavelength signatures during interactions between mobile shock waves and stationary shocks. Relativistic jet simulations are performed using the MPI-AMRVAC code, including the injection of non-thermal electrons and the production of radiation maps up to X-rays with RIPTIDE. The results show that bright flares occur during intense shock interactions, with trailing components behind the mobile shock wave, explaining observations such as those of the radio galaxy 3C 111.</p>
+      <h1 class="page__title">Flare echoes from relaxation shocks in perturbed relativistic jets</h1>
+    
+    <article class="publication-details">
+  <!-- Publication content from markdown -->
+  <div class="publication-content">
+    <p>This study focuses on the variability of relativistic astrophysical jets in AGNs, based on the acceleration of relativistic particles by internal shocks. The primary objective is to characterize the evolution of emission regions in the jet and study their multi-wavelength signatures during interactions between mobile shock waves and stationary shocks. Relativistic jet simulations are performed using the MPI-AMRVAC code, including the injection of non-thermal electrons and the production of radiation maps up to X-rays with RIPTIDE. The results show that bright flares occur during intense shock interactions, with trailing components behind the mobile shock wave, explaining observations such as those of the radio galaxy 3C 111.</p>
 
 <p>→ This study marks a significant advancement in the integral model, incorporating crucial elements such as the injection of relativistic electrons in MPI-AMRVAC simulations and the extension of radiative treatments in RIPTIDE.</p>
 
+  </div>
 
-        
-          <p style="font-size: smaller">Recommended citation: G. Fichet de Clairfontaine, Z. Meliani, and A. Zech (2022). "Flare echos from relaxation shocks in perturbed relativistic jets." <i>Astronomy & Astrophysics</i>. Volume 661.<br /><a href="https://www.aanda.org/articles/aa/pdf/2022/05/aa43119-22.pdf">Download Paper</a> | <a href="http://academicpages.github.io/files/bibtex1.bib">Download Bibtex</a></p>
-        
+    <!-- Citation chart -->
+    <div class="citation-chart">
+        <h3>Citation Timeline</h3>
+        <canvas id="citationChart"></canvas>
+      </div>
+    
+      <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+      <script>
+        document.addEventListener("DOMContentLoaded", function() {
+          const citationData = {"title":"Flare echoes from relaxation shocks in perturbed relativistic jets","total_citations":9,"citations_over_time":[{"year":2022,"citations":1},{"year":2023,"citations":3},{"year":2024,"citations":1},{"year":2025,"citations":4}]};
+    
+          if (citationData && citationData.citations_over_time) {
+            console.log("Citation data:", citationData); // Debug log
+    
+            // Calculate cumulative citations
+            const cumulativeCitations = citationData.citations_over_time.map((item, index) => {
+              return citationData.citations_over_time.slice(0, index + 1).reduce((sum, entry) => sum + entry.citations, 0);
+            });
+    
+            const ctx = document.getElementById('citationChart').getContext('2d');
+            new Chart(ctx, {
+              type: 'line',
+              data: {
+                labels: citationData.citations_over_time.map(item => item.year),
+                datasets: [
+                  {
+                    label: 'Annual Citations',
+                    data: citationData.citations_over_time.map(item => item.citations),
+                    borderColor: '#2b6cb0',
+                    backgroundColor: 'rgba(43, 108, 176, 0.2)',
+                    tension: 0.3,
+                    fill: false
+                  },
+                  {
+                    label: 'Cumulative Citations',
+                    data: cumulativeCitations,
+                    borderColor: '#4CAF50',
+                    backgroundColor: 'rgba(76, 175, 80, 0.2)',
+                    tension: 0.3,
+                    fill: false
+                  }
+                ]
+              },
+              options: {
+                responsive: true,
+                maintainAspectRatio: true,
+                aspectRatio: 2,
+                scales: {
+                    y: {
+                    beginAtZero: true,
+                    title: {
+                        display: true,
+                        text: 'Citations'
+                    }
+                    },
+                    x: {
+                    title: {
+                        display: true,
+                        text: 'Year'
+                    }
+                    }
+                },
+                plugins: {
+                    legend: {
+                    display: true,
+                    position: 'top'
+                    },
+                    tooltip: {
+                    mode: 'index',
+                    intersect: false
+                    }
+                }
+                }
 
-        
-      </section>
+            });
+          } else {
+            console.error("No citation data available.");
+          }
+        });
+      </script>
 
-      <footer class="page__meta">
-        
-        
-
-
-
-
-      </footer>
-
+    
+    <p>Recommended citation: G. Fichet de Clairfontaine, Z. Meliani, and A. Zech (2022). "Flare echos from relaxation shocks in perturbed relativistic jets." <i>Astronomy & Astrophysics</i>. Volume 661.<br />
+      <a href="https://www.aanda.org/articles/aa/pdf/2022/05/aa43119-22.pdf">Download Paper</a>
       
+       | <a href="http://academicpages.github.io/files/bibtex1.bib">Download Bibtex</a>
+    </p>
+    
+
+    <!-- Share buttons -->
+    
 
 <section class="page__share">
   
@@ -320,7 +392,8 @@
 </section>
 
 
-      
+    <div class="page__footer-nav">
+        
 
 
   <nav class="pagination">
@@ -336,11 +409,32 @@
 
     </div>
 
-    
-  </article>
+    <!-- Next/Previous navigation -->
+    <div class="page__footer-nav">
+        
 
-  
-  
+
+    </div>
+    </article>
+    
+    <style>
+    .publication-details {
+      max-width: 800px;
+      margin: 0 auto;
+      padding: 2rem;
+    }
+    .citation-chart {
+      margin: 4rem 0;
+      padding: 2rem;
+      background: #f8fafc;
+      border-radius: 8px;
+      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    }
+    #citationChart {
+      min-height: 400px;
+    }
+    </style>
+  </div>
 </div>
 
 
