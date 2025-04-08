@@ -288,20 +288,27 @@
 
   
 
+<!-- In your layout file -->
 <div class="citation-chart">
   <h3>Citation Timeline</h3>
   <canvas id="citationChart"></canvas>
-  <script id="citation-data" type="application/json">
-      {"title":"Flux variability from ejecta in structured relativistic jets with large-scale magnetic fields","total_citations":13,"citations_over_time":[{"year":2021,"citations":1},{"year":2022,"citations":5},{"year":2023,"citations":5},{"year":2024,"citations":1},{"year":2025,"citations":1}]}
-  </script>
+  <script id="citation-data" type="application/json">{"title":"Flux variability from ejecta in structured relativistic jets with large-scale magnetic fields","total_citations":13,"citations_over_time":[{"year":2021,"citations":1},{"year":2022,"citations":5},{"year":2023,"citations":5},{"year":2024,"citations":1},{"year":2025,"citations":1}]}</script>
 </div>
 
-<script>
-  document.addEventListener("DOMContentLoaded", function() {
-  const rawJson = document.getElementById("citation-data").textContent;
-  const citationData = JSON.parse(rawJson);
+<!-- Load Chart.js with specific version -->
+<script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.1/dist/chart.umd.min.js"></script>
 
-  if (citationData && citationData.citations_over_time) {
+<script>
+document.addEventListener("DOMContentLoaded", function() {
+  try {
+    const rawJson = document.getElementById("citation-data").textContent.trim();
+    const citationData = JSON.parse(rawJson);
+
+    // Consolidated validation check
+    if (!citationData?.citations_over_time) {
+      throw new Error('Invalid citation data structure');
+    }
+
     // Calculate cumulative citations
     const cumulativeCitations = citationData.citations_over_time.map((item, index) => 
       citationData.citations_over_time
@@ -347,10 +354,12 @@
         }
       }
     });
-  } else {
-    console.error("No citation data available.");
+  } catch (error) {
+    console.error('Chart initialization failed:', error);
+    document.getElementById('citationChart').innerHTML = 
+      `<div class="chart-error">Error loading chart: ${error.message}</div>`;
   }
-});
+}); // Added missing closing brace here
 </script>
 
     

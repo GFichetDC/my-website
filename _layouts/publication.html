@@ -12,20 +12,33 @@ layout: archive  # Keeps left sidebar
   {{ site.data.citations[page.citation_key] | jsonify }}
 {% endcapture %}
 
+<!-- In your layout file -->
 <div class="citation-chart">
   <h3>Citation Timeline</h3>
   <canvas id="citationChart"></canvas>
   <script id="citation-data" type="application/json">
-    {{ citation_json | strip_newlines }}
+    {%- if site.data.citations[page.citation_key] -%}
+      {{ site.data.citations[page.citation_key] | jsonify }}
+    {%- else -%}
+      {"error": "No citation data found"}
+    {%- endif -%}
   </script>
 </div>
 
-<script>
-  document.addEventListener("DOMContentLoaded", function() {
-  const rawJson = document.getElementById("citation-data").textContent;
-  const citationData = JSON.parse(rawJson);
+<!-- Load Chart.js with specific version -->
+<script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.1/dist/chart.umd.min.js"></script>
 
-  if (citationData && citationData.citations_over_time) {
+<script>
+document.addEventListener("DOMContentLoaded", function() {
+  try {
+    const rawJson = document.getElementById("citation-data").textContent.trim();
+    const citationData = JSON.parse(rawJson);
+
+    // Consolidated validation check
+    if (!citationData?.citations_over_time) {
+      throw new Error('Invalid citation data structure');
+    }
+
     // Calculate cumulative citations
     const cumulativeCitations = citationData.citations_over_time.map((item, index) => 
       citationData.citations_over_time
@@ -71,10 +84,12 @@ layout: archive  # Keeps left sidebar
         }
       }
     });
-  } else {
-    console.error("No citation data available.");
+  } catch (error) {
+    console.error('Chart initialization failed:', error);
+    document.getElementById('citationChart').innerHTML = 
+      `<div class="chart-error">Error loading chart: ${error.message}</div>`;
   }
-});
+}); // Added missing closing brace here
 </script>
 
     {% if page.citation %}
