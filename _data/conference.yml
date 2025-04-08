@@ -23,5 +23,33 @@
   latitude: 48.8534951
   longitude: 2.3483915
   location: "Paris, France"
-  location: "Paris, France"
+  venue: "Observatory of Paris"
   talk_slug: "talk_4"
+
+- name: "XXVIII Cracow Conference on Recent Advances in Astroparticle Physics"
+  latitude: 50.0619474
+  longitude: 19.9368564
+  location: "Kraków, Poland"
+  venue: "Institute of Nuclear Physics PAN"
+  talk_slug: "talk_5"
+
+- name: "IAU GA 2022, FM 1 : Physics of Relativistic Jets on all Scales"
+  latitude: 35.1799528
+  longitude: 129.0752365
+  location: "Busan, South Korea"
+  venue: "Busan Exhibition and Convention Center"
+  talk_slug: "talk_6"
+
+- name: "DFG Annual Assembly 2023, Relativistic Jets in Active Galaxies"
+  latitude: 49.7780356
+  longitude: 9.9434769
+  location: "Würzburg, Germany"
+  venue: "Schlosshotel Steinburg"
+  talk_slug: "talk_7"
+
+- name: "TeV Particle Astrophysics (TeVPA) 2023"
+  latitude: 40.8358846
+  longitude: 14.2487679
+  location: "Naples, Italy"
+  venue: "Archivio di Stato di Napoli"
+  talk_slug: "talk_8"
