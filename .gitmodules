@@ -1,0 +1,3 @@
+[submodule "node_modules/.cache/gh-pages/git@github.com!GFichetDC!my-website.git"]
+   path = node_modules/.cache/gh-pages/git@github.com!GFichetDC!my-website.git
+   url = git@github.com:GFichetDC/my-website.git
