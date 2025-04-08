@@ -14,11 +14,13 @@ layout: archive  # Keeps left sidebar
         <canvas id="citationChart"></canvas>
       </div>
 
+      {% capture citation_json %}
+        {{ site.data.citations[page.citation_key] | jsonify }}
+      {% endcapture %}
+
       <script>
         document.addEventListener("DOMContentLoaded", function() {
-          {% capture citation_json %}
-            {{ site.data.citations[page.citation_key] | jsonify }}
-          {% endcapture %}
+          const citationData = {{ citation_json | strip_newlines }};
     
           if (citationData && citationData.citations_over_time) {
             console.log("Citation data:", citationData); // Debug log
