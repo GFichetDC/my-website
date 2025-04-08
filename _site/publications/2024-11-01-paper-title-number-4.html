@@ -299,67 +299,80 @@
 <script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.1/dist/chart.umd.min.js"></script>
 
 <script>
-document.addEventListener("DOMContentLoaded", function() {
-  try {
-    const rawJson = document.getElementById("citation-data").textContent.trim();
-    const citationData = JSON.parse(rawJson);
-
-    // Consolidated validation check
-    if (!citationData?.citations_over_time) {
-      throw new Error('Invalid citation data structure');
-    }
-
-    // Calculate cumulative citations
-    const cumulativeCitations = citationData.citations_over_time.map((item, index) => 
-      citationData.citations_over_time
-        .slice(0, index + 1)
-        .reduce((sum, entry) => sum + entry.citations, 0)
-    );
-
-    const ctx = document.getElementById('citationChart').getContext('2d');
-    new Chart(ctx, {
-      type: 'line',
-      data: {
-        labels: citationData.citations_over_time.map(item => item.year),
-        datasets: [
-          {
-            label: 'Annual Citations',
-            data: citationData.citations_over_time.map(item => item.citations),
-            borderColor: '#2b6cb0',
-            backgroundColor: 'rgba(43, 108, 176, 0.2)',
-            tension: 0.3,
-            fill: false
+  document.addEventListener("DOMContentLoaded", function() {
+    try {
+      const citationData =   {"title":"AM³: An Open-Source Tool for Time-Dependent Lepto-Hadronic Modelling of Astrophysical Sources","total_citations":17,"citations_over_time":[{"year":2024,"citations":10},{"year":2025,"citations":7}]};
+  
+      if (citationData && citationData.citations_over_time) {
+        console.log("Citation data:", citationData); // Debug log
+  
+        // Calculate cumulative citations
+        const cumulativeCitations = citationData.citations_over_time.map((item, index) => {
+          return citationData.citations_over_time.slice(0, index + 1).reduce((sum, entry) => sum + entry.citations, 0);
+        });
+  
+        const ctx = document.getElementById('citationChart').getContext('2d');
+        new Chart(ctx, {
+          type: 'line',
+          data: {
+            labels: citationData.citations_over_time.map(item => item.year),
+            datasets: [
+              {
+                label: 'Annual Citations',
+                data: citationData.citations_over_time.map(item => item.citations),
+                borderColor: '#2b6cb0',
+                backgroundColor: 'rgba(43, 108, 176, 0.2)',
+                tension: 0.3,
+                fill: false
+              },
+              {
+                label: 'Cumulative Citations',
+                data: cumulativeCitations,
+                borderColor: '#4CAF50',
+                backgroundColor: 'rgba(76, 175, 80, 0.2)',
+                tension: 0.3,
+                fill: false
+              }
+            ]
           },
-          {
-            label: 'Cumulative Citations',
-            data: cumulativeCitations,
-            borderColor: '#4CAF50',
-            backgroundColor: 'rgba(76, 175, 80, 0.2)',
-            tension: 0.3,
-            fill: false
+          options: {
+            responsive: true,
+            maintainAspectRatio: true,
+            aspectRatio: 2,
+            scales: {
+              y: {
+                beginAtZero: true,
+                title: {
+                  display: true,
+                  text: 'Citations'
+                }
+              },
+              x: {
+                title: {
+                  display: true,
+                  text: 'Year'
+                }
+              }
+            },
+            plugins: {
+              legend: {
+                display: true,
+                position: 'top'
+              },
+              tooltip: {
+                mode: 'index',
+                intersect: false
+              }
+            }
           }
-        ]
-      },
-      options: {
-        responsive: true,
-        maintainAspectRatio: true,
-        aspectRatio: 2,
-        scales: {
-          y: { beginAtZero: true, title: { display: true, text: 'Citations' } },
-          x: { title: { display: true, text: 'Year' } }
-        },
-        plugins: {
-          legend: { display: true, position: 'top' },
-          tooltip: { mode: 'index', intersect: false }
-        }
+        });
+      } else {
+        console.error("No citation data available.");
       }
-    });
-  } catch (error) {
-    console.error('Chart initialization failed:', error);
-    document.getElementById('citationChart').innerHTML = 
-      `<div class="chart-error">Error loading chart: ${error.message}</div>`;
-  }
-}); // Added missing closing brace here
+    } catch (error) {
+      console.error("Error in processing citation data:", error);
+    }
+  });
 </script>
 
     
