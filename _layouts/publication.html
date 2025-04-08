@@ -20,10 +20,10 @@ layout: archive  # Keeps left sidebar
 
       <script>
         document.addEventListener("DOMContentLoaded", function() {
-          const citationData = {{ citation_json | strip_newlines }};
-    
+          const citationData = JSON.parse('{{ citation_json | strip_newlines | escape }}');
+          
           if (citationData && citationData.citations_over_time) {
-            console.log("Citation data:", citationData); // Debug log
+            console.log("Citation data:", citationData); 
     
             // Calculate cumulative citations
             const cumulativeCitations = citationData.citations_over_time.map((item, index) => {
