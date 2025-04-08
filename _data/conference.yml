@@ -1,13 +1,27 @@
-- name: "Talk 1 on Relevant Topic in Your Field"
-  latitude: 39.4699
-  longitude: -0.3763
-  location: "Valencia, Spain"
-  venue: "Astrophysics department"
+- name: "Simulating the evolution and emission of relativistic outflows"
+  latitude: 48.812309
+  longitude: 2.238150
+  location: "Meudon, France"
+  venue: "Observatory of Meudon"
   talk_slug: "talk_1"
 
-- name: "Talk 2 on Relevant Topic in Your Field"
-  latitude: 40.7128
-  longitude: -74.0060
-  location: "New York, USA"
-  venue: "NYU"
+- name: "European Astronomical Society Annual Meeting: SS4 radio-loud AGN"
+  latitude: 52.1594747
+  longitude: 4.4908843
+  location: "Leiden, Netherlands"
+  venue: "Leiden Observatory"
   talk_slug: "talk_2"
+
+- name: "Jets: Extragalactic jets on all scales"
+  latitude: 49.4093582
+  longitude: 8.694724
+  location: "Heidelberg, Germany"
+  venue: "Max Planck Institute für Radioastronomie"
+  talk_slug: "talk_3"
+
+- name: "Les Journées de la Société Française d'Astronomie et d'Astrophysique (SF2A): Atelier général du PNHE"
+  latitude: 48.8534951
+  longitude: 2.3483915
+  location: "Paris, France"
+  location: "Paris, France"
+  talk_slug: "talk_4"
