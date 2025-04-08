@@ -176,8 +176,6 @@
 
 
 
-
-
 <div id="main" role="main">
   
 
@@ -275,49 +273,115 @@
   </div>
 
 
-  <article class="page" itemscope itemtype="http://schema.org/CreativeWork">
-    <meta itemprop="headline" content="Dynamic and radiative implications of jet–star interactions in AGN jets">
-    <meta itemprop="description" content="">
-    <meta itemprop="datePublished" content="January 01, 2025">
+  <div class="archive">
     
-
-    <div class="page__inner-wrap">
-      
-        <header>
-          <h1 class="page__title" itemprop="headline">Dynamic and radiative implications of jet–star interactions in AGN jets
-</h1>
-          
-        
-        
-        
-          <p>Published in <i>Astronomy & Astrophysics</i>, 2025 </p>
-            
-        </header>
-      
-
-      <section class="page__content" itemprop="text">
-        <p>The physical phenomena explaining the classification of AGNs are still not well understood. Furthermore, new observational markers, such as the offset between the radio and optical emission centers, seem to indicate the presence of intrinsic physical phenomena within the jets. In this study, we propose the interaction between the jet and a stellar population. These interactions lead to mass entrainment in the jet due to proton enrichment. This mass entrainment results in more or less pronounced jet deceleration depending on the stellar density, and consequently, energy dissipation. In this study, we used the RIPTIDE code to produce radio and optical emission maps and highlight the presence of this radio-optical offset, quantitatively reproducing VLBI and Gaia optical observations for different types of AGNs. This study underscores the crucial impact of stars on jet characteristics and our understanding of the current classification of AGNs. Moreover, it paves the way for the multi-messenger study of these jet-star interactions.</p>
+      <h1 class="page__title">Dynamic and radiative implications of jet–star interactions in AGN jets</h1>
+    
+    <article class="publication-details">
+  <!-- Publication content from markdown -->
+  <div class="publication-content">
+    <p>The physical phenomena explaining the classification of AGNs are still not well understood. Furthermore, new observational markers, such as the offset between the radio and optical emission centers, seem to indicate the presence of intrinsic physical phenomena within the jets. In this study, we propose the interaction between the jet and a stellar population. These interactions lead to mass entrainment in the jet due to proton enrichment. This mass entrainment results in more or less pronounced jet deceleration depending on the stellar density, and consequently, energy dissipation. In this study, we used the RIPTIDE code to produce radio and optical emission maps and highlight the presence of this radio-optical offset, quantitatively reproducing VLBI and Gaia optical observations for different types of AGNs. This study underscores the crucial impact of stars on jet characteristics and our understanding of the current classification of AGNs. Moreover, it paves the way for the multi-messenger study of these jet-star interactions.</p>
 
 <p>→ This study explores the impact of stars on the multi-wavelength morphology of jets and how this can constrain the classification of AGNs.</p>
 
+  </div>
 
-        
-          <p style="font-size: smaller">Recommended citation: G. Fichet de Clairfontaine, M. Perucho, J.M. Martí, and Y. Kovalev (2025). &quot;Dynamic and radiative implications of jet–star interactions in AGN jets.&quot; <i>Astronomy & Astrophysics</i>. Volume 693.<br /><a href="https://www.aanda.org/articles/aa/pdf/2025/01/aa51914-24.pdf">Download Paper</a> | <a href="http://academicpages.github.io/files/bibtexA.bib">Download Bibtex</a></p>
-        
+  
 
-        
-      </section>
+<div class="citation-chart">
+  <h3>Citation Timeline</h3>
+  <canvas id="citationChart"></canvas>
+  <script id="citation-data" type="application/json">
+      {"title":"Dynamic and radiative implications of jet–star interactions in AGN jets","total_citations":0,"citations_over_time":[{"year":2025,"citations":0}]}
+  </script>
+</div>
 
-      <footer class="page__meta">
-        
-        
+<script>
+  document.addEventListener("DOMContentLoaded", function() {
+    const rawJson = document.getElementById("citation-data").textContent;
+    const citationData = JSON.parse(rawJson);
 
+    if (citationData && citationData.citations_over_time) {
+      console.log("Citation data:", citationData);
 
+      // Calculate cumulative citations
+      const cumulativeCitations = citationData.citations_over_time.map((item, index) => {
+        return citationData.citations_over_time
+          .slice(0, index + 1)
+          .reduce((sum, entry) => sum + entry.citations, 0);
+      });
 
+      const ctx = document.getElementById('citationChart').getContext('2d');
+      new Chart(ctx, {
+        type: 'line',
+        data: {
+          labels: citationData.citations_over_time.map(item => item.year),
+          datasets: [
+            {
+              label: 'Annual Citations',
+              data: citationData.citations_over_time.map(item => item.citations),
+              borderColor: '#2b6cb0',
+              backgroundColor: 'rgba(43, 108, 176, 0.2)',
+              tension: 0.3,
+              fill: false
+            },
+            {
+              label: 'Cumulative Citations',
+              data: cumulativeCitations,
+              borderColor: '#4CAF50',
+              backgroundColor: 'rgba(76, 175, 80, 0.2)',
+              tension: 0.3,
+              fill: false
+            }
+          ]
+        },
+        options: {
+          responsive: true,
+          maintainAspectRatio: true,
+          aspectRatio: 2,
+          scales: {
+            y: {
+              beginAtZero: true,
+              title: {
+                display: true,
+                text: 'Citations'
+              }
+            },
+            x: {
+              title: {
+                display: true,
+                text: 'Year'
+              }
+            }
+          },
+          plugins: {
+            legend: {
+              display: true,
+              position: 'top'
+            },
+            tooltip: {
+              mode: 'index',
+              intersect: false
+            }
+          }
+        }
+      });
+    } else {
+      console.error("No citation data available.");
+    }
+  });
+</script>
 
-      </footer>
-
+    
+    <p>Recommended citation: G. Fichet de Clairfontaine, M. Perucho, J.M. Martí, and Y. Kovalev (2025). &quot;Dynamic and radiative implications of jet–star interactions in AGN jets.&quot; <i>Astronomy & Astrophysics</i>. Volume 693.<br />
+      <a href="https://www.aanda.org/articles/aa/pdf/2025/01/aa51914-24.pdf">Download Paper</a>
       
+       | <a href="http://academicpages.github.io/files/bibtexA.bib">Download Bibtex</a>
+    </p>
+    
+
+    <!-- Share buttons -->
+    
 
 <section class="page__share">
   
@@ -334,7 +398,8 @@
 </section>
 
 
-      
+    <div class="page__footer-nav">
+        
 
 
   <nav class="pagination">
@@ -349,11 +414,32 @@
 
     </div>
 
-    
-  </article>
+    <!-- Next/Previous navigation -->
+    <div class="page__footer-nav">
+        
 
-  
-  
+
+    </div>
+    </article>
+    
+    <style>
+    .publication-details {
+      max-width: 800px;
+      margin: 0 auto;
+      padding: 2rem;
+    }
+    .citation-chart {
+      margin: 4rem 0;
+      padding: 2rem;
+      background: #f8fafc;
+      border-radius: 8px;
+      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    }
+    #citationChart {
+      min-height: 400px;
+    }
+    </style>
+  </div>
 </div>
 
 

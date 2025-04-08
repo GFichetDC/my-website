@@ -286,87 +286,91 @@
 
   </div>
 
-    <!-- Citation chart -->
-    <div class="citation-chart">
-        <h3>Citation Timeline</h3>
-        <canvas id="citationChart"></canvas>
-      </div>
+  
 
-      
+<div class="citation-chart">
+  <h3>Citation Timeline</h3>
+  <canvas id="citationChart"></canvas>
+  <script id="citation-data" type="application/json">
+      {"title":"Flux variability from ejecta in structured relativistic jets with large-scale magnetic fields","total_citations":13,"citations_over_time":[{"year":2021,"citations":1},{"year":2022,"citations":5},{"year":2023,"citations":5},{"year":2024,"citations":1},{"year":2025,"citations":1}]}
+  </script>
+</div>
 
-      <script>
-        document.addEventListener("DOMContentLoaded", function() {
-          const citationData =         {"title":"Flux variability from ejecta in structured relativistic jets with large-scale magnetic fields","total_citations":13,"citations_over_time":[{"year":2021,"citations":1},{"year":2022,"citations":5},{"year":2023,"citations":5},{"year":2024,"citations":1},{"year":2025,"citations":1}]}      ;
-    
-          if (citationData && citationData.citations_over_time) {
-            console.log("Citation data:", citationData); // Debug log
-    
-            // Calculate cumulative citations
-            const cumulativeCitations = citationData.citations_over_time.map((item, index) => {
-              return citationData.citations_over_time.slice(0, index + 1).reduce((sum, entry) => sum + entry.citations, 0);
-            });
-    
-            const ctx = document.getElementById('citationChart').getContext('2d');
-            new Chart(ctx, {
-              type: 'line',
-              data: {
-                labels: citationData.citations_over_time.map(item => item.year),
-                datasets: [
-                  {
-                    label: 'Annual Citations',
-                    data: citationData.citations_over_time.map(item => item.citations),
-                    borderColor: '#2b6cb0',
-                    backgroundColor: 'rgba(43, 108, 176, 0.2)',
-                    tension: 0.3,
-                    fill: false
-                  },
-                  {
-                    label: 'Cumulative Citations',
-                    data: cumulativeCitations,
-                    borderColor: '#4CAF50',
-                    backgroundColor: 'rgba(76, 175, 80, 0.2)',
-                    tension: 0.3,
-                    fill: false
-                  }
-                ]
-              },
-              options: {
-                responsive: true,
-                maintainAspectRatio: true,
-                aspectRatio: 2,
-                scales: {
-                    y: {
-                    beginAtZero: true,
-                    title: {
-                        display: true,
-                        text: 'Citations'
-                    }
-                    },
-                    x: {
-                    title: {
-                        display: true,
-                        text: 'Year'
-                    }
-                    }
-                },
-                plugins: {
-                    legend: {
-                    display: true,
-                    position: 'top'
-                    },
-                    tooltip: {
-                    mode: 'index',
-                    intersect: false
-                    }
-                }
-                }
+<script>
+  document.addEventListener("DOMContentLoaded", function() {
+    const rawJson = document.getElementById("citation-data").textContent;
+    const citationData = JSON.parse(rawJson);
 
-            });
-          } else {
-            console.error("No citation data available.");
+    if (citationData && citationData.citations_over_time) {
+      console.log("Citation data:", citationData);
+
+      // Calculate cumulative citations
+      const cumulativeCitations = citationData.citations_over_time.map((item, index) => {
+        return citationData.citations_over_time
+          .slice(0, index + 1)
+          .reduce((sum, entry) => sum + entry.citations, 0);
+      });
+
+      const ctx = document.getElementById('citationChart').getContext('2d');
+      new Chart(ctx, {
+        type: 'line',
+        data: {
+          labels: citationData.citations_over_time.map(item => item.year),
+          datasets: [
+            {
+              label: 'Annual Citations',
+              data: citationData.citations_over_time.map(item => item.citations),
+              borderColor: '#2b6cb0',
+              backgroundColor: 'rgba(43, 108, 176, 0.2)',
+              tension: 0.3,
+              fill: false
+            },
+            {
+              label: 'Cumulative Citations',
+              data: cumulativeCitations,
+              borderColor: '#4CAF50',
+              backgroundColor: 'rgba(76, 175, 80, 0.2)',
+              tension: 0.3,
+              fill: false
+            }
+          ]
+        },
+        options: {
+          responsive: true,
+          maintainAspectRatio: true,
+          aspectRatio: 2,
+          scales: {
+            y: {
+              beginAtZero: true,
+              title: {
+                display: true,
+                text: 'Citations'
+              }
+            },
+            x: {
+              title: {
+                display: true,
+                text: 'Year'
+              }
+            }
+          },
+          plugins: {
+            legend: {
+              display: true,
+              position: 'top'
+            },
+            tooltip: {
+              mode: 'index',
+              intersect: false
+            }
           }
-        });
-      </script>
+        }
+      });
+    } else {
+      console.error("No citation data available.");
+    }
+  });
+</script>
 
     
     <p>Recommended citation: G. Fichet de Clairfontaine, Z. Meliani, A. Zech, and O. Hervet (2021). "Flux variability from ejecta in structured relativistic jets with large-scale magnetic fields." <i>Astronomy & Astrophysics</i>. Volume 647, A77, 18 pp.<br />

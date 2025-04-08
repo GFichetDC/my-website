@@ -54,3 +54,10 @@ publi_4:
       citations: 10
     - year: 2025
       citations: 7
+
+publi_5:
+  title: "Dynamic and radiative implications of jet–star interactions in AGN jets"
+  total_citations: 0
+  citations_over_time:
+    - year: 2025
+      citations: 0

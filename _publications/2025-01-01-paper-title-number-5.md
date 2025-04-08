@@ -1,5 +1,7 @@
 ---
+layout: 'publication'
 title: "Dynamic and radiative implications of jet–star interactions in AGN jets"
+citation_key: 'publi_5'
 collection: publications
 category: manuscripts
 permalink: /publications/2025-01-11-paper-title-number-5
