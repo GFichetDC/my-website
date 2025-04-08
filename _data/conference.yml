@@ -88,3 +88,10 @@
   location: "Würzburg, Germany"
   venue: "Schlosshotel Steinburg"
   talk_slug: "talk_13"
+
+- name: "Flare echos from relaxation shocks in perturbed relativistic jets"
+  latitude: 37.1734995
+  longitude: -3.5995337
+  location: "Granada, Spain"
+  venue: "Instituto de Astrofísica de Andalucía"
+  talk_slug: "sem_1"

@@ -11,6 +11,15 @@ author_profile: true
 
 {% endif %}
 
-{% for post in site.talks reversed %}
+<h2>Seminars</h2>
+{% assign sorted_seminars = site.seminars | sort: "date" | reverse %}
+{% for post in sorted_seminars %}
+  {% include archive-single-talk.html %}
+{% endfor %}
+
+
+<h2>Talks</h2>
+{% assign sorted_talks = site.talks | sort: "date" | reverse %}
+{% for post in sorted_talks %}
   {% include archive-single-talk.html %}
 {% endfor %}
