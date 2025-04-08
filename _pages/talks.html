@@ -1,6 +1,6 @@
 ---
 layout: archive
-title: "Talks and presentations"
+title: "Productions"
 permalink: /talks/
 author_profile: true
 ---
@@ -12,14 +12,13 @@ author_profile: true
 {% endif %}
 
 <h2>Seminars</h2>
-{% assign sorted_seminars = site.seminars | sort: "date" | reverse %}
-{% for post in sorted_seminars %}
+
+{% for post in site.seminars reversed %}
   {% include archive-single-talk.html %}
 {% endfor %}
 
-
 <h2>Talks</h2>
-{% assign sorted_talks = site.talks | sort: "date" | reverse %}
-{% for post in sorted_talks %}
+
+{% for post in site.talks reversed %}
   {% include archive-single-talk.html %}
 {% endfor %}
