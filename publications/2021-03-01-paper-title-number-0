@@ -17,7 +17,7 @@
 
 
 
-<title>Portfolio - Home</title>
+<title>Flux variability from ejecta in structured relativistic jets with large-scale magnetic fields - Home</title>
 
 
 
@@ -27,13 +27,15 @@
 
 <meta property="og:locale" content="en-US">
 <meta property="og:site_name" content="Home">
-<meta property="og:title" content="Portfolio">
+<meta property="og:title" content="Flux variability from ejecta in structured relativistic jets with large-scale magnetic fields">
 
 
-  <link rel="canonical" href="https://gfichetdc.github.io/my-website/portfolio/">
-  <meta property="og:url" content="https://gfichetdc.github.io/my-website/portfolio/">
+  <link rel="canonical" href="https://gfichetdc.github.io/my-website/publications/2021-03-01-paper-title-number-0">
+  <meta property="og:url" content="https://gfichetdc.github.io/my-website/publications/2021-03-01-paper-title-number-0">
 
 
+
+  <meta property="og:description" name="description" content="Post-doc in High Energy Astrophysics">
 
 
 
@@ -46,6 +48,9 @@
 
 
 
+
+  <meta property="og:type" content="article">
+  <meta property="article:published_time" content="2021-03-01T00:00:00+00:00">
 
 
 
@@ -268,84 +273,172 @@
 
   <div class="archive">
     
-      <h1 class="page__title">Portfolio</h1>
+      <h1 class="page__title">Flux variability from ejecta in structured relativistic jets with large-scale magnetic fields</h1>
     
-    
+    <article class="publication-details">
+  <!-- Publication content from markdown -->
+  <div class="publication-content">
+    This study explores the complex interactions between mobile shock waves and stationary shocks in relativistic astrophysical jets, which play a key role in the observed variability of active galactic nuclei (AGN). The primary objective is to simulate these interactions and characterize the resulting radio flares using relativistic magnetohydrodynamic simulations. The MPI-AMRVAC code and the RIPTIDE radiative transfer code are employed to explore the impact of magnetic configuration and jet stratification. The results reveal that the presence of a large-scale magnetic structure alters the jet morphology, leading to bright radio flares with distinct characteristics during shock interactions. A promising application is demonstrated on the source 3C 273, highlighting the insightfulness of the shock-shock model.
 
-
+→ This study is essential for establishing the foundations of the integral model, highlighting the dynamic processes of relativistic jets in AGNs. It also demonstrates the value of connecting simulations performed with MPI-AMRVAC and post-processing done via RIPTIDE, emphasizing the synergy between these tools in enhancing our understanding of relativistic jets.
+  </div>
 
   
 
-
-
-
-
-<div class="list__item">
-  <article class="archive__item" itemscope itemtype="http://schema.org/CreativeWork">
-    
-
-    <h2 class="archive__item-title" itemprop="headline">
-      
-        <a href="https://gfichetdc.github.io/my-website/portfolio/portfolio-1/" rel="permalink">Portfolio item number 1
-</a>
-      
-    </h2>
-    
-    
-
-        
-
-    
-    <p class="archive__item-excerpt" itemprop="description"><p>Short description of portfolio item number 1<br /><img src="/images/500x300.png" /></p>
-</p>
-    
-    
-    
-
-  </article>
-  
+<!-- In your layout file -->
+<div class="citation-chart">
+  <h3>Citation Timeline</h3>
+  <canvas id="citationChart"></canvas>
+  <script id="citation-data" type="application/json">{"title":"Flux variability from ejecta in structured relativistic jets with large-scale magnetic fields","total_citations":13,"citations_over_time":[{"year":2021,"citations":1},{"year":2022,"citations":5},{"year":2023,"citations":5},{"year":2024,"citations":1},{"year":2025,"citations":1}]}</script>
 </div>
 
+<!-- Load Chart.js with specific version -->
+<script src="https://cdn.jsdelivr.net/npm/chart.js@3.9.1/dist/chart.min.js"></script>
 
+<script>
+  document.addEventListener("DOMContentLoaded", function() {
+    try {
+      const citationData =   {"title":"Flux variability from ejecta in structured relativistic jets with large-scale magnetic fields","total_citations":13,"citations_over_time":[{"year":2021,"citations":1},{"year":2022,"citations":5},{"year":2023,"citations":5},{"year":2024,"citations":1},{"year":2025,"citations":1}]};
+  
+      if (citationData && citationData.citations_over_time) {
+        console.log("Citation data:", citationData); // Debug log
+  
+        // Calculate cumulative citations
+        const cumulativeCitations = citationData.citations_over_time.map((item, index) => {
+          return citationData.citations_over_time.slice(0, index + 1).reduce((sum, entry) => sum + entry.citations, 0);
+        });
+  
+        const ctx = document.getElementById('citationChart').getContext('2d');
+        new Chart(ctx, {
+          type: 'line',
+          data: {
+            labels: citationData.citations_over_time.map(item => item.year),
+            datasets: [
+              {
+                label: 'Annual Citations',
+                data: citationData.citations_over_time.map(item => item.citations),
+                borderColor: '#2b6cb0',
+                backgroundColor: 'rgba(43, 108, 176, 0.2)',
+                tension: 0.3,
+                fill: false
+              },
+              {
+                label: 'Cumulative Citations',
+                data: cumulativeCitations,
+                borderColor: '#4CAF50',
+                backgroundColor: 'rgba(76, 175, 80, 0.2)',
+                tension: 0.3,
+                fill: false
+              }
+            ]
+          },
+          options: {
+            responsive: true,
+            maintainAspectRatio: true,
+            aspectRatio: 2,
+            scales: {
+              y: {
+                beginAtZero: true,
+                title: {
+                  display: true,
+                  text: 'Citations'
+                }
+              },
+              x: {
+                title: {
+                  display: true,
+                  text: 'Year'
+                }
+              }
+            },
+            plugins: {
+              legend: {
+                display: true,
+                position: 'top'
+              },
+              tooltip: {
+                mode: 'index',
+                intersect: false
+              }
+            }
+          }
+        });
+      } else {
+        console.error("No citation data available.");
+      }
+    } catch (error) {
+      console.error("Error in processing citation data:", error);
+    }
+  });
+</script>
 
+    
+    <p>Recommended citation: G. Fichet de Clairfontaine, Z. Meliani, A. Zech, and O. Hervet (2021). "Flux variability from ejecta in structured relativistic jets with large-scale magnetic fields." <i>Astronomy & Astrophysics</i>. Volume 647, A77, 18 pp.<br />
+      <a href="https://www.aanda.org/articles/aa/pdf/2021/03/aa39654-20.pdf">Download Paper</a>
+      
+       | <a href="http://academicpages.github.io/files/bibtex0.bib">Download Bibtex</a>
+    </p>
+    
 
+    <!-- Share buttons -->
+    
+
+<section class="page__share">
+  
+    <h4 class="page__share-title">Share on</h4>
   
 
+  <a href="https://bsky.app/intent/compose?text=https://gfichetdc.github.io/my-website/publications/2021-03-01-paper-title-number-0" class="btn btn--bluesky" title="Share on Bluesky"><i class="fab fa-bluesky" aria-hidden="true"></i><span> Bluesky</span></a>
+
+  <a href="https://www.facebook.com/sharer/sharer.php?u=https://gfichetdc.github.io/my-website/publications/2021-03-01-paper-title-number-0" class="btn btn--facebook" title="Share on Facebook"><i class="fab fa-facebook" aria-hidden="true"></i><span> Facebook</span></a>
+
+  <a href="https://www.linkedin.com/shareArticle?mini=true&url=https://gfichetdc.github.io/my-website/publications/2021-03-01-paper-title-number-0" class="btn btn--linkedin" title="Share on LinkedIn"><i class="fab fa-linkedin" aria-hidden="true"></i><span> LinkedIn</span></a>
+
+  <a href="https://x.com/intent/post?text=https://gfichetdc.github.io/my-website/publications/2021-03-01-paper-title-number-0" class="btn btn--x" title="Share on X"><i class="fab fa-x-twitter" aria-hidden="true"></i><span> X (formerly Twitter)</span></a>
+</section>
 
 
-
-
-<div class="list__item">
-  <article class="archive__item" itemscope itemtype="http://schema.org/CreativeWork">
-    
-
-    <h2 class="archive__item-title" itemprop="headline">
-      
-        <a href="https://gfichetdc.github.io/my-website/portfolio/portfolio-2/" rel="permalink">Portfolio item number 2
-</a>
-      
-    </h2>
-    
-    
-
+    <div class="page__footer-nav">
         
 
+
+  <nav class="pagination">
     
-    <p class="archive__item-excerpt" itemprop="description"><p>Short description of portfolio item number 2 <br /><img src="/images/500x300.png" /></p>
-</p>
+      <a href="#" class="pagination--pager disabled">Previous</a>
     
     
+      <a href="https://gfichetdc.github.io/my-website/publications/2021-03-01-paper-title-number-0" class="pagination--pager" title="Flux variability from ejecta in structured relativistic jets with large-scale magnetic fields
+">Next</a>
     
+  </nav>
 
-  </article>
-  
-</div>
+    </div>
+
+    <!-- Next/Previous navigation -->
+    <div class="page__footer-nav">
+        
 
 
-
-
-
-
+    </div>
+    </article>
+    
+    <style>
+    .publication-details {
+      max-width: 800px;
+      margin: 0 auto;
+      padding: 2rem;
+    }
+    .citation-chart {
+      margin: 4rem 0;
+      padding: 2rem;
+      background: #f8fafc;
+      border-radius: 8px;
+      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    }
+    #citationChart {
+      min-height: 400px;
+    }
+    </style>
   </div>
 </div>
 
