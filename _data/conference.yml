@@ -95,3 +95,45 @@
   location: "Granada, Spain"
   venue: "Instituto de Astrofísica de Andalucía"
   talk_slug: "sem_1"
+
+- name: "Characteristic multi-wavelength emission signatures from strong shock - shock interactions in perturbed relativistic jets"
+  venue: "Institut de Planétologie et d'Astrophysique de Grenoble"
+  location: "Grenoble France"
+  latitude: 45.1875602
+  longitude: 5.7357819
+  talk_slug: "sem_2"
+
+- name: "Characteristic multi-wavelength emission signatures from strong shock - shock interactions in perturbed relativistic jets"
+  venue: "Max Planck Institut für Radioastronomie"
+  location: "Bonn, Germany"
+  latitude: 50.7352621
+  longitude: 7.1024635
+  talk_slug: "sem_3"
+
+- name: "Unified jet modeling for gamma-loud AGN"
+  venue: "Universitad Würzburg"
+  location: "Würzburg, Germany"
+  latitude: 49.7780356
+  longitude: 9.9434769
+  talk_slug: "sem_4"
+
+- name: "Towards a complete model of relativistic jets of AGN"
+  venue: "Laboratoire Astroparticle et Cosmologie"
+  location: "Paris, France"
+  latitude: 48.8534951
+  longitude: 2.3483915
+  talk_slug: "sem_5"
+
+- name: "Towards a complete model of relativistic jets of AGN"
+  venue: "Laboratoire Univers et Théories, Observatoire de Paris"
+  location: "Meudon, France"
+  latitude: 48.812309
+  longitude: 2.238150
+  talk_slug: "sem_6"
+
+- name: "Towards a complete model of relativistic jets of AGN"
+  venue: "Universitat de Valencía"
+  location: "Valencía, Spain"
+  latitude: 39.4697065
+  longitude: -0.3763353
+  talk_slug: "sem_7"
